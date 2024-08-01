@@ -11,24 +11,27 @@ namespace KhoraControl.Model
     public class Veiculo
     {
         [Key]
-        private int ID { get; set; }
+        public int ID { get; set; }
         [Required]
-        private string Marca { get; set; }
+        public string Marca { get; set; }
         [Required]
-        private string Placa { get; set; }
-        private int? KmRodados {  get; set; }
+        public string Placa { get; set; }
+        public int? KmRodados {  get; set; }
         public DateTime? DataDaCompra {  get; set; }
-        private int? KmQuandoComprado { get; set; }
-        private string Ano {  get; set; }
-        private string Modelo { get; set; }
-        private DateTime? DataUltimaRevisao { get; set; }
-        private int? KmUltimaRevisao { get; set; }
-        private DateTime? DataProximaRevisao { get; set; }
-        private int? KmProximaRevisao{ get; set; }
-        private int? ID_Concessionaria { get; set; }
-        private string? Motorista { get; set; }
-        private string? SugestaoConcessionaria { get; set; }
-        private string? Observacoes {  get; set; }
+        public int? KmQuandoComprado { get; set; }
+        public string Ano {  get; set; }
+        public string Modelo { get; set; }
+        public DateTime? DataUltimaRevisao { get; set; }
+        public int? KmUltimaRevisao { get; set; }
+        public DateTime? DataProximaRevisao { get; set; }
+        public int? KmProximaRevisao{ get; set; }
+        public int? ID_Concessionaria { get; set; }
+        public string? Motorista { get; set; }
+        public string? SugestaoConcessionaria { get; set; }
+        public string? Observacoes {  get; set; }
+        [Required]
+        public string LocalSalvamentoDeDados { get; set; }
+
 
         private readonly DAL<Veiculo> _dal;
 

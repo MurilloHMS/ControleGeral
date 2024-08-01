@@ -62,8 +62,7 @@
               "RelativeToolTip": "Model\\CheckList.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAowAoAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T12:40:37.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T12:40:37.361Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Model\\Concessionaria.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T10:56:23.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T10:56:23.707Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "Model\\Produtos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T10:56:09.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T10:56:09.816Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "RelativeToolTip": "Model\\DadosNFe.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T10:55:53.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T10:55:53.171Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "Model\\DadosCheckList.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T10:55:23.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T10:55:23.886Z"
             },
             {
               "$type": "Document",
@@ -125,7 +120,7 @@
               "RelativeDocumentMoniker": "Model\\Veiculo.cs",
               "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Veiculo.cs",
               "RelativeToolTip": "Model\\Veiculo.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA9wC0AAAApAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T10:53:56.405Z",
               "EditorCaption": ""
@@ -140,8 +135,7 @@
               "RelativeToolTip": "Model\\Revisao.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T10:56:40.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T10:56:40.303Z"
             }
           ]
         }
