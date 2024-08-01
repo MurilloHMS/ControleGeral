@@ -1,7 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\proau\\source\\repos\\KhoraControl\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\concessionaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\concessionaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\checklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\checklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\revisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\revisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\dadosnfe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\dadosnfe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\dadoschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\dadoschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 209,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +51,97 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1408094023:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CheckList.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\CheckList.cs",
+              "RelativeDocumentMoniker": "Model\\CheckList.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\CheckList.cs",
+              "RelativeToolTip": "Model\\CheckList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T12:40:37.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Concessionaria.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Concessionaria.cs",
+              "RelativeDocumentMoniker": "Model\\Concessionaria.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Concessionaria.cs",
+              "RelativeToolTip": "Model\\Concessionaria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:56:23.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Produtos.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Produtos.cs",
+              "RelativeDocumentMoniker": "Model\\Produtos.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Produtos.cs",
+              "RelativeToolTip": "Model\\Produtos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:56:09.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DadosNFe.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\DadosNFe.cs",
+              "RelativeDocumentMoniker": "Model\\DadosNFe.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\DadosNFe.cs",
+              "RelativeToolTip": "Model\\DadosNFe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:55:53.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DadosCheckList.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\DadosCheckList.cs",
+              "RelativeDocumentMoniker": "Model\\DadosCheckList.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\DadosCheckList.cs",
+              "RelativeToolTip": "Model\\DadosCheckList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:55:23.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Veiculo.cs",
+              "RelativeDocumentMoniker": "Model\\Veiculo.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Veiculo.cs",
+              "RelativeToolTip": "Model\\Veiculo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:53:56.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Revisao.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Revisao.cs",
+              "RelativeDocumentMoniker": "Model\\Revisao.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Revisao.cs",
+              "RelativeToolTip": "Model\\Revisao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T10:56:40.303Z",
+              "EditorCaption": ""
             }
           ]
         }
