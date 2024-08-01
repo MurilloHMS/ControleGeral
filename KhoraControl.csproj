@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Model\Validation\" />
-    <Folder Include="View\Forms\" />
     <Folder Include="View\UC\" />
   </ItemGroup>
 
