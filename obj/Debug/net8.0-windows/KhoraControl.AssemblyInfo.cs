@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KhoraControl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fc3c3bb2678d5a2079b40975d90f5c4344b5922")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e1ea490c941a1678569dd85efd5ae256d5c897e")]
 [assembly: System.Reflection.AssemblyProductAttribute("KhoraControl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KhoraControl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

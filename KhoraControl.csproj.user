@@ -4,5 +4,8 @@
     <Compile Update="View\Forms\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\UC\Frm_CadastroVeiculos_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

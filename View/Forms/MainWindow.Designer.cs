@@ -36,6 +36,7 @@
             panelImagem = new Panel();
             btnMenu = new Button();
             panelMenu = new Panel();
+            tbcHome = new TabControl();
             panelVeiculos.SuspendLayout();
             panelImagem.SuspendLayout();
             panelMenu.SuspendLayout();
@@ -94,6 +95,7 @@
             button1.TabIndex = 0;
             button1.Text = "Cadastro Veiculos";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panelImagem
             // 
@@ -108,9 +110,8 @@
             // 
             btnMenu.Location = new Point(0, 0);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(47, 48);
+            btnMenu.Size = new Size(41, 30);
             btnMenu.TabIndex = 1;
-            btnMenu.Text = "button4";
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
@@ -127,11 +128,21 @@
             panelMenu.TabIndex = 0;
             panelMenu.Paint += panelMenu_Paint;
             // 
+            // tbcHome
+            // 
+            tbcHome.Dock = DockStyle.Fill;
+            tbcHome.Location = new Point(192, 0);
+            tbcHome.Name = "tbcHome";
+            tbcHome.SelectedIndex = 0;
+            tbcHome.Size = new Size(608, 450);
+            tbcHome.TabIndex = 1;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tbcHome);
             Controls.Add(panelMenu);
             Name = "MainWindow";
             Text = "Form1";
@@ -151,5 +162,6 @@
         private Panel panelImagem;
         private Panel panelMenu;
         private Button btnMenu;
+        private TabControl tbcHome;
     }
 }

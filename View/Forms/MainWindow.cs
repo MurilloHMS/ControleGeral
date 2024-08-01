@@ -1,3 +1,5 @@
+using KhoraControl.View.UC;
+
 namespace KhoraControl
 {
     public partial class MainWindow : Form
@@ -44,6 +46,19 @@ namespace KhoraControl
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroVeiculos_UC frm = new Frm_CadastroVeiculos_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tp = new TabPage();
+            tp.Name = frm.Name;
+            tp.Text = frm.Text;
+            tp.Controls.Add(frm);
+            tbcHome.Controls.Add(tp);
+            
 
         }
     }
