@@ -8,6 +8,15 @@ namespace KhoraControl.Setup.Database
         private string _connectionString;
 
         public DbSet<Veiculo> veiculos { get; set; }
+        public DbSet<Entidade> entidade { get; set; }
+        public DbSet<Empresa> empresas { get; set; }
+        public DbSet<Concessionaria> concessionarias { get; set; }
+        public DbSet<CheckList> checklist { get; set; }
+        public DbSet<DadosCheckList> dadosCheckLists { get; set; }
+        public DbSet<DadosNFe> dadosNFe { get; set; }
+        public DbSet<Produtos> produtos { get; set; }
+
+
         public KhoraContext()
         {
             string dbDiretorio = Path.Combine(Directory.GetCurrentDirectory(), "db");

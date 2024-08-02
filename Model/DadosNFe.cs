@@ -1,6 +1,7 @@
 ﻿using KhoraControl.Setup.Database;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -10,6 +11,7 @@ namespace KhoraControl.Model
 {
     public class DadosNFe
     {
+        [Key]
         public int ID {  get; set; }
         public int ID_Veiculo { get; set; }
         public string ChaveDeAcesso { get; set; }
