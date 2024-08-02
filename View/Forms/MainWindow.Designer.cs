@@ -100,7 +100,6 @@
             button3.Text = "                    Cadastro Check List";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -119,7 +118,6 @@
             button2.Text = "                    Cadastro Entidades";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -138,7 +136,6 @@
             button1.Text = "                    Cadastro Veiculos";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panelImagem
             // 
@@ -180,7 +177,6 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(380, 630);
             panelMenu.TabIndex = 0;
-            panelMenu.Paint += panelMenu_Paint;
             // 
             // panelImportacoes
             // 
@@ -210,7 +206,6 @@
             button6.Text = "                    Importar Excel";
             button6.TextAlign = ContentAlignment.MiddleLeft;
             button6.UseVisualStyleBackColor = true;
-            button6.Click += button2_Click;
             // 
             // button7
             // 
@@ -229,7 +224,6 @@
             button7.Text = "                    Importar XML";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
-            button7.Click += button1_Click;
             // 
             // btnPanelImportacoes
             // 

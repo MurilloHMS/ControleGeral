@@ -1,4 +1,6 @@
-using KhoraControl.View.UC;
+using System;
+using System.Windows.Forms;
+
 
 namespace KhoraControl
 {
@@ -7,18 +9,84 @@ namespace KhoraControl
         private Boolean showPanelMenu = false;
         private Boolean showPanelVeiculos = false;
         private Boolean showPanelImportacoes = false;
+        private System.Windows.Forms.Timer animationTimer;
+        private int targetHeightVeiculos;
+        private int targetWidthMenu;
+        private int targetHeightImportacoes;
+        private int step = 10; // Ajuste a velocidade da animação
+
         public MainWindow()
         {
             InitializeComponent();
+            InitializeAnimationTimer();
             TogglePanel();
+        }
+
+        private void InitializeAnimationTimer()
+        {
+            animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = 10; // Tempo em milissegundos entre cada passo da animação
+            animationTimer.Tick += AnimationTimer_Tick;
+        }
+
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            // Animar painel Veiculos
+            if (panelVeiculos.Height != targetHeightVeiculos)
+            {
+                if (Math.Abs(panelVeiculos.Height - targetHeightVeiculos) <= step)
+                {
+                    panelVeiculos.Height = targetHeightVeiculos;
+                }
+                else
+                {
+                    panelVeiculos.Height += targetHeightVeiculos > panelVeiculos.Height ? step : -step;
+                }
+            }
+
+            // Animar painel Menu
+            if (panelMenu.Width != targetWidthMenu)
+            {
+                if (Math.Abs(panelMenu.Width - targetWidthMenu) <= step)
+                {
+                    panelMenu.Width = targetWidthMenu;
+                }
+                else
+                {
+                    panelMenu.Width += targetWidthMenu > panelMenu.Width ? step : -step;
+                }
+            }
+
+            // Animar painel Importacoes
+            if (panelImportacoes.Height != targetHeightImportacoes)
+            {
+                if (Math.Abs(panelImportacoes.Height - targetHeightImportacoes) <= step)
+                {
+                    panelImportacoes.Height = targetHeightImportacoes;
+                }
+                else
+                {
+                    panelImportacoes.Height += targetHeightImportacoes > panelImportacoes.Height ? step : -step;
+                }
+            }
+
+            // Parar o Timer se todas as animações estiverem concluídas
+            if (panelVeiculos.Height == targetHeightVeiculos &&
+                panelMenu.Width == targetWidthMenu &&
+                panelImportacoes.Height == targetHeightImportacoes)
+            {
+                animationTimer.Stop();
+            }
         }
 
         private void TogglePanel()
         {
+            targetHeightVeiculos = showPanelVeiculos ? 115 : 0;
+            targetWidthMenu = showPanelMenu ? 192 : 40;
+            targetHeightImportacoes = showPanelImportacoes ? 115 : 0;
 
-            panelVeiculos.Height = showPanelVeiculos ? 115 : 0;
-            panelMenu.Width = showPanelMenu ? 192 : 40;
-            panelImportacoes.Height = showPanelImportacoes ? 115 : 0;
+            // Inicia a animação
+            animationTimer.Start();
         }
 
         private void btnVeiculos_Click(object sender, EventArgs e)
@@ -31,46 +99,6 @@ namespace KhoraControl
         {
             showPanelMenu = !showPanelMenu;
             TogglePanel();
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Frm_CadastroVeiculos_UC frm = new Frm_CadastroVeiculos_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tp = new TabPage();
-            tp.Name = frm.Name;
-            tp.Text = "Cadastro Veiculos";
-            tp.Controls.Add(frm);
-            tbcHome.Controls.Add(tp);
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Frm_CadastroEntidades_UC frm = new Frm_CadastroEntidades_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tp = new TabPage();
-            tp.Name = frm.Name;
-            tp.Text = "Cadastro Entidades";
-            tp.Controls.Add(frm);
-            tbcHome.Controls.Add(tp);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Frm_CadastroCheckList_UC frm = new Frm_CadastroCheckList_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tp = new TabPage();
-            tp.Name = frm.Name;
-            tp.Text = "Cadastro Check Lists";
-            tp.Controls.Add(frm);
-            tbcHome.Controls.Add(tp);
         }
 
         private void btnPanelImportacoes_Click(object sender, EventArgs e)
