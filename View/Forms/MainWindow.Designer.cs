@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             btnVeiculos = new Button();
             panelVeiculos = new Panel();
             button3 = new Button();
@@ -44,61 +45,95 @@
             // 
             // btnVeiculos
             // 
+            btnVeiculos.AutoSize = true;
+            btnVeiculos.BackgroundImageLayout = ImageLayout.None;
+            btnVeiculos.Cursor = Cursors.Hand;
+            btnVeiculos.FlatAppearance.BorderSize = 0;
             btnVeiculos.FlatStyle = FlatStyle.Flat;
+            btnVeiculos.Font = new Font("MesloLGLDZ Nerd Font", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnVeiculos.ForeColor = Color.FromArgb(144, 148, 155);
+            btnVeiculos.Image = (Image)resources.GetObject("btnVeiculos.Image");
+            btnVeiculos.ImageAlign = ContentAlignment.MiddleLeft;
             btnVeiculos.Location = new Point(0, 106);
+            btnVeiculos.Margin = new Padding(0);
             btnVeiculos.Name = "btnVeiculos";
-            btnVeiculos.Size = new Size(189, 33);
+            btnVeiculos.Size = new Size(192, 38);
             btnVeiculos.TabIndex = 0;
-            btnVeiculos.Text = "Veiculos";
+            btnVeiculos.Text = "     Cadastros";
+            btnVeiculos.TextAlign = ContentAlignment.MiddleLeft;
             btnVeiculos.UseVisualStyleBackColor = true;
             btnVeiculos.Click += btnVeiculos_Click;
             // 
             // panelVeiculos
             // 
+            panelVeiculos.BackColor = Color.FromArgb(53, 56, 83);
             panelVeiculos.Controls.Add(button3);
             panelVeiculos.Controls.Add(button2);
             panelVeiculos.Controls.Add(button1);
             panelVeiculos.Location = new Point(0, 145);
             panelVeiculos.Name = "panelVeiculos";
-            panelVeiculos.Size = new Size(189, 101);
+            panelVeiculos.Size = new Size(189, 116);
             panelVeiculos.TabIndex = 1;
             // 
             // button3
             // 
+            button3.Cursor = Cursors.Hand;
             button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(0, 66);
+            button3.ForeColor = Color.FromArgb(144, 148, 155);
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(0, 76);
+            button3.Margin = new Padding(0);
             button3.Name = "button3";
-            button3.Size = new Size(189, 33);
+            button3.Size = new Size(189, 38);
             button3.TabIndex = 2;
-            button3.Text = "Configurações Veiculos";
+            button3.Text = "                    Cadastro Check List";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
+            button2.Cursor = Cursors.Hand;
             button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(0, 33);
+            button2.ForeColor = Color.FromArgb(144, 148, 155);
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(0, 38);
+            button2.Margin = new Padding(0);
             button2.Name = "button2";
-            button2.Size = new Size(189, 33);
+            button2.Size = new Size(189, 38);
             button2.TabIndex = 1;
-            button2.Text = "Consulta Veiculos";
+            button2.Text = "                    Cadastro Entidades";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.FromArgb(144, 148, 155);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(189, 33);
+            button1.Size = new Size(189, 38);
             button1.TabIndex = 0;
-            button1.Text = "Cadastro Veiculos";
+            button1.Text = "                    Cadastro Veiculos";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // panelImagem
             // 
+            panelImagem.BackColor = Color.FromArgb(32, 36, 62);
             panelImagem.Controls.Add(btnMenu);
             panelImagem.Dock = DockStyle.Top;
             panelImagem.Location = new Point(0, 0);
@@ -108,16 +143,24 @@
             // 
             // btnMenu
             // 
-            btnMenu.Location = new Point(0, 0);
+            btnMenu.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMenu.BackgroundImage = Properties.Resources.Menu1;
+            btnMenu.BackgroundImageLayout = ImageLayout.Zoom;
+            btnMenu.Cursor = Cursors.Hand;
+            btnMenu.FlatAppearance.BorderSize = 0;
+            btnMenu.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMenu.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMenu.FlatStyle = FlatStyle.Flat;
+            btnMenu.Location = new Point(156, 1);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(41, 30);
+            btnMenu.Size = new Size(30, 30);
             btnMenu.TabIndex = 1;
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = SystemColors.ActiveCaption;
+            panelMenu.BackColor = Color.FromArgb(32, 36, 62);
             panelMenu.Controls.Add(panelImagem);
             panelMenu.Controls.Add(panelVeiculos);
             panelMenu.Controls.Add(btnVeiculos);
@@ -149,6 +192,7 @@
             panelVeiculos.ResumeLayout(false);
             panelImagem.ResumeLayout(false);
             panelMenu.ResumeLayout(false);
+            panelMenu.PerformLayout();
             ResumeLayout(false);
         }
 

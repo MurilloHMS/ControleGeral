@@ -16,7 +16,7 @@ namespace KhoraControl
         {
             if (showPanelVeiculos)
             {
-                panelVeiculos.Height = 100;
+                panelVeiculos.Height = 115;
             }
             else
             {
@@ -55,11 +55,22 @@ namespace KhoraControl
             frm.Dock = DockStyle.Fill;
             TabPage tp = new TabPage();
             tp.Name = frm.Name;
-            tp.Text = frm.Text;
+            tp.Text = "Cadastro Veiculos";
             tp.Controls.Add(frm);
             tbcHome.Controls.Add(tp);
-            
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroEntidades_UC frm = new Frm_CadastroEntidades_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tp = new TabPage();
+            tp.Name = frm.Name;
+            tp.Text = "Cadastro Entidades";
+            tp.Controls.Add(frm);
+            tbcHome.Controls.Add(tp);
         }
     }
 }

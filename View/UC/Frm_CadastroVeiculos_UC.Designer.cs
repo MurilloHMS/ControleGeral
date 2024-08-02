@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroVeiculos_UC));
             groupBox1 = new GroupBox();
+            button1 = new Button();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
@@ -68,12 +69,7 @@
             novaToolStripButton = new ToolStripButton();
             abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
-            imprimirToolStripButton = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
-            recortarToolStripButton = new ToolStripButton();
-            copiarToolStripButton = new ToolStripButton();
-            colarToolStripButton = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
             groupBox1.SuspendLayout();
@@ -83,6 +79,7 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dateTimePicker3);
             groupBox1.Controls.Add(dateTimePicker2);
             groupBox1.Controls.Add(dateTimePicker1);
@@ -125,6 +122,15 @@
             groupBox1.Text = "groupBox1";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // button1
+            // 
+            button1.Location = new Point(640, 462);
+            button1.Name = "button1";
+            button1.Size = new Size(36, 23);
+            button1.TabIndex = 3;
+            button1.Text = "...";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // dateTimePicker3
             // 
             dateTimePicker3.Format = DateTimePickerFormat.Short;
@@ -153,7 +159,7 @@
             // 
             textBox14.Location = new Point(30, 462);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(629, 23);
+            textBox14.Size = new Size(604, 23);
             textBox14.TabIndex = 1;
             // 
             // label14
@@ -404,7 +410,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, recortarToolStripButton, copiarToolStripButton, colarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(714, 25);
@@ -439,51 +445,10 @@
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
             // 
-            // imprimirToolStripButton
-            // 
-            imprimirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            imprimirToolStripButton.Image = (Image)resources.GetObject("imprimirToolStripButton.Image");
-            imprimirToolStripButton.ImageTransparentColor = Color.Magenta;
-            imprimirToolStripButton.Name = "imprimirToolStripButton";
-            imprimirToolStripButton.Size = new Size(23, 22);
-            imprimirToolStripButton.Text = "&Imprimir";
-            // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
             toolStripSeparator.Size = new Size(6, 25);
-            // 
-            // recortarToolStripButton
-            // 
-            recortarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            recortarToolStripButton.Image = (Image)resources.GetObject("recortarToolStripButton.Image");
-            recortarToolStripButton.ImageTransparentColor = Color.Magenta;
-            recortarToolStripButton.Name = "recortarToolStripButton";
-            recortarToolStripButton.Size = new Size(23, 22);
-            recortarToolStripButton.Text = "R&ecortar";
-            // 
-            // copiarToolStripButton
-            // 
-            copiarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            copiarToolStripButton.Image = (Image)resources.GetObject("copiarToolStripButton.Image");
-            copiarToolStripButton.ImageTransparentColor = Color.Magenta;
-            copiarToolStripButton.Name = "copiarToolStripButton";
-            copiarToolStripButton.Size = new Size(23, 22);
-            copiarToolStripButton.Text = "&Copiar";
-            // 
-            // colarToolStripButton
-            // 
-            colarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            colarToolStripButton.Image = (Image)resources.GetObject("colarToolStripButton.Image");
-            colarToolStripButton.ImageTransparentColor = Color.Magenta;
-            colarToolStripButton.Name = "colarToolStripButton";
-            colarToolStripButton.Size = new Size(23, 22);
-            colarToolStripButton.Text = "&Colar";
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
@@ -526,12 +491,7 @@
         private ToolStripButton novaToolStripButton;
         private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;
-        private ToolStripButton imprimirToolStripButton;
         private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton recortarToolStripButton;
-        private ToolStripButton copiarToolStripButton;
-        private ToolStripButton colarToolStripButton;
-        private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ajudaToolStripButton;
         private StatusStrip statusStrip1;
         private TextBox textBox14;
@@ -568,5 +528,6 @@
         private Label label15;
         private Label label17;
         private Label label16;
+        private Button button1;
     }
 }
