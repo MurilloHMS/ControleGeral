@@ -14,14 +14,17 @@ namespace KhoraControl.Model
     {
         [Key]
         public int ID { get; set; }
-        public int ID_NFe { get; set; }
+        public int? ID_NFe { get; set; }
+        [Required]
         public int ID_Veiculo { get; set; }
-        public string NumeroNFe { get; set; }
+        public string? NumeroNFe { get; set; }
         public string CodigoProduto { get; set; }
+        [Required]
         public string DescricaoProduto { get; set; }
+        [Required]
         public int Quantidade {  get; set; }
-        public double ValorUnitario { get; set; }
-        public double ValorTotal { get; set; }
+        public double? ValorUnitario { get; set; }
+        public double? ValorTotal { get; set; }
 
         private readonly DAL<Produtos> _dal;
 

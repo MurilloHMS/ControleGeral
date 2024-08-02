@@ -12,8 +12,8 @@ namespace KhoraControl.Model
     {
         [Key]
         public int ID {  get; set; }
-        public string CNPJ { get; set; }
-        public string IE {  get; set; }
+        public string? CNPJ { get; set; }
+        public string? IE {  get; set; }
 
         private readonly DAL<Concessionaria> _dal;
         public Concessionaria()

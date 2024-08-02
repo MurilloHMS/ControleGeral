@@ -12,7 +12,9 @@ namespace KhoraControl.Model
     {
         [Key]
         public int ID { get; set; }
+        [Required]
         public string CNPJ { get; set; }
+        [Required]
         public string IE {  get; set; }
 
         private readonly DAL<Empresa> _dal;

@@ -12,13 +12,17 @@ namespace KhoraControl.Model
     {
         [Key]
         public int ID { get; set; }
+        [Required]
         public int ID_Veiculo { get; set; }
+        [Required]
         public int ID_Item { get; set; }
-        public int ID_NotaFiscal { get; set; }
-        public int KmRodados { get; set; }
+        public int? ID_NotaFiscal { get; set; }
+        public int? KmRodados { get; set; }
+        [Required]
         public DateTime Data {  get; set; }
+        [Required]
         public int ID_Concessionaria { get; set; }
-        public string Observacoes { get; set; }
+        public string? Observacoes { get; set; }
 
         private readonly DAL<DadosCheckList> _dal;
 
