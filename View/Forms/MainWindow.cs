@@ -6,6 +6,7 @@ namespace KhoraControl
     {
         private Boolean showPanelMenu = false;
         private Boolean showPanelVeiculos = false;
+        private Boolean showPanelImportacoes = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -14,22 +15,10 @@ namespace KhoraControl
 
         private void TogglePanel()
         {
-            if (showPanelVeiculos)
-            {
-                panelVeiculos.Height = 115;
-            }
-            else
-            {
-                panelVeiculos.Height = 0;
-            }
-            if (showPanelMenu)
-            {
-                panelMenu.Width = 192;
-            }
-            else
-            {
-                panelMenu.Width = 40;
-            }
+
+            panelVeiculos.Height = showPanelVeiculos ? 115 : 0;
+            panelMenu.Width = showPanelMenu ? 192 : 40;
+            panelImportacoes.Height = showPanelImportacoes ? 115 : 0;
         }
 
         private void btnVeiculos_Click(object sender, EventArgs e)
@@ -71,6 +60,23 @@ namespace KhoraControl
             tp.Text = "Cadastro Entidades";
             tp.Controls.Add(frm);
             tbcHome.Controls.Add(tp);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroCheckList_UC frm = new Frm_CadastroCheckList_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tp = new TabPage();
+            tp.Name = frm.Name;
+            tp.Text = "Cadastro Check Lists";
+            tp.Controls.Add(frm);
+            tbcHome.Controls.Add(tp);
+        }
+
+        private void btnPanelImportacoes_Click(object sender, EventArgs e)
+        {
+            showPanelImportacoes = !showPanelImportacoes;
+            TogglePanel();
         }
     }
 }

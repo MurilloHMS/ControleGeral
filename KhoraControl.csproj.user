@@ -4,6 +4,9 @@
     <Compile Update="View\Forms\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\UC\Frm_CadastroCheckList_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="View\UC\Frm_CadastroEntidades_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
