@@ -13,7 +13,7 @@ namespace KhoraControl.Model
         [Key]
         public int Id { get; set; }
         [Required] 
-        public string KCSDESCRICAO { get; set; }
+        public string Descricao { get; set; }
 
         private readonly DAL<CheckList> _dal;
         public CheckList() 
