@@ -31,7 +31,9 @@ namespace KhoraControl.Model
         public string? Observacoes {  get; set; }
         [Required]
         public string LocalSalvamentoDeDados { get; set; }
-        public string NotaFiscalDeCompra { get; set; }
+        public string? NotaFiscalDeCompra { get; set; }
+        public int? ID_Empresa { get; set; }
+        public string? TipoVeiculo { get; set; }
 
 
         private readonly DAL<Veiculo> _dal;
