@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    internal class Empresa : Entidade
+    public class Empresa : Entidade
     {
         public int ID { get; set; }
         public string CNPJ { get; set; }

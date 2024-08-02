@@ -22,5 +22,14 @@ namespace KhoraControl.Setup.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite(_connectionString).UseLazyLoadingProxies();
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Entidade>()
+                .HasDiscriminator<string>("Tipo")
+                .HasValue<Empresa>("Empresa")
+                .HasValue<Concessionaria>("Concessionaria");
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

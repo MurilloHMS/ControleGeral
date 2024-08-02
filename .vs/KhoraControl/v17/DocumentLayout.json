@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\entidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\entidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 159,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,37 +27,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 259,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Entidade.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Entidade.cs",
-              "RelativeDocumentMoniker": "Model\\Entidade.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Entidade.cs",
-              "RelativeToolTip": "Model\\Entidade.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T15:44:18.573Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Empresa.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Empresa.cs",
-              "RelativeDocumentMoniker": "Model\\Empresa.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Empresa.cs",
-              "RelativeToolTip": "Model\\Empresa.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "DocumentIndex": 0,
+              "Title": "KhoraContext.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Setup\\Database\\KhoraContext.cs",
+              "RelativeDocumentMoniker": "Setup\\Database\\KhoraContext.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Setup\\Database\\KhoraContext.cs",
+              "RelativeToolTip": "Setup\\Database\\KhoraContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-02T15:28:29.756Z",
+              "WhenOpened": "2024-08-02T15:46:46.082Z",
               "EditorCaption": ""
             }
           ]

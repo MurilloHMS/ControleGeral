@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    internal class DadosCheckList
+    public class DadosCheckList
     {
         public int ID { get; set; }
         public int ID_Veiculo { get; set; }
