@@ -15,6 +15,7 @@ namespace KhoraControl.Model
         [Required] 
         public string Descricao { get; set; }
 
+
         private readonly DAL<CheckList> _dal;
         public CheckList() 
         {

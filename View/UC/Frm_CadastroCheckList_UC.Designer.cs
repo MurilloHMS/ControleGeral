@@ -30,157 +30,155 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCheckList_UC));
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            TxtID = new TextBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            label5 = new Label();
-            label6 = new Label();
-            textBox4 = new TextBox();
-            label7 = new Label();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
+            panelCadastroCheckList = new Panel();
+            textBox7 = new TextBox();
+            label11 = new Label();
+            textBox6 = new TextBox();
+            label10 = new Label();
+            button2 = new Button();
+            textBox5 = new TextBox();
+            label9 = new Label();
+            textBox3 = new TextBox();
+            label8 = new Label();
             button1 = new Button();
             comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            label7 = new Label();
+            textBox4 = new TextBox();
+            label6 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            TxtID = new TextBox();
+            label1 = new Label();
             groupBox2 = new GroupBox();
             checkedListBox1 = new CheckedListBox();
+            BtnShowPanel = new Button();
             groupBox1.SuspendLayout();
+            panelCadastroCheckList.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(TxtID);
-            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(panelCadastroCheckList);
             groupBox1.Location = new Point(17, 18);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(940, 161);
+            groupBox1.Size = new Size(940, 270);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados Veiculo";
             // 
-            // label1
+            // panelCadastroCheckList
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(21, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(18, 15);
-            label1.TabIndex = 0;
-            label1.Text = "ID";
+            panelCadastroCheckList.Controls.Add(BtnShowPanel);
+            panelCadastroCheckList.Controls.Add(textBox7);
+            panelCadastroCheckList.Controls.Add(label11);
+            panelCadastroCheckList.Controls.Add(textBox6);
+            panelCadastroCheckList.Controls.Add(label10);
+            panelCadastroCheckList.Controls.Add(button2);
+            panelCadastroCheckList.Controls.Add(textBox5);
+            panelCadastroCheckList.Controls.Add(label9);
+            panelCadastroCheckList.Controls.Add(textBox3);
+            panelCadastroCheckList.Controls.Add(label8);
+            panelCadastroCheckList.Controls.Add(button1);
+            panelCadastroCheckList.Controls.Add(comboBox2);
+            panelCadastroCheckList.Controls.Add(comboBox1);
+            panelCadastroCheckList.Controls.Add(label5);
+            panelCadastroCheckList.Controls.Add(dateTimePicker1);
+            panelCadastroCheckList.Controls.Add(label7);
+            panelCadastroCheckList.Controls.Add(textBox4);
+            panelCadastroCheckList.Controls.Add(label6);
+            panelCadastroCheckList.Controls.Add(label4);
+            panelCadastroCheckList.Controls.Add(label3);
+            panelCadastroCheckList.Controls.Add(textBox2);
+            panelCadastroCheckList.Controls.Add(textBox1);
+            panelCadastroCheckList.Controls.Add(label2);
+            panelCadastroCheckList.Controls.Add(TxtID);
+            panelCadastroCheckList.Controls.Add(label1);
+            panelCadastroCheckList.Dock = DockStyle.Fill;
+            panelCadastroCheckList.Location = new Point(3, 19);
+            panelCadastroCheckList.Name = "panelCadastroCheckList";
+            panelCadastroCheckList.Size = new Size(934, 248);
+            panelCadastroCheckList.TabIndex = 7;
             // 
-            // TxtID
+            // textBox7
             // 
-            TxtID.Location = new Point(21, 50);
-            TxtID.Name = "TxtID";
-            TxtID.Size = new Size(53, 23);
-            TxtID.TabIndex = 1;
+            textBox7.Location = new Point(598, 102);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(127, 23);
+            textBox7.TabIndex = 26;
             // 
-            // label2
+            // label11
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(148, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 15);
-            label2.TabIndex = 0;
-            label2.Text = "ID";
+            label11.AutoSize = true;
+            label11.Location = new Point(598, 84);
+            label11.Name = "label11";
+            label11.Size = new Size(76, 15);
+            label11.TabIndex = 25;
+            label11.Text = "Valor Revisão";
             // 
-            // textBox1
+            // textBox6
             // 
-            textBox1.Location = new Point(148, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(53, 23);
-            textBox1.TabIndex = 1;
+            textBox6.Location = new Point(442, 102);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(127, 23);
+            textBox6.TabIndex = 26;
             // 
-            // label3
+            // label10
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(207, 35);
-            label3.Name = "label3";
-            label3.Size = new Size(45, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Veiculo";
+            label10.AutoSize = true;
+            label10.Location = new Point(442, 84);
+            label10.Name = "label10";
+            label10.Size = new Size(74, 15);
+            label10.TabIndex = 25;
+            label10.Text = "Km Rodados";
             // 
-            // label4
+            // button2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(581, 33);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 15);
-            label4.TabIndex = 0;
-            label4.Text = "Nota Fiscal ";
+            button2.Cursor = Cursors.Hand;
+            button2.Location = new Point(726, 189);
+            button2.Name = "button2";
+            button2.Size = new Size(136, 25);
+            button2.TabIndex = 24;
+            button2.Text = "Cadastrar CheckList";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // textBox5
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(725, 50);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(100, 23);
-            dateTimePicker1.TabIndex = 2;
+            textBox5.Location = new Point(148, 191);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(550, 23);
+            textBox5.TabIndex = 23;
             // 
-            // label5
+            // label9
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(725, 19);
-            label5.Name = "label5";
-            label5.Size = new Size(100, 15);
-            label5.TabIndex = 3;
-            label5.Text = "Data Lançamento";
+            label9.AutoSize = true;
+            label9.Location = new Point(148, 173);
+            label9.Name = "label9";
+            label9.Size = new Size(113, 15);
+            label9.TabIndex = 18;
+            label9.Text = "Descritivo CheckList";
             // 
-            // label6
+            // textBox3
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(21, 95);
-            label6.Name = "label6";
-            label6.Size = new Size(18, 15);
-            label6.TabIndex = 0;
-            label6.Text = "ID";
+            textBox3.Location = new Point(21, 191);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(72, 23);
+            textBox3.TabIndex = 23;
             // 
-            // textBox4
+            // label8
             // 
-            textBox4.Location = new Point(21, 113);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(53, 23);
-            textBox4.TabIndex = 1;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(80, 95);
-            label7.Name = "label7";
-            label7.Size = new Size(87, 15);
-            label7.TabIndex = 0;
-            label7.Text = "Concessionária";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(80, 113);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(337, 23);
-            comboBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(207, 53);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(285, 23);
-            textBox2.TabIndex = 1;
+            label8.AutoSize = true;
+            label8.Location = new Point(21, 173);
+            label8.Name = "label8";
+            label8.Size = new Size(72, 15);
+            label8.TabIndex = 18;
+            label8.Text = "ID CheckList";
             // 
             // button1
             // 
@@ -191,24 +189,133 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(498, 53);
+            button1.Location = new Point(498, 42);
             button1.Name = "button1";
             button1.Size = new Size(25, 23);
-            button1.TabIndex = 5;
+            button1.TabIndex = 22;
             button1.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(581, 54);
+            comboBox2.Location = new Point(581, 43);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(93, 23);
-            comboBox2.TabIndex = 4;
+            comboBox2.TabIndex = 21;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(80, 102);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(337, 23);
+            comboBox1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(725, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 15);
+            label5.TabIndex = 19;
+            label5.Text = "Data Lançamento";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(725, 39);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(100, 23);
+            dateTimePicker1.TabIndex = 17;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(80, 84);
+            label7.Name = "label7";
+            label7.Size = new Size(87, 15);
+            label7.TabIndex = 12;
+            label7.Text = "Concessionária";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(21, 102);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(53, 23);
+            textBox4.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(21, 84);
+            label6.Name = "label6";
+            label6.Size = new Size(18, 15);
+            label6.TabIndex = 11;
+            label6.Text = "ID";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(581, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Nota Fiscal ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(207, 24);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 15);
+            label3.TabIndex = 9;
+            label3.Text = "Veiculo";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(207, 42);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(285, 23);
+            textBox2.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(148, 42);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(53, 23);
+            textBox1.TabIndex = 13;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(148, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(18, 15);
+            label2.TabIndex = 8;
+            label2.Text = "ID";
+            // 
+            // TxtID
+            // 
+            TxtID.Location = new Point(21, 39);
+            TxtID.Name = "TxtID";
+            TxtID.Size = new Size(53, 23);
+            TxtID.TabIndex = 16;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(21, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(18, 15);
+            label1.TabIndex = 7;
+            label1.Text = "ID";
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(checkedListBox1);
-            groupBox2.Location = new Point(17, 185);
+            groupBox2.Location = new Point(14, 294);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(940, 442);
             groupBox2.TabIndex = 1;
@@ -219,22 +326,33 @@
             // 
             checkedListBox1.Dock = DockStyle.Fill;
             checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Items.AddRange(new object[] { "teste1", "teste2", "teste3", "teste4", "teste5", "teste6", "teste7", "teste8", "teste9", "teste10", "teste11", "teste12", "teste13", "teste14", "teste15" });
             checkedListBox1.Location = new Point(3, 19);
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.Size = new Size(934, 420);
             checkedListBox1.TabIndex = 0;
             // 
+            // BtnShowPanel
+            // 
+            BtnShowPanel.Location = new Point(394, 131);
+            BtnShowPanel.Name = "BtnShowPanel";
+            BtnShowPanel.Size = new Size(75, 23);
+            BtnShowPanel.TabIndex = 27;
+            BtnShowPanel.Text = "button3";
+            BtnShowPanel.UseVisualStyleBackColor = true;
+            BtnShowPanel.Click += BtnShowPanel_Click;
+            // 
             // Frm_CadastroCheckList_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Frm_CadastroCheckList_UC";
-            Size = new Size(976, 668);
+            Size = new Size(976, 751);
             groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            panelCadastroCheckList.ResumeLayout(false);
+            panelCadastroCheckList.PerformLayout();
             groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -242,6 +360,16 @@
         #endregion
 
         private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private CheckedListBox checkedListBox1;
+        private Panel panelCadastroCheckList;
+        private Button button2;
+        private TextBox textBox5;
+        private Label label9;
+        private TextBox textBox3;
+        private Label label8;
+        private Button button1;
+        private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label5;
         private DateTimePicker dateTimePicker1;
@@ -255,9 +383,10 @@
         private Label label2;
         private TextBox TxtID;
         private Label label1;
-        private Button button1;
-        private ComboBox comboBox2;
-        private GroupBox groupBox2;
-        private CheckedListBox checkedListBox1;
+        private TextBox textBox6;
+        private Label label10;
+        private TextBox textBox7;
+        private Label label11;
+        private Button BtnShowPanel;
     }
 }

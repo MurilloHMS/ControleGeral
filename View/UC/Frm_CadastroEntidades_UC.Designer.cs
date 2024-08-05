@@ -340,6 +340,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
+            toolStrip1.RenderMode = ToolStripRenderMode.Professional;
             toolStrip1.Size = new Size(904, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
@@ -399,6 +400,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             Controls.Add(toolStrip1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
