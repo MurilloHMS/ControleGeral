@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroVeiculos_UC));
             groupBox1 = new GroupBox();
+            comboBox1 = new ComboBox();
             button1 = new Button();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
@@ -72,6 +73,9 @@
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
+            label18 = new Label();
+            textBox15 = new TextBox();
+            label19 = new Label();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -79,6 +83,9 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(textBox15);
+            groupBox1.Controls.Add(label19);
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dateTimePicker3);
             groupBox1.Controls.Add(dateTimePicker2);
@@ -90,6 +97,7 @@
             groupBox1.Controls.Add(textBox12);
             groupBox1.Controls.Add(label12);
             groupBox1.Controls.Add(textBox11);
+            groupBox1.Controls.Add(label18);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(textBox10);
             groupBox1.Controls.Add(label17);
@@ -119,15 +127,24 @@
             groupBox1.Size = new Size(682, 501);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Informações Veiculo";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "CARRO", "MOTO ", "CAMINHÃO", "VAN", "ÔNIBUS" });
+            comboBox1.Location = new Point(493, 273);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(162, 23);
+            comboBox1.TabIndex = 19;
             // 
             // button1
             // 
             button1.Location = new Point(640, 462);
             button1.Name = "button1";
             button1.Size = new Size(36, 23);
-            button1.TabIndex = 3;
+            button1.TabIndex = 18;
             button1.Text = "...";
             button1.UseVisualStyleBackColor = true;
             // 
@@ -137,7 +154,7 @@
             dateTimePicker3.Location = new Point(30, 232);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(122, 23);
-            dateTimePicker3.TabIndex = 2;
+            dateTimePicker3.TabIndex = 12;
             // 
             // dateTimePicker2
             // 
@@ -145,7 +162,7 @@
             dateTimePicker2.Location = new Point(322, 171);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(108, 23);
-            dateTimePicker2.TabIndex = 2;
+            dateTimePicker2.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
@@ -153,14 +170,14 @@
             dateTimePicker1.Location = new Point(30, 174);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(122, 23);
-            dateTimePicker1.TabIndex = 2;
+            dateTimePicker1.TabIndex = 8;
             // 
             // textBox14
             // 
             textBox14.Location = new Point(30, 462);
             textBox14.Name = "textBox14";
             textBox14.Size = new Size(604, 23);
-            textBox14.TabIndex = 1;
+            textBox14.TabIndex = 17;
             // 
             // label14
             // 
@@ -177,7 +194,7 @@
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(333, 83);
-            textBox13.TabIndex = 1;
+            textBox13.TabIndex = 16;
             // 
             // label13
             // 
@@ -194,7 +211,7 @@
             textBox12.Multiline = true;
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(268, 83);
-            textBox12.TabIndex = 1;
+            textBox12.TabIndex = 15;
             // 
             // label12
             // 
@@ -207,26 +224,26 @@
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(322, 232);
+            textBox11.Location = new Point(30, 273);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(337, 23);
-            textBox11.TabIndex = 1;
+            textBox11.Size = new Size(446, 23);
+            textBox11.TabIndex = 14;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(322, 214);
+            label11.Location = new Point(30, 255);
             label11.Name = "label11";
-            label11.Size = new Size(58, 15);
+            label11.Size = new Size(127, 15);
             label11.TabIndex = 0;
-            label11.Text = "Motorista";
+            label11.Text = "Nota Fiscal de Compra";
             // 
             // textBox10
             // 
             textBox10.Location = new Point(176, 232);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(122, 23);
-            textBox10.TabIndex = 1;
+            textBox10.TabIndex = 13;
             // 
             // label17
             // 
@@ -251,7 +268,7 @@
             textBox9.Location = new Point(447, 171);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(108, 23);
-            textBox9.TabIndex = 1;
+            textBox9.TabIndex = 11;
             // 
             // label16
             // 
@@ -276,7 +293,7 @@
             textBox8.Location = new Point(114, 62);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(104, 23);
-            textBox8.TabIndex = 1;
+            textBox8.TabIndex = 2;
             // 
             // label8
             // 
@@ -292,7 +309,7 @@
             textBox7.Location = new Point(176, 174);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(131, 23);
-            textBox7.TabIndex = 1;
+            textBox7.TabIndex = 9;
             // 
             // label15
             // 
@@ -317,7 +334,7 @@
             textBox6.Location = new Point(499, 122);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(156, 23);
-            textBox6.TabIndex = 1;
+            textBox6.TabIndex = 7;
             // 
             // label6
             // 
@@ -333,7 +350,7 @@
             textBox5.Location = new Point(368, 122);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(108, 23);
-            textBox5.TabIndex = 1;
+            textBox5.TabIndex = 6;
             // 
             // label5
             // 
@@ -349,7 +366,7 @@
             textBox4.Location = new Point(551, 62);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(104, 23);
-            textBox4.TabIndex = 1;
+            textBox4.TabIndex = 3;
             // 
             // label4
             // 
@@ -365,7 +382,7 @@
             textBox3.Location = new Point(248, 122);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 1;
+            textBox3.TabIndex = 5;
             // 
             // label3
             // 
@@ -381,7 +398,7 @@
             textBox2.Location = new Point(30, 122);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(212, 23);
-            textBox2.TabIndex = 1;
+            textBox2.TabIndex = 4;
             // 
             // label2
             // 
@@ -424,7 +441,8 @@
             novaToolStripButton.ImageTransparentColor = Color.Magenta;
             novaToolStripButton.Name = "novaToolStripButton";
             novaToolStripButton.Size = new Size(23, 22);
-            novaToolStripButton.Text = "&Nova";
+            novaToolStripButton.Text = "&Novo";
+            novaToolStripButton.ToolTipText = "Cadastrar Novo Veiculo";
             // 
             // abrirToolStripButton
             // 
@@ -444,6 +462,7 @@
             salvarToolStripButton.Name = "salvarToolStripButton";
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.ToolTipText = "Salvar Alterações";
             // 
             // toolStripSeparator
             // 
@@ -466,6 +485,31 @@
             statusStrip1.Size = new Size(714, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(493, 255);
+            label18.Name = "label18";
+            label18.Size = new Size(71, 15);
+            label18.TabIndex = 0;
+            label18.Text = "Tipo Veiculo";
+            // 
+            // textBox15
+            // 
+            textBox15.Location = new Point(221, 62);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(104, 23);
+            textBox15.TabIndex = 21;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(219, 44);
+            label19.Name = "label19";
+            label19.Size = new Size(66, 15);
+            label19.TabIndex = 20;
+            label19.Text = "ID Empresa";
             // 
             // Frm_CadastroVeiculos_UC
             // 
@@ -529,5 +573,9 @@
         private Label label17;
         private Label label16;
         private Button button1;
+        private ComboBox comboBox1;
+        private TextBox textBox15;
+        private Label label19;
+        private Label label18;
     }
 }
