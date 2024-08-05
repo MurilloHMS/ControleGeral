@@ -1,4 +1,5 @@
-﻿using KhoraControl.Setup.Database;
+﻿using KhoraControl.Model.Validation;
+using KhoraControl.Setup.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    public class Veiculo
+    public class Veiculo : ValidaObjeto
     {
         [Key]
         public int ID { get; set; }
@@ -26,7 +27,7 @@ namespace KhoraControl.Model
         public DateTime? DataProximaRevisao { get; set; }
         public int? KmProximaRevisao{ get; set; }
         public int? ID_Concessionaria { get; set; }
-        public string? Motorista { get; set; }
+        public string? Motorista { get; set; } // falta campo no formulário 05/08/2024 (No momento não é necessário Motorista) 
         public string? SugestaoConcessionaria { get; set; }
         public string? Observacoes {  get; set; }
         [Required]

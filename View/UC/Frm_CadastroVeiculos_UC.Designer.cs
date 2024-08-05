@@ -30,41 +30,48 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroVeiculos_UC));
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
+            cbEmpresa = new ComboBox();
+            cbConcessionária = new ComboBox();
+            TxtIDEmpresa = new TextBox();
+            label19 = new Label();
+            cbTipoVeiculo = new ComboBox();
             button1 = new Button();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            textBox14 = new TextBox();
+            DtpDataProximaRevisao = new DateTimePicker();
+            DtpDataUltimaRevisao = new DateTimePicker();
+            DtpDataDaCompra = new DateTimePicker();
+            TxtLocalSalvamento = new TextBox();
             label14 = new Label();
-            textBox13 = new TextBox();
+            TxtObs = new TextBox();
             label13 = new Label();
-            textBox12 = new TextBox();
+            TxtSugestaoConcessionaria = new TextBox();
             label12 = new Label();
-            textBox11 = new TextBox();
+            TxtNotaFiscalDeCompra = new TextBox();
+            label18 = new Label();
             label11 = new Label();
-            textBox10 = new TextBox();
+            TxtKmProximaRevisao = new TextBox();
             label17 = new Label();
             label10 = new Label();
-            textBox9 = new TextBox();
+            TxtKmUltimaRevisao = new TextBox();
             label16 = new Label();
             label9 = new Label();
-            textBox8 = new TextBox();
+            TxtIDConcessionaria = new TextBox();
             label8 = new Label();
-            textBox7 = new TextBox();
+            TxtKmQuandoComprado = new TextBox();
+            label21 = new Label();
+            label20 = new Label();
             label15 = new Label();
             label7 = new Label();
-            textBox6 = new TextBox();
+            TxtModelo = new TextBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            TxtAno = new TextBox();
             label5 = new Label();
-            textBox4 = new TextBox();
+            TxtKmRodados = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            TxtPlaca = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            TxtMarca = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            TxtID = new TextBox();
             label1 = new Label();
             toolStrip1 = new ToolStrip();
             novaToolStripButton = new ToolStripButton();
@@ -73,9 +80,6 @@
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
-            label18 = new Label();
-            textBox15 = new TextBox();
-            label19 = new Label();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -83,44 +87,48 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            groupBox1.Controls.Add(textBox15);
+            groupBox1.Controls.Add(cbEmpresa);
+            groupBox1.Controls.Add(cbConcessionária);
+            groupBox1.Controls.Add(TxtIDEmpresa);
             groupBox1.Controls.Add(label19);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cbTipoVeiculo);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(dateTimePicker3);
-            groupBox1.Controls.Add(dateTimePicker2);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox14);
+            groupBox1.Controls.Add(DtpDataProximaRevisao);
+            groupBox1.Controls.Add(DtpDataUltimaRevisao);
+            groupBox1.Controls.Add(DtpDataDaCompra);
+            groupBox1.Controls.Add(TxtLocalSalvamento);
             groupBox1.Controls.Add(label14);
-            groupBox1.Controls.Add(textBox13);
+            groupBox1.Controls.Add(TxtObs);
             groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(textBox12);
+            groupBox1.Controls.Add(TxtSugestaoConcessionaria);
             groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(textBox11);
+            groupBox1.Controls.Add(TxtNotaFiscalDeCompra);
             groupBox1.Controls.Add(label18);
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(textBox10);
+            groupBox1.Controls.Add(TxtKmProximaRevisao);
             groupBox1.Controls.Add(label17);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(textBox9);
+            groupBox1.Controls.Add(TxtKmUltimaRevisao);
             groupBox1.Controls.Add(label16);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(textBox8);
+            groupBox1.Controls.Add(TxtIDConcessionaria);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox7);
+            groupBox1.Controls.Add(TxtKmQuandoComprado);
+            groupBox1.Controls.Add(label21);
+            groupBox1.Controls.Add(label20);
             groupBox1.Controls.Add(label15);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(TxtModelo);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(TxtAno);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(TxtKmRodados);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(TxtPlaca);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(TxtMarca);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(TxtID);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(15, 43);
             groupBox1.Name = "groupBox1";
@@ -130,14 +138,48 @@
             groupBox1.Text = "Informações Veiculo";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // comboBox1
+            // cbEmpresa
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "CARRO", "MOTO ", "CAMINHÃO", "VAN", "ÔNIBUS" });
-            comboBox1.Location = new Point(493, 273);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 23);
-            comboBox1.TabIndex = 19;
+            cbEmpresa.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEmpresa.FormattingEnabled = true;
+            cbEmpresa.Location = new Point(464, 62);
+            cbEmpresa.Name = "cbEmpresa";
+            cbEmpresa.Size = new Size(191, 23);
+            cbEmpresa.TabIndex = 22;
+            // 
+            // cbConcessionária
+            // 
+            cbConcessionária.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbConcessionária.FormattingEnabled = true;
+            cbConcessionária.Location = new Point(163, 62);
+            cbConcessionária.Name = "cbConcessionária";
+            cbConcessionária.Size = new Size(211, 23);
+            cbConcessionária.TabIndex = 22;
+            // 
+            // TxtIDEmpresa
+            // 
+            TxtIDEmpresa.Location = new Point(418, 62);
+            TxtIDEmpresa.Name = "TxtIDEmpresa";
+            TxtIDEmpresa.Size = new Size(35, 23);
+            TxtIDEmpresa.TabIndex = 21;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(416, 44);
+            label19.Name = "label19";
+            label19.Size = new Size(18, 15);
+            label19.TabIndex = 20;
+            label19.Text = "ID";
+            // 
+            // cbTipoVeiculo
+            // 
+            cbTipoVeiculo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTipoVeiculo.FormattingEnabled = true;
+            cbTipoVeiculo.Location = new Point(493, 273);
+            cbTipoVeiculo.Name = "cbTipoVeiculo";
+            cbTipoVeiculo.Size = new Size(162, 23);
+            cbTipoVeiculo.TabIndex = 19;
             // 
             // button1
             // 
@@ -147,37 +189,39 @@
             button1.TabIndex = 18;
             button1.Text = "...";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // dateTimePicker3
+            // DtpDataProximaRevisao
             // 
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(30, 232);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(122, 23);
-            dateTimePicker3.TabIndex = 12;
+            DtpDataProximaRevisao.Format = DateTimePickerFormat.Short;
+            DtpDataProximaRevisao.Location = new Point(30, 232);
+            DtpDataProximaRevisao.Name = "DtpDataProximaRevisao";
+            DtpDataProximaRevisao.Size = new Size(122, 23);
+            DtpDataProximaRevisao.TabIndex = 12;
             // 
-            // dateTimePicker2
+            // DtpDataUltimaRevisao
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(322, 171);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(108, 23);
-            dateTimePicker2.TabIndex = 10;
+            DtpDataUltimaRevisao.Format = DateTimePickerFormat.Short;
+            DtpDataUltimaRevisao.Location = new Point(322, 171);
+            DtpDataUltimaRevisao.Name = "DtpDataUltimaRevisao";
+            DtpDataUltimaRevisao.Size = new Size(108, 23);
+            DtpDataUltimaRevisao.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // DtpDataDaCompra
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(30, 174);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(122, 23);
-            dateTimePicker1.TabIndex = 8;
+            DtpDataDaCompra.Format = DateTimePickerFormat.Short;
+            DtpDataDaCompra.Location = new Point(30, 174);
+            DtpDataDaCompra.Name = "DtpDataDaCompra";
+            DtpDataDaCompra.Size = new Size(122, 23);
+            DtpDataDaCompra.TabIndex = 8;
             // 
-            // textBox14
+            // TxtLocalSalvamento
             // 
-            textBox14.Location = new Point(30, 462);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(604, 23);
-            textBox14.TabIndex = 17;
+            TxtLocalSalvamento.Location = new Point(30, 462);
+            TxtLocalSalvamento.Name = "TxtLocalSalvamento";
+            TxtLocalSalvamento.ReadOnly = true;
+            TxtLocalSalvamento.Size = new Size(604, 23);
+            TxtLocalSalvamento.TabIndex = 17;
             // 
             // label14
             // 
@@ -188,13 +232,13 @@
             label14.TabIndex = 0;
             label14.Text = "Local Salvamento Documentos";
             // 
-            // textBox13
+            // TxtObs
             // 
-            textBox13.Location = new Point(326, 332);
-            textBox13.Multiline = true;
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(333, 83);
-            textBox13.TabIndex = 16;
+            TxtObs.Location = new Point(326, 332);
+            TxtObs.Multiline = true;
+            TxtObs.Name = "TxtObs";
+            TxtObs.Size = new Size(333, 83);
+            TxtObs.TabIndex = 16;
             // 
             // label13
             // 
@@ -205,13 +249,13 @@
             label13.TabIndex = 0;
             label13.Text = "Observações";
             // 
-            // textBox12
+            // TxtSugestaoConcessionaria
             // 
-            textBox12.Location = new Point(30, 332);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(268, 83);
-            textBox12.TabIndex = 15;
+            TxtSugestaoConcessionaria.Location = new Point(30, 332);
+            TxtSugestaoConcessionaria.Multiline = true;
+            TxtSugestaoConcessionaria.Name = "TxtSugestaoConcessionaria";
+            TxtSugestaoConcessionaria.Size = new Size(268, 83);
+            TxtSugestaoConcessionaria.TabIndex = 15;
             // 
             // label12
             // 
@@ -222,12 +266,22 @@
             label12.TabIndex = 0;
             label12.Text = "Sugestão Concessionária";
             // 
-            // textBox11
+            // TxtNotaFiscalDeCompra
             // 
-            textBox11.Location = new Point(30, 273);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(446, 23);
-            textBox11.TabIndex = 14;
+            TxtNotaFiscalDeCompra.Location = new Point(30, 273);
+            TxtNotaFiscalDeCompra.Name = "TxtNotaFiscalDeCompra";
+            TxtNotaFiscalDeCompra.ReadOnly = true;
+            TxtNotaFiscalDeCompra.Size = new Size(446, 23);
+            TxtNotaFiscalDeCompra.TabIndex = 14;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(493, 255);
+            label18.Name = "label18";
+            label18.Size = new Size(71, 15);
+            label18.TabIndex = 0;
+            label18.Text = "Tipo Veiculo";
             // 
             // label11
             // 
@@ -238,12 +292,12 @@
             label11.TabIndex = 0;
             label11.Text = "Nota Fiscal de Compra";
             // 
-            // textBox10
+            // TxtKmProximaRevisao
             // 
-            textBox10.Location = new Point(176, 232);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(122, 23);
-            textBox10.TabIndex = 13;
+            TxtKmProximaRevisao.Location = new Point(176, 232);
+            TxtKmProximaRevisao.Name = "TxtKmProximaRevisao";
+            TxtKmProximaRevisao.Size = new Size(122, 23);
+            TxtKmProximaRevisao.TabIndex = 13;
             // 
             // label17
             // 
@@ -261,14 +315,14 @@
             label10.Name = "label10";
             label10.Size = new Size(115, 15);
             label10.TabIndex = 0;
-            label10.Text = "Km Proxima Revisõa";
+            label10.Text = "Km Proxima Revisão";
             // 
-            // textBox9
+            // TxtKmUltimaRevisao
             // 
-            textBox9.Location = new Point(447, 171);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(108, 23);
-            textBox9.TabIndex = 11;
+            TxtKmUltimaRevisao.Location = new Point(447, 171);
+            TxtKmUltimaRevisao.Name = "TxtKmUltimaRevisao";
+            TxtKmUltimaRevisao.Size = new Size(108, 23);
+            TxtKmUltimaRevisao.TabIndex = 11;
             // 
             // label16
             // 
@@ -288,12 +342,12 @@
             label9.TabIndex = 0;
             label9.Text = "Km Ultima Revisão";
             // 
-            // textBox8
+            // TxtIDConcessionaria
             // 
-            textBox8.Location = new Point(114, 62);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(104, 23);
-            textBox8.TabIndex = 2;
+            TxtIDConcessionaria.Location = new Point(119, 62);
+            TxtIDConcessionaria.Name = "TxtIDConcessionaria";
+            TxtIDConcessionaria.Size = new Size(38, 23);
+            TxtIDConcessionaria.TabIndex = 2;
             // 
             // label8
             // 
@@ -304,21 +358,39 @@
             label8.TabIndex = 0;
             label8.Text = "Data da Compra";
             // 
-            // textBox7
+            // TxtKmQuandoComprado
             // 
-            textBox7.Location = new Point(176, 174);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(131, 23);
-            textBox7.TabIndex = 9;
+            TxtKmQuandoComprado.Location = new Point(176, 174);
+            TxtKmQuandoComprado.Name = "TxtKmQuandoComprado";
+            TxtKmQuandoComprado.Size = new Size(131, 23);
+            TxtKmQuandoComprado.TabIndex = 9;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(471, 44);
+            label21.Name = "label21";
+            label21.Size = new Size(52, 15);
+            label21.TabIndex = 0;
+            label21.Text = "Empresa";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(167, 44);
+            label20.Name = "label20";
+            label20.Size = new Size(87, 15);
+            label20.TabIndex = 0;
+            label20.Text = "Concessionária";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(112, 44);
+            label15.Location = new Point(117, 44);
             label15.Name = "label15";
-            label15.Size = new Size(101, 15);
+            label15.Size = new Size(18, 15);
             label15.TabIndex = 0;
-            label15.Text = "ID Concessionaria";
+            label15.Text = "ID";
             // 
             // label7
             // 
@@ -329,12 +401,12 @@
             label7.TabIndex = 0;
             label7.Text = "Km Quando Comprado";
             // 
-            // textBox6
+            // TxtModelo
             // 
-            textBox6.Location = new Point(499, 122);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(156, 23);
-            textBox6.TabIndex = 7;
+            TxtModelo.Location = new Point(499, 122);
+            TxtModelo.Name = "TxtModelo";
+            TxtModelo.Size = new Size(156, 23);
+            TxtModelo.TabIndex = 7;
             // 
             // label6
             // 
@@ -345,12 +417,12 @@
             label6.TabIndex = 0;
             label6.Text = "MODELO";
             // 
-            // textBox5
+            // TxtAno
             // 
-            textBox5.Location = new Point(368, 122);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(108, 23);
-            textBox5.TabIndex = 6;
+            TxtAno.Location = new Point(368, 122);
+            TxtAno.Name = "TxtAno";
+            TxtAno.Size = new Size(108, 23);
+            TxtAno.TabIndex = 6;
             // 
             // label5
             // 
@@ -361,28 +433,28 @@
             label5.TabIndex = 0;
             label5.Text = "ANO";
             // 
-            // textBox4
+            // TxtKmRodados
             // 
-            textBox4.Location = new Point(551, 62);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(104, 23);
-            textBox4.TabIndex = 3;
+            TxtKmRodados.Location = new Point(451, 229);
+            TxtKmRodados.Name = "TxtKmRodados";
+            TxtKmRodados.Size = new Size(104, 23);
+            TxtKmRodados.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(551, 44);
+            label4.Location = new Point(451, 211);
             label4.Name = "label4";
             label4.Size = new Size(83, 15);
             label4.TabIndex = 0;
             label4.Text = "KM RODADOS";
             // 
-            // textBox3
+            // TxtPlaca
             // 
-            textBox3.Location = new Point(248, 122);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            TxtPlaca.Location = new Point(248, 122);
+            TxtPlaca.Name = "TxtPlaca";
+            TxtPlaca.Size = new Size(100, 23);
+            TxtPlaca.TabIndex = 5;
             // 
             // label3
             // 
@@ -393,12 +465,12 @@
             label3.TabIndex = 0;
             label3.Text = "PLACA";
             // 
-            // textBox2
+            // TxtMarca
             // 
-            textBox2.Location = new Point(30, 122);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(212, 23);
-            textBox2.TabIndex = 4;
+            TxtMarca.Location = new Point(30, 122);
+            TxtMarca.Name = "TxtMarca";
+            TxtMarca.Size = new Size(212, 23);
+            TxtMarca.TabIndex = 4;
             // 
             // label2
             // 
@@ -409,12 +481,12 @@
             label2.TabIndex = 0;
             label2.Text = "MARCA";
             // 
-            // textBox1
+            // TxtID
             // 
-            textBox1.Location = new Point(30, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(78, 23);
-            textBox1.TabIndex = 1;
+            TxtID.Location = new Point(30, 62);
+            TxtID.Name = "TxtID";
+            TxtID.Size = new Size(49, 23);
+            TxtID.TabIndex = 1;
             // 
             // label1
             // 
@@ -452,7 +524,8 @@
             abrirToolStripButton.Name = "abrirToolStripButton";
             abrirToolStripButton.Size = new Size(23, 22);
             abrirToolStripButton.Text = "&Abrir";
-            abrirToolStripButton.ToolTipText = "Selecionar Local Salvamentos";
+            abrirToolStripButton.ToolTipText = "Selecionar Documento De Compra";
+            abrirToolStripButton.Click += abrirToolStripButton_Click;
             // 
             // salvarToolStripButton
             // 
@@ -463,6 +536,7 @@
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
             salvarToolStripButton.ToolTipText = "Salvar Alterações";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
             // toolStripSeparator
             // 
@@ -486,35 +560,11 @@
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(493, 255);
-            label18.Name = "label18";
-            label18.Size = new Size(71, 15);
-            label18.TabIndex = 0;
-            label18.Text = "Tipo Veiculo";
-            // 
-            // textBox15
-            // 
-            textBox15.Location = new Point(221, 62);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(104, 23);
-            textBox15.TabIndex = 21;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(219, 44);
-            label19.Name = "label19";
-            label19.Size = new Size(66, 15);
-            label19.TabIndex = 20;
-            label19.Text = "ID Empresa";
-            // 
             // Frm_CadastroVeiculos_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Lavender;
             Controls.Add(statusStrip1);
             Controls.Add(toolStrip1);
             Controls.Add(groupBox1);
@@ -538,44 +588,48 @@
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
         private StatusStrip statusStrip1;
-        private TextBox textBox14;
+        private TextBox TxtLocalSalvamento;
         private Label label14;
-        private TextBox textBox13;
+        private TextBox TxtObs;
         private Label label13;
-        private TextBox textBox12;
+        private TextBox TxtSugestaoConcessionaria;
         private Label label12;
-        private TextBox textBox11;
+        private TextBox TxtNotaFiscalDeCompra;
         private Label label11;
-        private TextBox textBox10;
+        private TextBox TxtKmProximaRevisao;
         private Label label10;
-        private TextBox textBox9;
+        private TextBox TxtKmUltimaRevisao;
         private Label label9;
-        private TextBox textBox8;
+        private TextBox TxtIDConcessionaria;
         private Label label8;
-        private TextBox textBox7;
+        private TextBox TxtKmQuandoComprado;
         private Label label7;
-        private TextBox textBox6;
+        private TextBox TxtModelo;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox TxtAno;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox TxtKmRodados;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox TxtPlaca;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox TxtMarca;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox TxtID;
         private Label label1;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DtpDataProximaRevisao;
+        private DateTimePicker DtpDataUltimaRevisao;
+        private DateTimePicker DtpDataDaCompra;
         private Label label15;
         private Label label17;
         private Label label16;
         private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox15;
+        private ComboBox cbTipoVeiculo;
+        private TextBox TxtIDEmpresa;
         private Label label19;
         private Label label18;
+        private ComboBox cbEmpresa;
+        private ComboBox cbConcessionária;
+        private Label label21;
+        private Label label20;
     }
 }

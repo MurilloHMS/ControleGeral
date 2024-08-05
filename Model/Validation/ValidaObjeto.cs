@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model.Validation
 {
-    internal class ValidaObjeto
+    public class ValidaObjeto
     {
         public void ValidaClasse()
         {
