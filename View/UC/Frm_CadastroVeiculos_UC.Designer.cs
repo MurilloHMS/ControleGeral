@@ -80,6 +80,7 @@
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
+            LimpartoolStripButton = new ToolStripButton();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -406,6 +407,7 @@
             // 
             // TxtModelo
             // 
+            TxtModelo.CharacterCasing = CharacterCasing.Upper;
             TxtModelo.Location = new Point(499, 122);
             TxtModelo.Name = "TxtModelo";
             TxtModelo.Size = new Size(156, 23);
@@ -422,6 +424,7 @@
             // 
             // TxtAno
             // 
+            TxtAno.CharacterCasing = CharacterCasing.Upper;
             TxtAno.Location = new Point(368, 122);
             TxtAno.Name = "TxtAno";
             TxtAno.Size = new Size(108, 23);
@@ -432,9 +435,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(368, 104);
             label5.Name = "label5";
-            label5.Size = new Size(33, 15);
+            label5.Size = new Size(87, 15);
             label5.TabIndex = 0;
-            label5.Text = "ANO";
+            label5.Text = "ANO/MODELO";
             // 
             // TxtKmRodados
             // 
@@ -454,6 +457,7 @@
             // 
             // TxtPlaca
             // 
+            TxtPlaca.CharacterCasing = CharacterCasing.Upper;
             TxtPlaca.Location = new Point(248, 122);
             TxtPlaca.Name = "TxtPlaca";
             TxtPlaca.Size = new Size(100, 23);
@@ -470,6 +474,7 @@
             // 
             // TxtMarca
             // 
+            TxtMarca.CharacterCasing = CharacterCasing.Upper;
             TxtMarca.Location = new Point(30, 122);
             TxtMarca.Name = "TxtMarca";
             TxtMarca.Size = new Size(212, 23);
@@ -502,7 +507,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, LimpartoolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(714, 25);
@@ -562,6 +567,17 @@
             statusStrip1.Size = new Size(714, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
+            // 
+            // LimpartoolStripButton
+            // 
+            LimpartoolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            LimpartoolStripButton.Image = (Image)resources.GetObject("LimpartoolStripButton.Image");
+            LimpartoolStripButton.ImageTransparentColor = Color.Magenta;
+            LimpartoolStripButton.Name = "LimpartoolStripButton";
+            LimpartoolStripButton.Size = new Size(23, 22);
+            LimpartoolStripButton.Text = "&Limpar";
+            LimpartoolStripButton.ToolTipText = "Limpar Dados";
+            LimpartoolStripButton.Click += LimpartoolStripButton_Click;
             // 
             // Frm_CadastroVeiculos_UC
             // 
@@ -634,5 +650,6 @@
         private ComboBox cbConcessionária;
         private Label label21;
         private Label label20;
+        private ToolStripButton LimpartoolStripButton;
     }
 }

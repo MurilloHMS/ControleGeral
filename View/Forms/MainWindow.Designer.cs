@@ -191,6 +191,7 @@
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;

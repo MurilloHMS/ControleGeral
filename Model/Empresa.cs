@@ -10,8 +10,7 @@ namespace KhoraControl.Model
 {
     public class Empresa : Entidade
     {
-        [Key]
-        public int ID { get; set; }
+        
         [Required]
         public string CNPJ { get; set; }
         [Required]

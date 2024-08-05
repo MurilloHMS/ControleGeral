@@ -11,6 +11,7 @@ namespace KhoraControl.Model.Enums
         Carro,
         Caminhão,
         Moto,
-        Van
+        Van,
+        Caminhonete
     }
 }

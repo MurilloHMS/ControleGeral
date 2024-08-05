@@ -200,6 +200,7 @@ namespace KhoraControl
             tabPage.Text = "Cadastro De Veiculos";
             tabPage.Controls.Add(frm);
             tbcHome.TabPages.Add(tabPage);
+            tbcHome.SelectedTab = tabPage;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -211,6 +212,7 @@ namespace KhoraControl
             tabPage.Text = "Cadastro de Entidades";
             tabPage.Controls.Add(frm);
             tbcHome.TabPages.Add(tabPage);
+            tbcHome.SelectedTab = tabPage;
         }
 
         private void BtnDashBoard_Click(object sender, EventArgs e)
@@ -222,6 +224,7 @@ namespace KhoraControl
             tabPage.Text = "DashBoard Analise Veiculos";
             tabPage.Controls.Add(frm);
             tbcHome.TabPages.Add(tabPage);
+            tbcHome.SelectedTab = tabPage;
         }
     }
 }

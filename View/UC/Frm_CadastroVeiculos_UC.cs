@@ -45,8 +45,8 @@ namespace KhoraControl.View.UC
             {
                 v.ID = int.Parse(TxtID.Text);
             }
-            v.ID_Concessionaria = int.Parse(TxtIDConcessionaria.Text);
-            v.ID_Empresa = int.Parse(TxtIDEmpresa.Text);
+            v.ID_Concessionaria = ParseNullable(TxtIDConcessionaria.Text);
+            v.ID_Empresa = ParseNullable(TxtIDEmpresa.Text);
             v.Marca = TxtMarca.Text;
             v.Placa = TxtPlaca.Text;
             v.Ano = TxtAno.Text;
@@ -62,6 +62,28 @@ namespace KhoraControl.View.UC
             v.LocalSalvamentoDeDados = TxtLocalSalvamento.Text;
 
             return v;
+        }
+
+        private void ClearData()
+        {
+            TxtID.Clear();
+            TxtAno.Clear();
+            TxtIDConcessionaria.Clear();
+            TxtIDEmpresa.Clear();
+            TxtKmProximaRevisao.Clear();
+            TxtKmQuandoComprado.Clear();
+            TxtKmRodados.Clear();
+            TxtKmUltimaRevisao.Clear();
+            TxtLocalSalvamento.Clear();
+            TxtModelo.Clear();
+            TxtObs.Clear();
+            TxtPlaca.Clear();
+            TxtSugestaoConcessionaria.Clear();
+            TxtMarca.Clear();
+            TxtNotaFiscalDeCompra.Clear();
+            cbConcessionária.SelectedIndex = 0;
+            cbEmpresa.SelectedIndex = 0;
+            cbTipoVeiculo.SelectedIndex = 0;
         }
 
         private int? ParseNullable(string text)
@@ -80,13 +102,13 @@ namespace KhoraControl.View.UC
                 {
                     veiculo.Update();
                     MessageBox.Show("Veiculo Atualizado com sucesso!", "Atualização Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    ClearData();
                 }
                 else
                 {
                     veiculo.Insert();
                     MessageBox.Show("Veiculo Cadastrado com sucesso!", "Cadastro Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    ClearData();
                 }
             }
             catch (ValidationException ex)
@@ -159,6 +181,11 @@ namespace KhoraControl.View.UC
             {
                 TxtIDEmpresa.Text = retorno.ID.ToString();
             }
+        }
+
+        private void LimpartoolStripButton_Click(object sender, EventArgs e)
+        {
+            ClearData();
         }
     }
 }

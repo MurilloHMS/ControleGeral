@@ -31,26 +31,26 @@
             groupBox1 = new GroupBox();
             panel3 = new Panel();
             label2 = new Label();
+            panel1 = new Panel();
+            label1 = new Label();
+            TxtQuantVeiculo = new Label();
             comboBox4 = new ComboBox();
             comboBox3 = new ComboBox();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            label1 = new Label();
-            label6 = new Label();
+            DgvVeiculos = new DataGridView();
+            groupBox2 = new GroupBox();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DgvVeiculos).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(panel3);
-            groupBox1.Controls.Add(comboBox4);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(panel2);
             groupBox1.Controls.Add(panel1);
             groupBox1.Location = new Point(13, 17);
             groupBox1.Name = "groupBox1";
@@ -61,6 +61,7 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(label2);
             panel3.Location = new Point(656, 22);
             panel3.Name = "panel3";
@@ -78,46 +79,10 @@
             label2.Text = "Resumo de Veiculos Ativos e inativos";
             label2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(502, 198);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(105, 23);
-            comboBox4.TabIndex = 3;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(391, 198);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(105, 23);
-            comboBox3.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(169, 22);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(438, 170);
-            panel2.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(438, 170);
-            dataGridView1.TabIndex = 0;
-            // 
             // panel1
             // 
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(label6);
+            panel1.Controls.Add(TxtQuantVeiculo);
             panel1.Location = new Point(16, 49);
             panel1.Name = "panel1";
             panel1.Size = new Size(120, 129);
@@ -134,32 +99,89 @@
             label1.TabIndex = 0;
             label1.Text = "Total de Veiculos ";
             // 
-            // label6
+            // TxtQuantVeiculo
             // 
-            label6.Dock = DockStyle.Fill;
-            label6.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(120, 129);
-            label6.TabIndex = 0;
-            label6.Text = "0";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
+            TxtQuantVeiculo.Dock = DockStyle.Fill;
+            TxtQuantVeiculo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TxtQuantVeiculo.Location = new Point(0, 0);
+            TxtQuantVeiculo.Name = "TxtQuantVeiculo";
+            TxtQuantVeiculo.Size = new Size(120, 129);
+            TxtQuantVeiculo.TabIndex = 0;
+            TxtQuantVeiculo.Text = "0";
+            TxtQuantVeiculo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // comboBox4
+            // 
+            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(806, 267);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(105, 23);
+            comboBox4.TabIndex = 3;
+            // 
+            // comboBox3
+            // 
+            comboBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(695, 267);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(105, 23);
+            comboBox3.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(DgvVeiculos);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 19);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(898, 346);
+            panel2.TabIndex = 2;
+            // 
+            // DgvVeiculos
+            // 
+            DgvVeiculos.AllowUserToAddRows = false;
+            DgvVeiculos.AllowUserToDeleteRows = false;
+            DgvVeiculos.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgvVeiculos.Location = new Point(0, 0);
+            DgvVeiculos.Name = "DgvVeiculos";
+            DgvVeiculos.ReadOnly = true;
+            DgvVeiculos.Size = new Size(898, 346);
+            DgvVeiculos.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            groupBox2.AutoSize = true;
+            groupBox2.Controls.Add(panel2);
+            groupBox2.Location = new Point(13, 296);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(904, 368);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Veiculos";
             // 
             // Frm_Dashboard_Uc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
+            Controls.Add(groupBox2);
+            Controls.Add(comboBox4);
             Controls.Add(groupBox1);
+            Controls.Add(comboBox3);
             Name = "Frm_Dashboard_Uc";
             Size = new Size(931, 685);
+            Load += Frm_Dashboard_Uc_Load;
             groupBox1.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DgvVeiculos).EndInit();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -167,12 +189,13 @@
         private GroupBox groupBox1;
         private Label label1;
         private Panel panel1;
-        private Label label6;
+        private Label TxtQuantVeiculo;
         private ComboBox comboBox4;
         private ComboBox comboBox3;
         private Panel panel2;
-        private DataGridView dataGridView1;
+        private DataGridView DgvVeiculos;
         private Panel panel3;
         private Label label2;
+        private GroupBox groupBox2;
     }
 }

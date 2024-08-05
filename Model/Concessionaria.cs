@@ -12,8 +12,7 @@ namespace KhoraControl.Model
 {
     public class Concessionaria : Entidade
     {
-        [Key]
-        public int ID {  get; set; }
+        
         public string? CNPJ { get; set; }
         public string? IE {  get; set; }
 

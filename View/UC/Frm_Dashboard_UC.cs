@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KhoraControl.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,19 @@ namespace KhoraControl.View.UC
         public Frm_Dashboard_Uc()
         {
             InitializeComponent();
+        }
+
+        public void MostrarDadosVeiculo()
+        {
+            Veiculo veiculo = new Veiculo();
+            var dados = veiculo.GetAll();
+            DgvVeiculos.DataSource = dados;
+            TxtQuantVeiculo.Text = dados.Count().ToString();
+        }
+
+        private void Frm_Dashboard_Uc_Load(object sender, EventArgs e)
+        {
+            MostrarDadosVeiculo();
         }
     }
 }

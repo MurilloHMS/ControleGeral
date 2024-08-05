@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_dashboard_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_dashboard_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\forms\\mainwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,25 +31,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.cs [Projeto]",
+              "Title": "MainWindow.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\MainWindow.cs",
               "RelativeDocumentMoniker": "View\\Forms\\MainWindow.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\MainWindow.cs [Projeto]",
-              "RelativeToolTip": "View\\Forms\\MainWindow.cs [Projeto]",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\MainWindow.cs*",
+              "RelativeToolTip": "View\\Forms\\MainWindow.cs*",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAUwOIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T18:12:46.179Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-08-05T19:14:37.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Frm_Dashboard_UC.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_Dashboard_UC.cs",
-              "RelativeDocumentMoniker": "View\\UC\\Frm_Dashboard_UC.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_Dashboard_UC.cs [Projeto]",
-              "RelativeToolTip": "View\\UC\\Frm_Dashboard_UC.cs [Projeto]",
+              "Title": "MainWindow.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\MainWindow.cs",
+              "RelativeDocumentMoniker": "View\\Forms\\MainWindow.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\MainWindow.cs [Projeto]*",
+              "RelativeToolTip": "View\\Forms\\MainWindow.cs [Projeto]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T18:12:13.039Z",
+              "WhenOpened": "2024-08-05T18:12:46.179Z",
               "EditorCaption": " [Projeto]"
             }
           ]
