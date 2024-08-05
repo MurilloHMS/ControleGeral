@@ -1,3 +1,4 @@
+using KhoraControl.View.UC;
 using System;
 using System.Windows.Forms;
 
@@ -13,7 +14,7 @@ namespace KhoraControl
         private int targetHeightVeiculos;
         private int targetWidthMenu;
         private int targetHeightImportacoes;
-        private int step = 10; // Ajuste a velocidade da animação
+        private int step = 13; // Ajuste a velocidade da animação
 
         public MainWindow()
         {
@@ -105,6 +106,87 @@ namespace KhoraControl
         {
             showPanelImportacoes = !showPanelImportacoes;
             TogglePanel();
+        }
+
+        private void tbcHome_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                var ContextMenu = new ContextMenuStrip();
+
+                var vToolTip001 = CriaItemMenu("Fechar Aba", "Close Tab");
+                var vToolTip002 = CriaItemMenu("Fechar Todas as Abas", "Close All Tabs");
+                var vToolTip003 = CriaItemMenu("Fechar Todas as Abas a Direita", "Close Pane");
+
+                ContextMenu.Items.Add(vToolTip001);
+                ContextMenu.Items.Add(vToolTip002);
+                ContextMenu.Items.Add(vToolTip003);
+
+                ContextMenu.Show(this, new Point(e.X, e.Y));
+                vToolTip001.Click += new System.EventHandler(vToolTip001_Click);
+                vToolTip002.Click += new System.EventHandler(vToolTip002_Click);
+                vToolTip003.Click += new System.EventHandler(vToolTip003_Click);
+
+            }
+        }
+
+        void vToolTip001_Click(object sender, EventArgs e)
+        {
+            //apaga a aba selecionada 
+            if (!(tbcHome.SelectedTab == null))
+            {
+                tbcHome.TabPages.Remove(tbcHome.SelectedTab);
+            }
+        }
+        void vToolTip002_Click(object sender, EventArgs e)
+        {
+            //apaga todas as abas
+            tbcHome.TabPages.Clear();
+        }
+        void vToolTip003_Click(object sender, EventArgs e)
+        {
+            //apaga todas as abas a direita
+            if (!(tbcHome.SelectedTab == null))
+            {
+                int ItemSelecionado = tbcHome.SelectedIndex;
+
+                for (int i = tbcHome.TabCount - 1; i > ItemSelecionado; i += -1)
+                {
+
+                    tbcHome.TabPages.Remove(tbcHome.TabPages[i]);
+
+                }
+            }
+        }
+
+        private ToolStripMenuItem CriaItemMenu(String text, string nomeDoIcone)
+        {
+            var vToolTip = new ToolStripMenuItem();
+            vToolTip.Text = text;
+            return vToolTip;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroVeiculos_UC frm = new Frm_CadastroVeiculos_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tabPage = new TabPage();
+            tabPage.Name = frm.Name;
+            tabPage.Text = "Cadastro De Veiculos";
+            tabPage.Controls.Add(frm);
+            tbcHome.TabPages.Add(tabPage);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroEntidades_UC frm = new Frm_CadastroEntidades_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tabPage = new TabPage();
+            tabPage.Name = frm.Name;
+            tabPage.Text = "Cadastro de Entidades";
+            tabPage.Controls.Add(frm);
+            tbcHome.TabPages.Add(tabPage);
         }
     }
 }

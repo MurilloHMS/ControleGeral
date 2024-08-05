@@ -32,8 +32,8 @@
             btnVeiculos = new Button();
             panelVeiculos = new Panel();
             button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
+            button2 = new Button();
             panelImagem = new Panel();
             btnMenu = new Button();
             panelMenu = new Panel();
@@ -63,7 +63,7 @@
             btnVeiculos.Location = new Point(0, 104);
             btnVeiculos.Margin = new Padding(0);
             btnVeiculos.Name = "btnVeiculos";
-            btnVeiculos.Size = new Size(380, 38);
+            btnVeiculos.Size = new Size(199, 38);
             btnVeiculos.TabIndex = 2;
             btnVeiculos.Text = "     Cadastros";
             btnVeiculos.TextAlign = ContentAlignment.MiddleLeft;
@@ -80,7 +80,7 @@
             panelVeiculos.Location = new Point(0, 142);
             panelVeiculos.Margin = new Padding(0);
             panelVeiculos.Name = "panelVeiculos";
-            panelVeiculos.Size = new Size(380, 116);
+            panelVeiculos.Size = new Size(199, 116);
             panelVeiculos.TabIndex = 1;
             // 
             // button3
@@ -95,29 +95,11 @@
             button3.Location = new Point(0, 76);
             button3.Margin = new Padding(0);
             button3.Name = "button3";
-            button3.Size = new Size(380, 38);
+            button3.Size = new Size(199, 38);
             button3.TabIndex = 2;
             button3.Text = "                    Cadastro Check List";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Cursor = Cursors.Hand;
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(144, 148, 155);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 0);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(380, 38);
-            button2.TabIndex = 1;
-            button2.Text = "                    Cadastro Entidades";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -131,11 +113,31 @@
             button1.Location = new Point(0, 38);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(380, 38);
+            button1.Size = new Size(199, 38);
             button1.TabIndex = 0;
             button1.Text = "                    Cadastro Veiculos";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Cursor = Cursors.Hand;
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(144, 148, 155);
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(0, 0);
+            button2.Margin = new Padding(0);
+            button2.Name = "button2";
+            button2.Size = new Size(199, 38);
+            button2.TabIndex = 1;
+            button2.Text = "                    Cadastro Entidades";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // panelImagem
             // 
@@ -144,7 +146,7 @@
             panelImagem.Dock = DockStyle.Top;
             panelImagem.Location = new Point(0, 0);
             panelImagem.Name = "panelImagem";
-            panelImagem.Size = new Size(380, 104);
+            panelImagem.Size = new Size(199, 104);
             panelImagem.TabIndex = 1;
             // 
             // btnMenu
@@ -157,7 +159,7 @@
             btnMenu.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnMenu.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnMenu.FlatStyle = FlatStyle.Flat;
-            btnMenu.Location = new Point(344, 1);
+            btnMenu.Location = new Point(163, 1);
             btnMenu.Name = "btnMenu";
             btnMenu.Size = new Size(30, 30);
             btnMenu.TabIndex = 1;
@@ -175,7 +177,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(380, 630);
+            panelMenu.Size = new Size(199, 630);
             panelMenu.TabIndex = 0;
             // 
             // panelImportacoes
@@ -186,7 +188,7 @@
             panelImportacoes.Dock = DockStyle.Top;
             panelImportacoes.Location = new Point(0, 296);
             panelImportacoes.Name = "panelImportacoes";
-            panelImportacoes.Size = new Size(380, 116);
+            panelImportacoes.Size = new Size(199, 116);
             panelImportacoes.TabIndex = 2;
             // 
             // button6
@@ -201,7 +203,7 @@
             button6.Location = new Point(0, 38);
             button6.Margin = new Padding(0);
             button6.Name = "button6";
-            button6.Size = new Size(380, 38);
+            button6.Size = new Size(199, 38);
             button6.TabIndex = 1;
             button6.Text = "                    Importar Excel";
             button6.TextAlign = ContentAlignment.MiddleLeft;
@@ -219,7 +221,7 @@
             button7.Location = new Point(0, 0);
             button7.Margin = new Padding(0);
             button7.Name = "button7";
-            button7.Size = new Size(380, 38);
+            button7.Size = new Size(199, 38);
             button7.TabIndex = 0;
             button7.Text = "                    Importar XML";
             button7.TextAlign = ContentAlignment.MiddleLeft;
@@ -240,7 +242,7 @@
             btnPanelImportacoes.Location = new Point(0, 258);
             btnPanelImportacoes.Margin = new Padding(0);
             btnPanelImportacoes.Name = "btnPanelImportacoes";
-            btnPanelImportacoes.Size = new Size(380, 38);
+            btnPanelImportacoes.Size = new Size(199, 38);
             btnPanelImportacoes.TabIndex = 3;
             btnPanelImportacoes.Text = "     Importações";
             btnPanelImportacoes.TextAlign = ContentAlignment.MiddleLeft;
@@ -250,11 +252,12 @@
             // tbcHome
             // 
             tbcHome.Dock = DockStyle.Fill;
-            tbcHome.Location = new Point(380, 0);
+            tbcHome.Location = new Point(199, 0);
             tbcHome.Name = "tbcHome";
             tbcHome.SelectedIndex = 0;
-            tbcHome.Size = new Size(420, 630);
+            tbcHome.Size = new Size(601, 630);
             tbcHome.TabIndex = 1;
+            tbcHome.MouseDown += tbcHome_MouseDown;
             // 
             // MainWindow
             // 
@@ -264,7 +267,9 @@
             Controls.Add(tbcHome);
             Controls.Add(panelMenu);
             Name = "MainWindow";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Controle De Projetos";
+            WindowState = FormWindowState.Maximized;
             panelVeiculos.ResumeLayout(false);
             panelImagem.ResumeLayout(false);
             panelMenu.ResumeLayout(false);
