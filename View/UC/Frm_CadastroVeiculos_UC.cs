@@ -52,20 +52,21 @@ namespace KhoraControl.View.UC
             v.Ano = TxtAno.Text;
             v.Modelo = TxtModelo.Text;
             v.DataDaCompra = DtpDataDaCompra.Value;
-            v.KmQuandoComprado = int.Parse(TxtKmQuandoComprado.Text);
+            v.KmQuandoComprado = ParseNullable(TxtKmQuandoComprado.Text);
             v.DataUltimaRevisao = DtpDataUltimaRevisao.Value;
-            v.KmUltimaRevisao = int.Parse(TxtKmUltimaRevisao.Text);
+            v.KmUltimaRevisao = ParseNullable(TxtKmUltimaRevisao.Text);
             v.DataProximaRevisao = DtpDataProximaRevisao.Value;
-            v.KmRodados = int.Parse(TxtKmRodados.Text);
+            v.KmRodados = ParseNullable(TxtKmRodados.Text);
             v.SugestaoConcessionaria = TxtSugestaoConcessionaria.Text;
             v.Observacoes = TxtObs.Text;
             v.LocalSalvamentoDeDados = TxtLocalSalvamento.Text;
 
-
-
-
-
             return v;
+        }
+
+        private int? ParseNullable(string text)
+        {
+            return int.TryParse(text, out var result) ? (int)result : null;
         }
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
@@ -75,7 +76,7 @@ namespace KhoraControl.View.UC
                 Veiculo veiculo = new Veiculo();
                 veiculo = CollectData();
                 veiculo.ValidaClasse();
-                if (string.IsNullOrEmpty(TxtID.Text))
+                if (!string.IsNullOrEmpty(TxtID.Text))
                 {
                     veiculo.Update();
                     MessageBox.Show("Veiculo Atualizado com sucesso!", "Atualização Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -152,7 +153,7 @@ namespace KhoraControl.View.UC
         {
             TxtIDEmpresa.Text = string.Empty;
             Empresa emp = new Empresa();
-            string nome = cbConcessionária.Text;
+            string nome = cbEmpresa.Text;
             var retorno = emp.ReturnForName(nome);
             if (retorno != null)
             {

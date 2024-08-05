@@ -253,6 +253,7 @@
             // 
             // TxtSugestaoConcessionaria
             // 
+            TxtSugestaoConcessionaria.CharacterCasing = CharacterCasing.Upper;
             TxtSugestaoConcessionaria.Location = new Point(30, 332);
             TxtSugestaoConcessionaria.Multiline = true;
             TxtSugestaoConcessionaria.Name = "TxtSugestaoConcessionaria";
