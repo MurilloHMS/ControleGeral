@@ -77,7 +77,7 @@ namespace KhoraControl
             // Animar painel Analises
             if (panelAnalises.Height != targetHeightAnalises)
             {
-                if(Math.Abs(panelAnalises.Height - targetHeightAnalises) <= step)
+                if (Math.Abs(panelAnalises.Height - targetHeightAnalises) <= step)
                 {
                     panelAnalises.Height = targetHeightAnalises;
                 }
@@ -213,6 +213,15 @@ namespace KhoraControl
             tbcHome.TabPages.Add(tabPage);
         }
 
-        
+        private void BtnDashBoard_Click(object sender, EventArgs e)
+        {
+            Frm_Dashboard_Uc frm = new Frm_Dashboard_Uc();
+            frm.Dock= DockStyle.Fill;
+            TabPage tabPage = new TabPage();
+            tabPage.Name = frm.Name;
+            tabPage.Text = "DashBoard Analise Veiculos";
+            tabPage.Controls.Add(frm);
+            tbcHome.TabPages.Add(tabPage);
+        }
     }
 }

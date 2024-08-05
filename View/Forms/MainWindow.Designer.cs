@@ -37,20 +37,21 @@
             panelImagem = new Panel();
             btnMenu = new Button();
             panelMenu = new Panel();
+            button4 = new Button();
+            panelAnalises = new Panel();
+            button5 = new Button();
+            BtnDashBoard = new Button();
+            BtnPanelAnalises = new Button();
             panelImportacoes = new Panel();
             button6 = new Button();
             button7 = new Button();
             btnPanelImportacoes = new Button();
             tbcHome = new TabControl();
-            BtnPanelAnalises = new Button();
-            panelAnalises = new Panel();
-            button5 = new Button();
-            BtnDashBoard = new Button();
             panelVeiculos.SuspendLayout();
             panelImagem.SuspendLayout();
             panelMenu.SuspendLayout();
-            panelImportacoes.SuspendLayout();
             panelAnalises.SuspendLayout();
+            panelImportacoes.SuspendLayout();
             SuspendLayout();
             // 
             // btnVeiculos
@@ -174,6 +175,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(32, 36, 62);
+            panelMenu.Controls.Add(button4);
             panelMenu.Controls.Add(panelAnalises);
             panelMenu.Controls.Add(BtnPanelAnalises);
             panelMenu.Controls.Add(panelImportacoes);
@@ -184,8 +186,92 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(199, 630);
+            panelMenu.Size = new Size(199, 723);
             panelMenu.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(0, 674);
+            button4.Name = "button4";
+            button4.Size = new Size(40, 37);
+            button4.TabIndex = 6;
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // panelAnalises
+            // 
+            panelAnalises.BackColor = Color.FromArgb(53, 56, 83);
+            panelAnalises.Controls.Add(button5);
+            panelAnalises.Controls.Add(BtnDashBoard);
+            panelAnalises.Dock = DockStyle.Top;
+            panelAnalises.Location = new Point(0, 450);
+            panelAnalises.Name = "panelAnalises";
+            panelAnalises.Size = new Size(199, 116);
+            panelAnalises.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.Cursor = Cursors.Hand;
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.FromArgb(144, 148, 155);
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(0, 38);
+            button5.Margin = new Padding(0);
+            button5.Name = "button5";
+            button5.Size = new Size(199, 38);
+            button5.TabIndex = 1;
+            button5.Text = "                    Exportar Excel";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // BtnDashBoard
+            // 
+            BtnDashBoard.Cursor = Cursors.Hand;
+            BtnDashBoard.Dock = DockStyle.Top;
+            BtnDashBoard.FlatAppearance.BorderSize = 0;
+            BtnDashBoard.FlatStyle = FlatStyle.Flat;
+            BtnDashBoard.ForeColor = Color.FromArgb(144, 148, 155);
+            BtnDashBoard.Image = (Image)resources.GetObject("BtnDashBoard.Image");
+            BtnDashBoard.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnDashBoard.Location = new Point(0, 0);
+            BtnDashBoard.Margin = new Padding(0);
+            BtnDashBoard.Name = "BtnDashBoard";
+            BtnDashBoard.Size = new Size(199, 38);
+            BtnDashBoard.TabIndex = 0;
+            BtnDashBoard.Text = "                    DashBoard";
+            BtnDashBoard.TextAlign = ContentAlignment.MiddleLeft;
+            BtnDashBoard.UseVisualStyleBackColor = true;
+            BtnDashBoard.Click += BtnDashBoard_Click;
+            // 
+            // BtnPanelAnalises
+            // 
+            BtnPanelAnalises.AutoSize = true;
+            BtnPanelAnalises.BackgroundImageLayout = ImageLayout.None;
+            BtnPanelAnalises.Cursor = Cursors.Hand;
+            BtnPanelAnalises.Dock = DockStyle.Top;
+            BtnPanelAnalises.FlatAppearance.BorderSize = 0;
+            BtnPanelAnalises.FlatStyle = FlatStyle.Flat;
+            BtnPanelAnalises.Font = new Font("MesloLGLDZ Nerd Font", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BtnPanelAnalises.ForeColor = Color.FromArgb(144, 148, 155);
+            BtnPanelAnalises.Image = (Image)resources.GetObject("BtnPanelAnalises.Image");
+            BtnPanelAnalises.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnPanelAnalises.Location = new Point(0, 412);
+            BtnPanelAnalises.Margin = new Padding(0);
+            BtnPanelAnalises.Name = "BtnPanelAnalises";
+            BtnPanelAnalises.Size = new Size(199, 38);
+            BtnPanelAnalises.TabIndex = 4;
+            BtnPanelAnalises.Text = "      Analises";
+            BtnPanelAnalises.TextAlign = ContentAlignment.MiddleLeft;
+            BtnPanelAnalises.UseVisualStyleBackColor = true;
+            BtnPanelAnalises.Click += BtnPanelAnalises_Click;
             // 
             // panelImportacoes
             // 
@@ -262,96 +348,26 @@
             tbcHome.Location = new Point(199, 0);
             tbcHome.Name = "tbcHome";
             tbcHome.SelectedIndex = 0;
-            tbcHome.Size = new Size(601, 630);
+            tbcHome.Size = new Size(977, 723);
             tbcHome.TabIndex = 1;
             tbcHome.MouseDown += tbcHome_MouseDown;
-            // 
-            // BtnPanelAnalises
-            // 
-            BtnPanelAnalises.AutoSize = true;
-            BtnPanelAnalises.BackgroundImageLayout = ImageLayout.None;
-            BtnPanelAnalises.Cursor = Cursors.Hand;
-            BtnPanelAnalises.Dock = DockStyle.Top;
-            BtnPanelAnalises.FlatAppearance.BorderSize = 0;
-            BtnPanelAnalises.FlatStyle = FlatStyle.Flat;
-            BtnPanelAnalises.Font = new Font("MesloLGLDZ Nerd Font", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            BtnPanelAnalises.ForeColor = Color.FromArgb(144, 148, 155);
-            BtnPanelAnalises.Image = (Image)resources.GetObject("BtnPanelAnalises.Image");
-            BtnPanelAnalises.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnPanelAnalises.Location = new Point(0, 412);
-            BtnPanelAnalises.Margin = new Padding(0);
-            BtnPanelAnalises.Name = "BtnPanelAnalises";
-            BtnPanelAnalises.Size = new Size(199, 38);
-            BtnPanelAnalises.TabIndex = 4;
-            BtnPanelAnalises.Text = "      Analises";
-            BtnPanelAnalises.TextAlign = ContentAlignment.MiddleLeft;
-            BtnPanelAnalises.UseVisualStyleBackColor = true;
-            BtnPanelAnalises.Click += BtnPanelAnalises_Click;
-            // 
-            // panelAnalises
-            // 
-            panelAnalises.BackColor = Color.FromArgb(53, 56, 83);
-            panelAnalises.Controls.Add(button5);
-            panelAnalises.Controls.Add(BtnDashBoard);
-            panelAnalises.Dock = DockStyle.Top;
-            panelAnalises.Location = new Point(0, 450);
-            panelAnalises.Name = "panelAnalises";
-            panelAnalises.Size = new Size(199, 116);
-            panelAnalises.TabIndex = 5;
-            // 
-            // button5
-            // 
-            button5.Cursor = Cursors.Hand;
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.FromArgb(144, 148, 155);
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(0, 38);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.Size = new Size(199, 38);
-            button5.TabIndex = 1;
-            button5.Text = "                    Exportar Excel";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // BtnDashBoard
-            // 
-            BtnDashBoard.Cursor = Cursors.Hand;
-            BtnDashBoard.Dock = DockStyle.Top;
-            BtnDashBoard.FlatAppearance.BorderSize = 0;
-            BtnDashBoard.FlatStyle = FlatStyle.Flat;
-            BtnDashBoard.ForeColor = Color.FromArgb(144, 148, 155);
-            BtnDashBoard.Image = (Image)resources.GetObject("BtnDashBoard.Image");
-            BtnDashBoard.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnDashBoard.Location = new Point(0, 0);
-            BtnDashBoard.Margin = new Padding(0);
-            BtnDashBoard.Name = "BtnDashBoard";
-            BtnDashBoard.Size = new Size(199, 38);
-            BtnDashBoard.TabIndex = 0;
-            BtnDashBoard.Text = "                    DashBoard";
-            BtnDashBoard.TextAlign = ContentAlignment.MiddleLeft;
-            BtnDashBoard.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 630);
+            ClientSize = new Size(1176, 723);
             Controls.Add(tbcHome);
             Controls.Add(panelMenu);
             Name = "MainWindow";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Controle De Projetos";
-            WindowState = FormWindowState.Maximized;
+            Text = "Khora Control";
             panelVeiculos.ResumeLayout(false);
             panelImagem.ResumeLayout(false);
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
-            panelImportacoes.ResumeLayout(false);
             panelAnalises.ResumeLayout(false);
+            panelImportacoes.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -374,5 +390,6 @@
         private Button button5;
         private Button BtnDashBoard;
         private Button BtnPanelAnalises;
+        private Button button4;
     }
 }
