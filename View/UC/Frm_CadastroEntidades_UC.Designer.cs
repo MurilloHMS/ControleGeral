@@ -203,11 +203,17 @@
             // 
             // button1
             // 
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(97, 56);
             button1.Name = "button1";
             button1.Size = new Size(27, 23);
             button1.TabIndex = 3;
-            button1.Text = "?";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

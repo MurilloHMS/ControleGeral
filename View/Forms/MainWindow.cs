@@ -218,10 +218,22 @@ namespace KhoraControl
         private void BtnDashBoard_Click(object sender, EventArgs e)
         {
             Frm_Dashboard_Uc frm = new Frm_Dashboard_Uc();
-            frm.Dock= DockStyle.Fill;
+            frm.Dock = DockStyle.Fill;
             TabPage tabPage = new TabPage();
             tabPage.Name = frm.Name;
             tabPage.Text = "DashBoard Analise Veiculos";
+            tabPage.Controls.Add(frm);
+            tbcHome.TabPages.Add(tabPage);
+            tbcHome.SelectedTab = tabPage;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frm_CadastroCheckList_UC frm = new Frm_CadastroCheckList_UC();
+            frm.Dock = DockStyle.Fill;
+            TabPage tabPage = new TabPage();
+            tabPage.Name = frm.Name;
+            tabPage.Text = "Cadastro CheckList";
             tabPage.Controls.Add(frm);
             tbcHome.TabPages.Add(tabPage);
             tbcHome.SelectedTab = tabPage;

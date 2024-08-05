@@ -106,6 +106,7 @@
             button3.Text = "                    Cadastro Check List";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
