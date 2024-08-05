@@ -48,5 +48,10 @@ namespace KhoraControl.Model
         {
             return _dal.ObterRegistroPor(r => r.ID.Equals(id));
         }
+
+        public Empresa ReturnForName(string name)
+        {
+            return _dal.ObterRegistroPor(r => r.Nome.Equals(name));
+        }
     }
 }

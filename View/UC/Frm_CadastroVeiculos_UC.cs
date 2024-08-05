@@ -10,19 +10,32 @@ namespace KhoraControl.View.UC
         public Frm_CadastroVeiculos_UC()
         {
             InitializeComponent();
-            cbTipoVeiculo.DataSource = Enum.GetValues(typeof(TipoVeiculo_e));
-            Concessionaria con = new Concessionaria();
-            BindingSource binding = new BindingSource();
-            binding.DataSource = con.ReturnAll();
-            cbConcessionária.DataSource = binding;
-            cbConcessionária.DisplayMember = "Name";
-            cbConcessionária.ValueMember = "Nome";
-
+            PreencheComboBox();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        private void PreencheComboBox()
+        {
+            Concessionaria con = new Concessionaria();
+            var itens = con.ReturnAll();
+            cbConcessionária.Items.Add(string.Empty);
+            foreach (var it in itens)
+            {
+                cbConcessionária.Items.Add(it.Nome);
+            }
+
+            cbTipoVeiculo.DataSource = Enum.GetValues(typeof(TipoVeiculo_e));
+
+            Empresa emp = new Empresa();
+            var item = emp.ReturnAll();
+            cbEmpresa.Items.Add(string.Empty);
+            foreach (var it in item)
+            {
+                cbEmpresa.Items.Add(it.Nome);
+            }
         }
 
         private Veiculo CollectData()
@@ -120,6 +133,30 @@ namespace KhoraControl.View.UC
                     string[] files = Directory.GetFiles(fbd.SelectedPath);
                     TxtLocalSalvamento.Text = fbd.SelectedPath;
                 }
+            }
+        }
+
+        private void cbConcessionária_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtIDConcessionaria.Text = string.Empty;
+            Concessionaria con = new Concessionaria();
+            string nome = cbConcessionária.Text;
+            var retorno = con.ReturnForName(nome);
+            if (retorno != null)
+            {
+                TxtIDConcessionaria.Text = retorno.ID.ToString();
+            }
+        }
+
+        private void cbEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtIDEmpresa.Text = string.Empty;
+            Empresa emp = new Empresa();
+            string nome = cbConcessionária.Text;
+            var retorno = emp.ReturnForName(nome);
+            if (retorno != null)
+            {
+                TxtIDEmpresa.Text = retorno.ID.ToString();
             }
         }
     }

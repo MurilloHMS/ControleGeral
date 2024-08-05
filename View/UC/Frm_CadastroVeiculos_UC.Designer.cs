@@ -146,14 +146,17 @@
             cbEmpresa.Name = "cbEmpresa";
             cbEmpresa.Size = new Size(191, 23);
             cbEmpresa.TabIndex = 22;
+            cbEmpresa.SelectedIndexChanged += cbEmpresa_SelectedIndexChanged;
             // 
             // cbConcessionária
             // 
+            cbConcessionária.DropDownStyle = ComboBoxStyle.DropDownList;
             cbConcessionária.FormattingEnabled = true;
             cbConcessionária.Location = new Point(163, 62);
             cbConcessionária.Name = "cbConcessionária";
             cbConcessionária.Size = new Size(211, 23);
             cbConcessionária.TabIndex = 22;
+            cbConcessionária.SelectedIndexChanged += cbConcessionária_SelectedIndexChanged;
             // 
             // TxtIDEmpresa
             // 

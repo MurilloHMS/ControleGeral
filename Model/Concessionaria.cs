@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,6 +45,11 @@ namespace KhoraControl.Model
         public Concessionaria ReturnForID(int id)
         {
             return _dal.ObterRegistroPor(r => r.ID.Equals(id));
+        }
+
+        public Concessionaria ReturnForName(string name)
+        {
+            return _dal.ObterRegistroPor(r => r.Nome.Equals(name));    
         }
     }
 }
