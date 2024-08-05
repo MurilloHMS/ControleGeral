@@ -13,5 +13,8 @@
     <Compile Update="View\UC\Frm_CadastroVeiculos_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="View\UC\Frm_Dashboard_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -10,10 +10,13 @@ namespace KhoraControl
         private Boolean showPanelMenu = false;
         private Boolean showPanelVeiculos = false;
         private Boolean showPanelImportacoes = false;
+        private Boolean showPanelAnalises = false;
+
         private System.Windows.Forms.Timer animationTimer;
         private int targetHeightVeiculos;
         private int targetWidthMenu;
         private int targetHeightImportacoes;
+        private int targetHeightAnalises;
         private int step = 13; // Ajuste a velocidade da animação
 
         public MainWindow()
@@ -71,10 +74,24 @@ namespace KhoraControl
                 }
             }
 
+            // Animar painel Analises
+            if (panelAnalises.Height != targetHeightAnalises)
+            {
+                if(Math.Abs(panelAnalises.Height - targetHeightAnalises) <= step)
+                {
+                    panelAnalises.Height = targetHeightAnalises;
+                }
+                else
+                {
+                    panelAnalises.Height += targetHeightAnalises > panelAnalises.Height ? step : -step;
+                }
+            }
+
             // Parar o Timer se todas as animações estiverem concluídas
             if (panelVeiculos.Height == targetHeightVeiculos &&
                 panelMenu.Width == targetWidthMenu &&
-                panelImportacoes.Height == targetHeightImportacoes)
+                panelImportacoes.Height == targetHeightImportacoes &&
+                panelAnalises.Height == targetHeightAnalises)
             {
                 animationTimer.Stop();
             }
@@ -85,6 +102,7 @@ namespace KhoraControl
             targetHeightVeiculos = showPanelVeiculos ? 115 : 0;
             targetWidthMenu = showPanelMenu ? 192 : 40;
             targetHeightImportacoes = showPanelImportacoes ? 115 : 0;
+            targetHeightAnalises = showPanelAnalises ? 115 : 0;
 
             // Inicia a animação
             animationTimer.Start();
@@ -105,6 +123,12 @@ namespace KhoraControl
         private void btnPanelImportacoes_Click(object sender, EventArgs e)
         {
             showPanelImportacoes = !showPanelImportacoes;
+            TogglePanel();
+        }
+
+        private void BtnPanelAnalises_Click(object sender, EventArgs e)
+        {
+            showPanelAnalises = !showPanelAnalises;
             TogglePanel();
         }
 
@@ -188,5 +212,7 @@ namespace KhoraControl
             tabPage.Controls.Add(frm);
             tbcHome.TabPages.Add(tabPage);
         }
+
+        
     }
 }

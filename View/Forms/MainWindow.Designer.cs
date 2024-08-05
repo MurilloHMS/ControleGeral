@@ -42,10 +42,15 @@
             button7 = new Button();
             btnPanelImportacoes = new Button();
             tbcHome = new TabControl();
+            BtnPanelAnalises = new Button();
+            panelAnalises = new Panel();
+            button5 = new Button();
+            BtnDashBoard = new Button();
             panelVeiculos.SuspendLayout();
             panelImagem.SuspendLayout();
             panelMenu.SuspendLayout();
             panelImportacoes.SuspendLayout();
+            panelAnalises.SuspendLayout();
             SuspendLayout();
             // 
             // btnVeiculos
@@ -169,6 +174,8 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(32, 36, 62);
+            panelMenu.Controls.Add(panelAnalises);
+            panelMenu.Controls.Add(BtnPanelAnalises);
             panelMenu.Controls.Add(panelImportacoes);
             panelMenu.Controls.Add(btnPanelImportacoes);
             panelMenu.Controls.Add(panelVeiculos);
@@ -259,6 +266,75 @@
             tbcHome.TabIndex = 1;
             tbcHome.MouseDown += tbcHome_MouseDown;
             // 
+            // BtnPanelAnalises
+            // 
+            BtnPanelAnalises.AutoSize = true;
+            BtnPanelAnalises.BackgroundImageLayout = ImageLayout.None;
+            BtnPanelAnalises.Cursor = Cursors.Hand;
+            BtnPanelAnalises.Dock = DockStyle.Top;
+            BtnPanelAnalises.FlatAppearance.BorderSize = 0;
+            BtnPanelAnalises.FlatStyle = FlatStyle.Flat;
+            BtnPanelAnalises.Font = new Font("MesloLGLDZ Nerd Font", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BtnPanelAnalises.ForeColor = Color.FromArgb(144, 148, 155);
+            BtnPanelAnalises.Image = (Image)resources.GetObject("BtnPanelAnalises.Image");
+            BtnPanelAnalises.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnPanelAnalises.Location = new Point(0, 412);
+            BtnPanelAnalises.Margin = new Padding(0);
+            BtnPanelAnalises.Name = "BtnPanelAnalises";
+            BtnPanelAnalises.Size = new Size(199, 38);
+            BtnPanelAnalises.TabIndex = 4;
+            BtnPanelAnalises.Text = "      Analises";
+            BtnPanelAnalises.TextAlign = ContentAlignment.MiddleLeft;
+            BtnPanelAnalises.UseVisualStyleBackColor = true;
+            BtnPanelAnalises.Click += BtnPanelAnalises_Click;
+            // 
+            // panelAnalises
+            // 
+            panelAnalises.BackColor = Color.FromArgb(53, 56, 83);
+            panelAnalises.Controls.Add(button5);
+            panelAnalises.Controls.Add(BtnDashBoard);
+            panelAnalises.Dock = DockStyle.Top;
+            panelAnalises.Location = new Point(0, 450);
+            panelAnalises.Name = "panelAnalises";
+            panelAnalises.Size = new Size(199, 116);
+            panelAnalises.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.Cursor = Cursors.Hand;
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.FromArgb(144, 148, 155);
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(0, 38);
+            button5.Margin = new Padding(0);
+            button5.Name = "button5";
+            button5.Size = new Size(199, 38);
+            button5.TabIndex = 1;
+            button5.Text = "                    Exportar Excel";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // BtnDashBoard
+            // 
+            BtnDashBoard.Cursor = Cursors.Hand;
+            BtnDashBoard.Dock = DockStyle.Top;
+            BtnDashBoard.FlatAppearance.BorderSize = 0;
+            BtnDashBoard.FlatStyle = FlatStyle.Flat;
+            BtnDashBoard.ForeColor = Color.FromArgb(144, 148, 155);
+            BtnDashBoard.Image = (Image)resources.GetObject("BtnDashBoard.Image");
+            BtnDashBoard.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnDashBoard.Location = new Point(0, 0);
+            BtnDashBoard.Margin = new Padding(0);
+            BtnDashBoard.Name = "BtnDashBoard";
+            BtnDashBoard.Size = new Size(199, 38);
+            BtnDashBoard.TabIndex = 0;
+            BtnDashBoard.Text = "                    DashBoard";
+            BtnDashBoard.TextAlign = ContentAlignment.MiddleLeft;
+            BtnDashBoard.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -275,6 +351,7 @@
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
             panelImportacoes.ResumeLayout(false);
+            panelAnalises.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -293,5 +370,9 @@
         private Button button6;
         private Button button7;
         private Button btnPanelImportacoes;
+        private Panel panelAnalises;
+        private Button button5;
+        private Button BtnDashBoard;
+        private Button BtnPanelAnalises;
     }
 }
