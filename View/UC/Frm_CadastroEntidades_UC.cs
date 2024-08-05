@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KhoraControl.Model;
+using KhoraControl.Model.Requests;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +19,74 @@ namespace KhoraControl.View.UC
             InitializeComponent();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            string cep = TxtCep.Text;
+            if (cep.Length == 9)
+            {
+                var vjson = CepRequests.GeraJsonCEP(cep);
+                CEP.Unit uCep = new CEP.Unit();
+                uCep = CEP.DesSeializedClassUnit(vjson);
 
+                TxtLogradouro.Text = uCep.Logradouro;
+                TxtLocalidade.Text = uCep.Localidade;
+                TxtBairro.Text = uCep.Bairro;
+                TxtComplemento.Text = uCep.Complemento;
+                TxtUF.Text = uCep.Uf;
+            }
+        }
+
+        private Concessionaria CollectConceData()
+        {
+            Concessionaria con = new Concessionaria();
+            if (!string.IsNullOrEmpty(TxtID.Text))
+            {
+                con.ID = int.Parse(TxtID.Text);
+            }
+            con.Nome = TxtNome.Text;
+            con.CNPJ = TxtCPNJ.Text;
+            con.IE = TxtIE.Text;
+            con.Cep = TxtCep.Text;
+            con.Localidade = TxtLocalidade.Text;
+            con.Logradouro = TxtLogradouro.Text;
+            con.Bairro = TxtBairro.Text;
+            con.Complemento = TxtComplemento.Text;
+            con.Uf = TxtUF.Text;
+            con.Numero = TxtNumero.Text;
+
+            return con;
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (RbConcessionaria.Checked) 
+            {
+
+                Concessionaria con = new Concessionaria();
+                con = CollectConceData();
+                if (!string.IsNullOrEmpty(TxtID.Text))
+                {
+                    con.Update();
+                    MessageBox.Show("Concessionária atualizada com sucesso!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    con.Insert();
+                    MessageBox.Show("Concessionária inserida com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                //try
+                //{
+                    
+                //}                
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            }
+            else
+            {
+
+            }
         }
     }
 }

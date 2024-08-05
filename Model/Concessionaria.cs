@@ -1,4 +1,5 @@
-﻿using KhoraControl.Setup.Database;
+﻿using KhoraControl.Model.Validation;
+using KhoraControl.Setup.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

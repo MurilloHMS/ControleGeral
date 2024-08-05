@@ -11,6 +11,13 @@ namespace KhoraControl.View.UC
         {
             InitializeComponent();
             cbTipoVeiculo.DataSource = Enum.GetValues(typeof(TipoVeiculo_e));
+            Concessionaria con = new Concessionaria();
+            BindingSource binding = new BindingSource();
+            binding.DataSource = con.ReturnAll();
+            cbConcessionária.DataSource = binding;
+            cbConcessionária.DisplayMember = "Name";
+            cbConcessionária.ValueMember = "Nome";
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -58,13 +65,13 @@ namespace KhoraControl.View.UC
                 if (string.IsNullOrEmpty(TxtID.Text))
                 {
                     veiculo.Update();
-                    MessageBox.Show("Veiculo Atualizado com sucesso!", "Atualização Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Veiculo Atualizado com sucesso!", "Atualização Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
                     veiculo.Insert();
-                    MessageBox.Show("Veiculo Cadastrado com sucesso!", "Cadastro Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Veiculo Cadastrado com sucesso!", "Cadastro Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }

@@ -149,7 +149,6 @@
             // 
             // cbConcessionária
             // 
-            cbConcessionária.DropDownStyle = ComboBoxStyle.DropDownList;
             cbConcessionária.FormattingEnabled = true;
             cbConcessionária.Location = new Point(163, 62);
             cbConcessionária.Name = "cbConcessionária";
