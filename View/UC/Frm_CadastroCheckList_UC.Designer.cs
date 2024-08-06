@@ -30,10 +30,21 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCheckList_UC));
+            imageList1 = new ImageList(components);
+            toolStrip1 = new ToolStrip();
+            novaToolStripButton = new ToolStripButton();
+            abrirToolStripButton = new ToolStripButton();
+            salvarToolStripButton = new ToolStripButton();
+            imprimirToolStripButton = new ToolStripButton();
+            toolStripSeparator = new ToolStripSeparator();
+            recortarToolStripButton = new ToolStripButton();
+            copiarToolStripButton = new ToolStripButton();
+            colarToolStripButton = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            ajudaToolStripButton = new ToolStripButton();
             groupBox1 = new GroupBox();
             panelCadastroCheckList = new Panel();
             BtnShowPanel = new Button();
-            imageList1 = new ImageList(components);
             textBox7 = new TextBox();
             label11 = new Label();
             textBox6 = new TextBox();
@@ -43,8 +54,8 @@
             label9 = new Label();
             TxtID_CheckList = new TextBox();
             label8 = new Label();
+            button3 = new Button();
             button1 = new Button();
-            comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label5 = new Label();
             dateTimePicker1 = new DateTimePicker();
@@ -53,6 +64,7 @@
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
+            TxtNumNotaFiscal = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -60,20 +72,120 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             checkedListBox1 = new CheckedListBox();
+            toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             panelCadastroCheckList.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "Collapse Arrow.ico");
+            imageList1.Images.SetKeyName(1, "Expand Arrow.ico");
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, recortarToolStripButton, copiarToolStripButton, colarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(954, 25);
+            toolStrip1.TabIndex = 0;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // novaToolStripButton
+            // 
+            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            novaToolStripButton.Image = (Image)resources.GetObject("novaToolStripButton.Image");
+            novaToolStripButton.ImageTransparentColor = Color.Magenta;
+            novaToolStripButton.Name = "novaToolStripButton";
+            novaToolStripButton.Size = new Size(23, 22);
+            novaToolStripButton.Text = "&Nova";
+            // 
+            // abrirToolStripButton
+            // 
+            abrirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            abrirToolStripButton.Image = (Image)resources.GetObject("abrirToolStripButton.Image");
+            abrirToolStripButton.ImageTransparentColor = Color.Magenta;
+            abrirToolStripButton.Name = "abrirToolStripButton";
+            abrirToolStripButton.Size = new Size(23, 22);
+            abrirToolStripButton.Text = "&Abrir";
+            // 
+            // salvarToolStripButton
+            // 
+            salvarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            salvarToolStripButton.Image = (Image)resources.GetObject("salvarToolStripButton.Image");
+            salvarToolStripButton.ImageTransparentColor = Color.Magenta;
+            salvarToolStripButton.Name = "salvarToolStripButton";
+            salvarToolStripButton.Size = new Size(23, 22);
+            salvarToolStripButton.Text = "&Salvar";
+            // 
+            // imprimirToolStripButton
+            // 
+            imprimirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            imprimirToolStripButton.Image = (Image)resources.GetObject("imprimirToolStripButton.Image");
+            imprimirToolStripButton.ImageTransparentColor = Color.Magenta;
+            imprimirToolStripButton.Name = "imprimirToolStripButton";
+            imprimirToolStripButton.Size = new Size(23, 22);
+            imprimirToolStripButton.Text = "&Imprimir";
+            // 
+            // toolStripSeparator
+            // 
+            toolStripSeparator.Name = "toolStripSeparator";
+            toolStripSeparator.Size = new Size(6, 25);
+            // 
+            // recortarToolStripButton
+            // 
+            recortarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            recortarToolStripButton.Image = (Image)resources.GetObject("recortarToolStripButton.Image");
+            recortarToolStripButton.ImageTransparentColor = Color.Magenta;
+            recortarToolStripButton.Name = "recortarToolStripButton";
+            recortarToolStripButton.Size = new Size(23, 22);
+            recortarToolStripButton.Text = "R&ecortar";
+            // 
+            // copiarToolStripButton
+            // 
+            copiarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            copiarToolStripButton.Image = (Image)resources.GetObject("copiarToolStripButton.Image");
+            copiarToolStripButton.ImageTransparentColor = Color.Magenta;
+            copiarToolStripButton.Name = "copiarToolStripButton";
+            copiarToolStripButton.Size = new Size(23, 22);
+            copiarToolStripButton.Text = "&Copiar";
+            // 
+            // colarToolStripButton
+            // 
+            colarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            colarToolStripButton.Image = (Image)resources.GetObject("colarToolStripButton.Image");
+            colarToolStripButton.ImageTransparentColor = Color.Magenta;
+            colarToolStripButton.Name = "colarToolStripButton";
+            colarToolStripButton.Size = new Size(23, 22);
+            colarToolStripButton.Text = "&Colar";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // ajudaToolStripButton
+            // 
+            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
+            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
+            ajudaToolStripButton.Name = "ajudaToolStripButton";
+            ajudaToolStripButton.Size = new Size(23, 22);
+            ajudaToolStripButton.Text = "Aju&da";
             // 
             // groupBox1
             // 
             groupBox1.AutoSize = true;
             groupBox1.Controls.Add(panelCadastroCheckList);
             groupBox1.Dock = DockStyle.Top;
-            groupBox1.Location = new Point(0, 0);
+            groupBox1.Location = new Point(0, 25);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(976, 283);
-            groupBox1.TabIndex = 0;
+            groupBox1.Size = new Size(954, 277);
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados Veiculo";
             // 
@@ -89,8 +201,8 @@
             panelCadastroCheckList.Controls.Add(label9);
             panelCadastroCheckList.Controls.Add(TxtID_CheckList);
             panelCadastroCheckList.Controls.Add(label8);
+            panelCadastroCheckList.Controls.Add(button3);
             panelCadastroCheckList.Controls.Add(button1);
-            panelCadastroCheckList.Controls.Add(comboBox2);
             panelCadastroCheckList.Controls.Add(comboBox1);
             panelCadastroCheckList.Controls.Add(label5);
             panelCadastroCheckList.Controls.Add(dateTimePicker1);
@@ -99,6 +211,7 @@
             panelCadastroCheckList.Controls.Add(label6);
             panelCadastroCheckList.Controls.Add(label4);
             panelCadastroCheckList.Controls.Add(label3);
+            panelCadastroCheckList.Controls.Add(TxtNumNotaFiscal);
             panelCadastroCheckList.Controls.Add(textBox2);
             panelCadastroCheckList.Controls.Add(textBox1);
             panelCadastroCheckList.Controls.Add(label2);
@@ -106,7 +219,7 @@
             panelCadastroCheckList.Controls.Add(label1);
             panelCadastroCheckList.Location = new Point(3, 19);
             panelCadastroCheckList.Name = "panelCadastroCheckList";
-            panelCadastroCheckList.Size = new Size(970, 242);
+            panelCadastroCheckList.Size = new Size(931, 236);
             panelCadastroCheckList.TabIndex = 7;
             // 
             // BtnShowPanel
@@ -124,14 +237,6 @@
             BtnShowPanel.TabIndex = 27;
             BtnShowPanel.UseVisualStyleBackColor = true;
             BtnShowPanel.Click += BtnShowPanel_Click;
-            // 
-            // imageList1
-            // 
-            imageList1.ColorDepth = ColorDepth.Depth32Bit;
-            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
-            imageList1.TransparentColor = Color.Transparent;
-            imageList1.Images.SetKeyName(0, "Collapse Arrow.ico");
-            imageList1.Images.SetKeyName(1, "Expand Arrow.ico");
             // 
             // textBox7
             // 
@@ -183,7 +288,6 @@
             TxtDescritivoCheckList.Name = "TxtDescritivoCheckList";
             TxtDescritivoCheckList.Size = new Size(550, 23);
             TxtDescritivoCheckList.TabIndex = 23;
-            TxtDescritivoCheckList.KeyDown += TxtDescritivoCheckList_KeyDown;
             // 
             // label9
             // 
@@ -210,6 +314,21 @@
             label8.TabIndex = 18;
             label8.Text = "ID CheckList";
             // 
+            // button3
+            // 
+            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
+            button3.BackgroundImageLayout = ImageLayout.Zoom;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(650, 39);
+            button3.Name = "button3";
+            button3.Size = new Size(26, 23);
+            button3.TabIndex = 22;
+            button3.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
@@ -224,15 +343,6 @@
             button1.Size = new Size(25, 23);
             button1.TabIndex = 22;
             button1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(581, 43);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(93, 23);
-            comboBox2.TabIndex = 21;
             // 
             // comboBox1
             // 
@@ -303,6 +413,13 @@
             label3.TabIndex = 9;
             label3.Text = "Veiculo";
             // 
+            // TxtNumNotaFiscal
+            // 
+            TxtNumNotaFiscal.Location = new Point(581, 39);
+            TxtNumNotaFiscal.Name = "TxtNumNotaFiscal";
+            TxtNumNotaFiscal.Size = new Size(64, 23);
+            TxtNumNotaFiscal.TabIndex = 14;
+            // 
             // textBox2
             // 
             textBox2.Location = new Point(207, 42);
@@ -346,10 +463,10 @@
             // 
             groupBox2.Controls.Add(checkedListBox1);
             groupBox2.Dock = DockStyle.Top;
-            groupBox2.Location = new Point(0, 283);
+            groupBox2.Location = new Point(0, 302);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(976, 442);
-            groupBox2.TabIndex = 1;
+            groupBox2.Size = new Size(954, 284);
+            groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Check List";
             // 
@@ -359,7 +476,7 @@
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Location = new Point(3, 19);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(970, 420);
+            checkedListBox1.Size = new Size(948, 262);
             checkedListBox1.TabIndex = 0;
             // 
             // Frm_CadastroCheckList_UC
@@ -369,9 +486,12 @@
             BackColor = Color.Lavender;
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Controls.Add(toolStrip1);
             Name = "Frm_CadastroCheckList_UC";
-            Size = new Size(976, 751);
+            Size = new Size(954, 751);
             Load += Frm_CadastroCheckList_UC_Load;
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             panelCadastroCheckList.ResumeLayout(false);
             panelCadastroCheckList.PerformLayout();
@@ -381,18 +501,32 @@
         }
 
         #endregion
-
+        private ImageList imageList1;
+        private ToolStrip toolStrip1;
+        private ToolStripButton novaToolStripButton;
+        private ToolStripButton abrirToolStripButton;
+        private ToolStripButton salvarToolStripButton;
+        private ToolStripButton imprimirToolStripButton;
+        private ToolStripSeparator toolStripSeparator;
+        private ToolStripButton recortarToolStripButton;
+        private ToolStripButton copiarToolStripButton;
+        private ToolStripButton colarToolStripButton;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton ajudaToolStripButton;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private CheckedListBox checkedListBox1;
         private Panel panelCadastroCheckList;
+        private Button BtnShowPanel;
+        private TextBox textBox7;
+        private Label label11;
+        private TextBox textBox6;
+        private Label label10;
         private Button button2;
         private TextBox TxtDescritivoCheckList;
         private Label label9;
         private TextBox TxtID_CheckList;
         private Label label8;
+        private Button button3;
         private Button button1;
-        private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label5;
         private DateTimePicker dateTimePicker1;
@@ -401,16 +535,13 @@
         private Label label6;
         private Label label4;
         private Label label3;
+        private TextBox TxtNumNotaFiscal;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label2;
         private TextBox TxtID;
         private Label label1;
-        private TextBox textBox6;
-        private Label label10;
-        private TextBox textBox7;
-        private Label label11;
-        private Button BtnShowPanel;
-        private ImageList imageList1;
+        private GroupBox groupBox2;
+        private CheckedListBox checkedListBox1;
     }
 }

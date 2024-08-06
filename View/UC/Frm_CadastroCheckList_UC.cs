@@ -135,5 +135,6 @@ namespace KhoraControl.View.UC
                 button2.PerformClick();
             }
         }
+
     }
 }
