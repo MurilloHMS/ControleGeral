@@ -192,16 +192,16 @@
             // 
             // button4
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button4.Dock = DockStyle.Bottom;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(0, 674);
+            button4.Location = new Point(0, 686);
             button4.Name = "button4";
-            button4.Size = new Size(40, 37);
+            button4.Size = new Size(199, 37);
             button4.TabIndex = 6;
             button4.UseVisualStyleBackColor = true;
             // 
