@@ -70,14 +70,13 @@
             groupBox1.Controls.Add(panelCadastroCheckList);
             groupBox1.Location = new Point(17, 18);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(940, 270);
+            groupBox1.Size = new Size(943, 270);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados Veiculo";
             // 
             // panelCadastroCheckList
             // 
-            panelCadastroCheckList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panelCadastroCheckList.Controls.Add(BtnShowPanel);
             panelCadastroCheckList.Controls.Add(textBox7);
             panelCadastroCheckList.Controls.Add(label11);

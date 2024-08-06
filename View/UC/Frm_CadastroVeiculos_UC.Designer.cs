@@ -77,10 +77,11 @@
             novaToolStripButton = new ToolStripButton();
             abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
+            LimpartoolStripButton = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
-            LimpartoolStripButton = new ToolStripButton();
+            ckbAtivo = new CheckBox();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -88,6 +89,7 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(ckbAtivo);
             groupBox1.Controls.Add(cbEmpresa);
             groupBox1.Controls.Add(cbConcessionária);
             groupBox1.Controls.Add(TxtIDEmpresa);
@@ -215,6 +217,7 @@
             DtpDataDaCompra.Format = DateTimePickerFormat.Short;
             DtpDataDaCompra.Location = new Point(30, 174);
             DtpDataDaCompra.Name = "DtpDataDaCompra";
+            DtpDataDaCompra.ShowCheckBox = true;
             DtpDataDaCompra.Size = new Size(122, 23);
             DtpDataDaCompra.TabIndex = 8;
             // 
@@ -495,6 +498,7 @@
             TxtID.Name = "TxtID";
             TxtID.Size = new Size(49, 23);
             TxtID.TabIndex = 1;
+            TxtID.TextChanged += TxtID_TextChanged;
             // 
             // label1
             // 
@@ -546,6 +550,17 @@
             salvarToolStripButton.ToolTipText = "Salvar Alterações";
             salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
+            // LimpartoolStripButton
+            // 
+            LimpartoolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            LimpartoolStripButton.Image = (Image)resources.GetObject("LimpartoolStripButton.Image");
+            LimpartoolStripButton.ImageTransparentColor = Color.Magenta;
+            LimpartoolStripButton.Name = "LimpartoolStripButton";
+            LimpartoolStripButton.Size = new Size(23, 22);
+            LimpartoolStripButton.Text = "&Limpar";
+            LimpartoolStripButton.ToolTipText = "Limpar Dados";
+            LimpartoolStripButton.Click += LimpartoolStripButton_Click;
+            // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
@@ -568,16 +583,15 @@
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
-            // LimpartoolStripButton
+            // ckbAtivo
             // 
-            LimpartoolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            LimpartoolStripButton.Image = (Image)resources.GetObject("LimpartoolStripButton.Image");
-            LimpartoolStripButton.ImageTransparentColor = Color.Magenta;
-            LimpartoolStripButton.Name = "LimpartoolStripButton";
-            LimpartoolStripButton.Size = new Size(23, 22);
-            LimpartoolStripButton.Text = "&Limpar";
-            LimpartoolStripButton.ToolTipText = "Limpar Dados";
-            LimpartoolStripButton.Click += LimpartoolStripButton_Click;
+            ckbAtivo.AutoSize = true;
+            ckbAtivo.Location = new Point(593, 22);
+            ckbAtivo.Name = "ckbAtivo";
+            ckbAtivo.Size = new Size(54, 19);
+            ckbAtivo.TabIndex = 23;
+            ckbAtivo.Text = "Ativo";
+            ckbAtivo.UseVisualStyleBackColor = true;
             // 
             // Frm_CadastroVeiculos_UC
             // 
@@ -651,5 +665,6 @@
         private Label label21;
         private Label label20;
         private ToolStripButton LimpartoolStripButton;
+        private CheckBox ckbAtivo;
     }
 }

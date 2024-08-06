@@ -35,6 +35,8 @@ namespace KhoraControl.Model
         public string? NotaFiscalDeCompra { get; set; }
         public int? ID_Empresa { get; set; }
         public string? TipoVeiculo { get; set; }
+        [Required]
+        public char StatusVeiculo { get; set; }
 
 
         private readonly DAL<Veiculo> _dal;
@@ -61,6 +63,11 @@ namespace KhoraControl.Model
         public IEnumerable<Veiculo> GetAll()
         {
             return _dal.ObterRegistros();
+        }
+
+        public Veiculo GetForID(int id)
+        {
+            return _dal.ObterRegistroPor(v => v.ID.Equals(id));
         }
     }
 }

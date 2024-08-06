@@ -40,6 +40,7 @@ namespace KhoraControl.View.UC
 
         private Veiculo CollectData()
         {
+            TipoVeiculo_e tipo;
             Veiculo v = new Veiculo();
             if (!string.IsNullOrEmpty(TxtID.Text))
             {
@@ -51,7 +52,7 @@ namespace KhoraControl.View.UC
             v.Placa = TxtPlaca.Text;
             v.Ano = TxtAno.Text;
             v.Modelo = TxtModelo.Text;
-            v.DataDaCompra = DtpDataDaCompra.Value;
+            v.DataDaCompra = DtpDataDaCompra.Checked ? DtpDataDaCompra.Value : null;
             v.KmQuandoComprado = ParseNullable(TxtKmQuandoComprado.Text);
             v.DataUltimaRevisao = DtpDataUltimaRevisao.Value;
             v.KmUltimaRevisao = ParseNullable(TxtKmUltimaRevisao.Text);
@@ -60,8 +61,35 @@ namespace KhoraControl.View.UC
             v.SugestaoConcessionaria = TxtSugestaoConcessionaria.Text;
             v.Observacoes = TxtObs.Text;
             v.LocalSalvamentoDeDados = TxtLocalSalvamento.Text;
+            bool parseSuccess = Enum.TryParse<TipoVeiculo_e>(cbTipoVeiculo.SelectedValue.ToString(), out tipo);
+            v.TipoVeiculo = parseSuccess ? tipo.ToString() : null;
+            v.NotaFiscalDeCompra = TxtNotaFiscalDeCompra.Text;
+            v.StatusVeiculo = ckbAtivo.Checked ? (char)StatusEstoque_e.Ativo : (char)StatusEstoque_e.Inativo;
 
             return v;
+        }
+
+        private void WriteData(Veiculo V)
+        {
+            TxtID.Text = V.ID.ToString();
+            TxtAno.Text = V.Ano;
+            TxtIDConcessionaria.Text = V.ID_Concessionaria.ToString();
+            TxtIDEmpresa.Text = V.ID_Empresa.ToString();
+            TxtKmProximaRevisao.Text = V.KmProximaRevisao.ToString();
+            TxtKmQuandoComprado.Text = V.KmQuandoComprado.ToString();
+            TxtKmRodados.Text = V.KmRodados.ToString();
+            TxtKmUltimaRevisao.Text = V.KmUltimaRevisao.ToString();
+            TxtLocalSalvamento.Text = V.LocalSalvamentoDeDados;
+            TxtModelo.Text = V.Modelo;
+            TxtObs.Text = V.Observacoes;
+            TxtPlaca.Text = V.Placa;
+            TxtSugestaoConcessionaria.Text = V.SugestaoConcessionaria;
+            TxtMarca.Text = V.Marca;
+            TxtNotaFiscalDeCompra.Text = V.NotaFiscalDeCompra;
+            DtpDataDaCompra.Text = V.DataDaCompra.ToString();
+            cbTipoVeiculo.SelectedItem = V.TipoVeiculo;
+            ckbAtivo.Checked = V.StatusVeiculo == 'T' ? true : false;
+
         }
 
         private void ClearData()
@@ -186,6 +214,19 @@ namespace KhoraControl.View.UC
         private void LimpartoolStripButton_Click(object sender, EventArgs e)
         {
             ClearData();
+        }
+
+        private void TxtID_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtID.Text.Length > 0)
+            {
+                Veiculo veiculo = new Veiculo();
+                WriteData(veiculo.GetForID(int.Parse(TxtID.Text)));
+            }
+            else
+            {
+                ClearData();
+            }
         }
     }
 }
