@@ -187,7 +187,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(199, 723);
+            panelMenu.Size = new Size(199, 671);
             panelMenu.TabIndex = 0;
             // 
             // button4
@@ -199,7 +199,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(0, 686);
+            button4.Location = new Point(0, 634);
             button4.Name = "button4";
             button4.Size = new Size(199, 37);
             button4.TabIndex = 6;
@@ -350,7 +350,7 @@
             tbcHome.Location = new Point(199, 0);
             tbcHome.Name = "tbcHome";
             tbcHome.SelectedIndex = 0;
-            tbcHome.Size = new Size(977, 723);
+            tbcHome.Size = new Size(977, 671);
             tbcHome.TabIndex = 1;
             tbcHome.MouseDown += tbcHome_MouseDown;
             // 
@@ -358,7 +358,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1176, 723);
+            ClientSize = new Size(1176, 671);
             Controls.Add(tbcHome);
             Controls.Add(panelMenu);
             Name = "MainWindow";

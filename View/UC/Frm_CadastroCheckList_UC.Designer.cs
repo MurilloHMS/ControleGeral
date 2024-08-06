@@ -39,9 +39,9 @@
             textBox6 = new TextBox();
             label10 = new Label();
             button2 = new Button();
-            textBox5 = new TextBox();
+            TxtDescritivoCheckList = new TextBox();
             label9 = new Label();
-            textBox3 = new TextBox();
+            TxtID_CheckList = new TextBox();
             label8 = new Label();
             button1 = new Button();
             comboBox2 = new ComboBox();
@@ -67,10 +67,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.AutoSize = true;
             groupBox1.Controls.Add(panelCadastroCheckList);
-            groupBox1.Location = new Point(17, 18);
+            groupBox1.Dock = DockStyle.Top;
+            groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(943, 270);
+            groupBox1.Size = new Size(976, 283);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados Veiculo";
@@ -83,9 +85,9 @@
             panelCadastroCheckList.Controls.Add(textBox6);
             panelCadastroCheckList.Controls.Add(label10);
             panelCadastroCheckList.Controls.Add(button2);
-            panelCadastroCheckList.Controls.Add(textBox5);
+            panelCadastroCheckList.Controls.Add(TxtDescritivoCheckList);
             panelCadastroCheckList.Controls.Add(label9);
-            panelCadastroCheckList.Controls.Add(textBox3);
+            panelCadastroCheckList.Controls.Add(TxtID_CheckList);
             panelCadastroCheckList.Controls.Add(label8);
             panelCadastroCheckList.Controls.Add(button1);
             panelCadastroCheckList.Controls.Add(comboBox2);
@@ -104,7 +106,7 @@
             panelCadastroCheckList.Controls.Add(label1);
             panelCadastroCheckList.Location = new Point(3, 19);
             panelCadastroCheckList.Name = "panelCadastroCheckList";
-            panelCadastroCheckList.Size = new Size(934, 245);
+            panelCadastroCheckList.Size = new Size(970, 242);
             panelCadastroCheckList.TabIndex = 7;
             // 
             // BtnShowPanel
@@ -172,13 +174,16 @@
             button2.TabIndex = 24;
             button2.Text = "Cadastrar CheckList";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // textBox5
+            // TxtDescritivoCheckList
             // 
-            textBox5.Location = new Point(148, 191);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(550, 23);
-            textBox5.TabIndex = 23;
+            TxtDescritivoCheckList.CharacterCasing = CharacterCasing.Upper;
+            TxtDescritivoCheckList.Location = new Point(148, 191);
+            TxtDescritivoCheckList.Name = "TxtDescritivoCheckList";
+            TxtDescritivoCheckList.Size = new Size(550, 23);
+            TxtDescritivoCheckList.TabIndex = 23;
+            TxtDescritivoCheckList.KeyDown += TxtDescritivoCheckList_KeyDown;
             // 
             // label9
             // 
@@ -189,12 +194,12 @@
             label9.TabIndex = 18;
             label9.Text = "Descritivo CheckList";
             // 
-            // textBox3
+            // TxtID_CheckList
             // 
-            textBox3.Location = new Point(21, 191);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(72, 23);
-            textBox3.TabIndex = 23;
+            TxtID_CheckList.Location = new Point(21, 191);
+            TxtID_CheckList.Name = "TxtID_CheckList";
+            TxtID_CheckList.Size = new Size(72, 23);
+            TxtID_CheckList.TabIndex = 23;
             // 
             // label8
             // 
@@ -340,12 +345,13 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(checkedListBox1);
-            groupBox2.Location = new Point(14, 294);
+            groupBox2.Dock = DockStyle.Top;
+            groupBox2.Location = new Point(0, 283);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(940, 442);
+            groupBox2.Size = new Size(976, 442);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Ckeck List";
+            groupBox2.Text = "Check List";
             // 
             // checkedListBox1
             // 
@@ -353,7 +359,7 @@
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Location = new Point(3, 19);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(934, 420);
+            checkedListBox1.Size = new Size(970, 420);
             checkedListBox1.TabIndex = 0;
             // 
             // Frm_CadastroCheckList_UC
@@ -365,11 +371,13 @@
             Controls.Add(groupBox1);
             Name = "Frm_CadastroCheckList_UC";
             Size = new Size(976, 751);
+            Load += Frm_CadastroCheckList_UC_Load;
             groupBox1.ResumeLayout(false);
             panelCadastroCheckList.ResumeLayout(false);
             panelCadastroCheckList.PerformLayout();
             groupBox2.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -379,9 +387,9 @@
         private CheckedListBox checkedListBox1;
         private Panel panelCadastroCheckList;
         private Button button2;
-        private TextBox textBox5;
+        private TextBox TxtDescritivoCheckList;
         private Label label9;
-        private TextBox textBox3;
+        private TextBox TxtID_CheckList;
         private Label label8;
         private Button button1;
         private ComboBox comboBox2;

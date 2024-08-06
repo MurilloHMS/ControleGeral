@@ -1,4 +1,5 @@
-﻿using KhoraControl.Setup.Database;
+﻿using KhoraControl.Model.Validation;
+using KhoraControl.Setup.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    public class CheckList
+    public class CheckList : ValidaObjeto
     {
         [Key]
         public int Id { get; set; }
