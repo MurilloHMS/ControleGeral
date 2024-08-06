@@ -191,52 +191,48 @@ namespace KhoraControl
 
         }
 
+        private void ShowTabPage(UserControl userControl, string tabPageName, string tabPageText)
+        {
+            TabPage existingTabPage = tbcHome.TabPages.Cast<TabPage>().FirstOrDefault(tab => tab.Name == tabPageName);
+            if (existingTabPage == null)
+            {
+                var newTabPage = new TabPage
+                {
+                    Name = tabPageName,
+                    Text = tabPageText
+                };
+                userControl.Dock = DockStyle.Fill;
+                newTabPage.Controls.Add(userControl);
+                tbcHome.TabPages.Add(newTabPage);
+                tbcHome.SelectedTab = newTabPage;
+            }
+            else
+            {
+                tbcHome.SelectedTab = existingTabPage;
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm_CadastroVeiculos_UC frm = new Frm_CadastroVeiculos_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tabPage = new TabPage();
-            tabPage.Name = frm.Name;
-            tabPage.Text = "Cadastro De Veiculos";
-            tabPage.Controls.Add(frm);
-            tbcHome.TabPages.Add(tabPage);
-            tbcHome.SelectedTab = tabPage;
+            ShowTabPage(new Frm_CadastroVeiculos_UC(), "Frm_CadastroVeiculos_UC", "Cadastro de Veiculos");
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Frm_CadastroEntidades_UC frm = new Frm_CadastroEntidades_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tabPage = new TabPage();
-            tabPage.Name = frm.Name;
-            tabPage.Text = "Cadastro de Entidades";
-            tabPage.Controls.Add(frm);
-            tbcHome.TabPages.Add(tabPage);
-            tbcHome.SelectedTab = tabPage;
+            ShowTabPage(new Frm_CadastroEntidades_UC(), "Frm_CadastroEntidades_UC", "Cadastro de Entidades");
         }
 
         private void BtnDashBoard_Click(object sender, EventArgs e)
         {
-            Frm_Dashboard_Uc frm = new Frm_Dashboard_Uc();
-            frm.Dock = DockStyle.Fill;
-            TabPage tabPage = new TabPage();
-            tabPage.Name = frm.Name;
-            tabPage.Text = "DashBoard Analise Veiculos";
-            tabPage.Controls.Add(frm);
-            tbcHome.TabPages.Add(tabPage);
-            tbcHome.SelectedTab = tabPage;
+
+            ShowTabPage(new Frm_Dashboard_Uc(), "Frm_Dashboard_UC", "DashBoard Analise Veiculos");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Frm_CadastroCheckList_UC frm = new Frm_CadastroCheckList_UC();
-            frm.Dock = DockStyle.Fill;
-            TabPage tabPage = new TabPage();
-            tabPage.Name = frm.Name;
-            tabPage.Text = "Cadastro CheckList";
-            tabPage.Controls.Add(frm);
-            tbcHome.TabPages.Add(tabPage);
-            tbcHome.SelectedTab = tabPage;
+            ShowTabPage(new Frm_CadastroCheckList_UC(), "Frm_CadastroCheckList", "Cadastro de Check List");
         }
     }
 }

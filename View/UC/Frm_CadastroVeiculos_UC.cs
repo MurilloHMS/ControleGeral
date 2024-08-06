@@ -37,7 +37,6 @@ namespace KhoraControl.View.UC
                 cbEmpresa.Items.Add(it.Nome);
             }
         }
-
         private Veiculo CollectData()
         {
             TipoVeiculo_e tipo;
@@ -48,7 +47,7 @@ namespace KhoraControl.View.UC
             }
             v.ID_Concessionaria = ParseNullable(TxtIDConcessionaria.Text);
             v.ID_Empresa = ParseNullable(TxtIDEmpresa.Text);
-            v.Marca = TxtMarca.Text;
+            v.Marca = TxtMarca.Text.Trim();
             v.Placa = TxtPlaca.Text;
             v.Ano = TxtAno.Text;
             v.Modelo = TxtModelo.Text;

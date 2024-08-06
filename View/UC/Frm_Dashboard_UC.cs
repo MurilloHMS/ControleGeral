@@ -31,6 +31,21 @@ namespace KhoraControl.View.UC
 
             ConfigureChartVeiculosPorMarca(dados);
             ConfigureChartVeiculosAtivosEInativos(veiculosAtivos, veiculosInativos);
+            configureDataGrideViewColumns();
+        }
+
+        public void configureDataGrideViewColumns()
+        {
+            string[] colunasParaEsconder = { "DataDaCompra", "KmQuandoComprado", "DataUltimaRevisao", "KmUltimaRevisao", "DataProximaRevisao", 
+                "KmProximaRevisao", "ID_Concessionaria", "LocalSalvamentoDeDados", "NotaFiscalDeCompra","ID_Empresa", "TipoVeiculo", "StatusVeiculo"};
+            foreach (string nomeColuna in colunasParaEsconder)
+            {
+                if (DgvVeiculos.Columns.Contains(nomeColuna))
+                {
+                    DgvVeiculos.Columns[nomeColuna].Visible = false;
+                }
+            }
+
         }
         public void ConfigureChartVeiculosPorMarca(IEnumerable<Veiculo> dados)
         {

@@ -44,8 +44,6 @@
             panel1 = new Panel();
             label1 = new Label();
             TxtQuantVeiculo = new Label();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
             panel2 = new Panel();
             DgvVeiculos = new DataGridView();
             groupBox2 = new GroupBox();
@@ -78,13 +76,15 @@
             // panel4
             // 
             panel4.Controls.Add(chartVeiculosPorMarca);
-            panel4.Location = new Point(214, 65);
+            panel4.Location = new Point(214, 58);
             panel4.Name = "panel4";
-            panel4.Size = new Size(431, 163);
+            panel4.Size = new Size(431, 170);
             panel4.TabIndex = 6;
             // 
             // chartVeiculosPorMarca
             // 
+            chartVeiculosPorMarca.BackColor = Color.Lavender;
+            chartVeiculosPorMarca.BorderlineColor = Color.Lavender;
             chartArea1.Name = "ChartArea1";
             chartVeiculosPorMarca.ChartAreas.Add(chartArea1);
             chartVeiculosPorMarca.Dock = DockStyle.Fill;
@@ -97,18 +97,18 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chartVeiculosPorMarca.Series.Add(series1);
-            chartVeiculosPorMarca.Size = new Size(431, 163);
+            chartVeiculosPorMarca.Size = new Size(431, 170);
             chartVeiculosPorMarca.TabIndex = 0;
             chartVeiculosPorMarca.Text = "chart1";
             // 
             // label3
             // 
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(340, 26);
+            label3.Location = new Point(316, 19);
             label3.Name = "label3";
-            label3.Size = new Size(182, 36);
+            label3.Size = new Size(213, 36);
             label3.TabIndex = 5;
-            label3.Text = "Resumo De Veiculos Ativos e Inativos";
+            label3.Text = "Resumo de Veiculos por Marca";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -189,43 +189,26 @@
             TxtQuantVeiculo.Text = "0";
             TxtQuantVeiculo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // comboBox4
-            // 
-            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(806, 267);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(105, 23);
-            comboBox4.TabIndex = 3;
-            // 
-            // comboBox3
-            // 
-            comboBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(695, 267);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(105, 23);
-            comboBox3.TabIndex = 3;
-            // 
             // panel2
             // 
             panel2.Controls.Add(DgvVeiculos);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 19);
             panel2.Name = "panel2";
-            panel2.Size = new Size(898, 346);
+            panel2.Size = new Size(898, 375);
             panel2.TabIndex = 2;
             // 
             // DgvVeiculos
             // 
             DgvVeiculos.AllowUserToAddRows = false;
             DgvVeiculos.AllowUserToDeleteRows = false;
-            DgvVeiculos.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             DgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgvVeiculos.Dock = DockStyle.Fill;
             DgvVeiculos.Location = new Point(0, 0);
             DgvVeiculos.Name = "DgvVeiculos";
             DgvVeiculos.ReadOnly = true;
-            DgvVeiculos.Size = new Size(898, 346);
+            DgvVeiculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvVeiculos.Size = new Size(898, 375);
             DgvVeiculos.TabIndex = 0;
             // 
             // groupBox2
@@ -233,9 +216,9 @@
             groupBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             groupBox2.AutoSize = true;
             groupBox2.Controls.Add(panel2);
-            groupBox2.Location = new Point(13, 296);
+            groupBox2.Location = new Point(13, 267);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(904, 368);
+            groupBox2.Size = new Size(904, 397);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Veiculos";
@@ -246,9 +229,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Lavender;
             Controls.Add(groupBox2);
-            Controls.Add(comboBox4);
             Controls.Add(groupBox1);
-            Controls.Add(comboBox3);
             Name = "Frm_Dashboard_Uc";
             Size = new Size(931, 685);
             Load += Frm_Dashboard_Uc_Load;
@@ -272,8 +253,6 @@
         private Label label1;
         private Panel panel1;
         private Label TxtQuantVeiculo;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
         private Panel panel2;
         private DataGridView DgvVeiculos;
         private Panel panel3;
