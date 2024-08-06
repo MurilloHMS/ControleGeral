@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCheckList_UC));
             groupBox1 = new GroupBox();
             panelCadastroCheckList = new Panel();
+            BtnShowPanel = new Button();
+            imageList1 = new ImageList(components);
             textBox7 = new TextBox();
             label11 = new Label();
             textBox6 = new TextBox();
@@ -57,7 +60,6 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             checkedListBox1 = new CheckedListBox();
-            BtnShowPanel = new Button();
             groupBox1.SuspendLayout();
             panelCadastroCheckList.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -75,6 +77,7 @@
             // 
             // panelCadastroCheckList
             // 
+            panelCadastroCheckList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panelCadastroCheckList.Controls.Add(BtnShowPanel);
             panelCadastroCheckList.Controls.Add(textBox7);
             panelCadastroCheckList.Controls.Add(label11);
@@ -100,11 +103,34 @@
             panelCadastroCheckList.Controls.Add(label2);
             panelCadastroCheckList.Controls.Add(TxtID);
             panelCadastroCheckList.Controls.Add(label1);
-            panelCadastroCheckList.Dock = DockStyle.Fill;
             panelCadastroCheckList.Location = new Point(3, 19);
             panelCadastroCheckList.Name = "panelCadastroCheckList";
-            panelCadastroCheckList.Size = new Size(934, 248);
+            panelCadastroCheckList.Size = new Size(934, 245);
             panelCadastroCheckList.TabIndex = 7;
+            // 
+            // BtnShowPanel
+            // 
+            BtnShowPanel.Cursor = Cursors.Hand;
+            BtnShowPanel.FlatAppearance.BorderSize = 0;
+            BtnShowPanel.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnShowPanel.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnShowPanel.FlatStyle = FlatStyle.Flat;
+            BtnShowPanel.ImageIndex = 1;
+            BtnShowPanel.ImageList = imageList1;
+            BtnShowPanel.Location = new Point(410, 131);
+            BtnShowPanel.Name = "BtnShowPanel";
+            BtnShowPanel.Size = new Size(44, 23);
+            BtnShowPanel.TabIndex = 27;
+            BtnShowPanel.UseVisualStyleBackColor = true;
+            BtnShowPanel.Click += BtnShowPanel_Click;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "Collapse Arrow.ico");
+            imageList1.Images.SetKeyName(1, "Expand Arrow.ico");
             // 
             // textBox7
             // 
@@ -331,16 +357,6 @@
             checkedListBox1.Size = new Size(934, 420);
             checkedListBox1.TabIndex = 0;
             // 
-            // BtnShowPanel
-            // 
-            BtnShowPanel.Location = new Point(394, 131);
-            BtnShowPanel.Name = "BtnShowPanel";
-            BtnShowPanel.Size = new Size(75, 23);
-            BtnShowPanel.TabIndex = 27;
-            BtnShowPanel.Text = "button3";
-            BtnShowPanel.UseVisualStyleBackColor = true;
-            BtnShowPanel.Click += BtnShowPanel_Click;
-            // 
             // Frm_CadastroCheckList_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -388,5 +404,6 @@
         private TextBox textBox7;
         private Label label11;
         private Button BtnShowPanel;
+        private ImageList imageList1;
     }
 }

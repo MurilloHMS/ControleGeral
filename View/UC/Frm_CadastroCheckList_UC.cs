@@ -27,7 +27,7 @@ namespace KhoraControl.View.UC
         private void InitializeAnimationTimer()
         {
             animationTimer = new System.Windows.Forms.Timer();
-            animationTimer.Interval = 10; // Tempo em milissegundos entre cada passo da animação
+            animationTimer.Interval = 10;
             animationTimer.Tick += AnimationTimer_Tick;
         }
 
@@ -62,6 +62,14 @@ namespace KhoraControl.View.UC
         private void BtnShowPanel_Click(object sender, EventArgs e)
         {
             ShowPanelCadastroCheckList = !ShowPanelCadastroCheckList;
+            if (ShowPanelCadastroCheckList)
+            {
+                BtnShowPanel.ImageIndex = 0;
+            }
+            else
+            {
+                BtnShowPanel.ImageIndex = 1;
+            }
             TogglePanel();
         }
     }
