@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace KhoraControl.View.UC
 {
@@ -85,12 +86,76 @@ namespace KhoraControl.View.UC
             DgvDadosNFe.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             DgvDadosNFe.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            // Ocultar colunas
-            int[] colunasOcultar = new int[] { 0, 4, 5, 6, 7, 8, 9, 10, 11 };
-            foreach(int i in colunasOcultar)
+            // Ocultar colunas , 4, 5, 6, 7, 8, 9, 10, 11
+            int[] colunasOcultar = new int[] { 0,6,7,8,9,10,11,12,13,14,15};
+            foreach (int i in colunasOcultar)
             {
                 DgvDadosNFe.Columns[i].Visible = false;
             }
+        }
+
+        private void SaveData()
+        {
+            DadosNFe dados = new DadosNFe()
+            {
+                NaturezaOperacao = CbNaturezaOpe.Text,
+                ID_Veiculo = int.Parse(TxtID_Veiculo.Text),
+                NumNFe = TxtNumNFe.Text,
+                Serie = TxtSerie.Text,
+                ChaveDeAcesso = TxtChave.Text,
+                RazaoSocialDestinatario = TxtRzSocialDest.Text,
+                RazaoSocialRemetente = TxtRzSocialRem.Text,
+                CNPJDestinatario = mTxtCnpjDes.Text,
+                CNPJRemetente = mTxtCnpjRem.Text,
+                DataEmissao = DtpDataEmissao.Value,
+                DataRevisao = DtpDataRevisao.Value,
+                ValorTotalNotaFiscal = double.Parse(TxtTotNFe.Text),
+                ValorTotalProdutos = double.Parse(TxtTotProd.Text)
+            };
+
+            dados.Insert();
+            TxtID.Text = dados.ID.ToString();
+
+
+
+            List<Produtos> produtosParaIncluir = new List<Produtos>();
+
+            foreach (DataGridViewRow row in DgvDadosNFe.Rows)
+            {
+                Produtos produto = new Produtos
+                {
+                    CodigoProduto = row.Cells["Referência"].Value.ToString(),
+                    DescricaoProduto = row.Cells["Descrição"].Value.ToString(),
+                    Quantidade = int.Parse(row.Cells["Quantidade"].Value.ToString()),
+                    ValorUnitario = double.Parse(row.Cells["ValorUnitario"].Value.ToString()),
+                    ValorTotal = double.Parse(row.Cells["ValorTotal"].Value.ToString()),
+                    ID_Veiculo = int.Parse(TxtID_Veiculo.Text),
+                    NumeroNFe = TxtNumNFe.Text,
+                    ID_NFe = int.Parse(TxtID.Text)
+
+                };
+
+                produtosParaIncluir.Add(produto);
+            }
+            try
+            {
+                foreach (Produtos i in produtosParaIncluir)
+                {
+                    i.Insert();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao incluir os produtos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            MessageBox.Show("Dados incluídos com sucesso!", "Inclusão de dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            SaveData();
         }
     }
 }

@@ -8,6 +8,8 @@ namespace KhoraControl.Model.Import
         public string Referência { get; set; }
         public string Descrição { get; set; }
         public int Quantidade { get; set; }
+        public string ValorUnitario { get; set; }
+        public string ValorTotal { get; set; }
         public string Fornecedor { get; set; }
         public string Destinatario { get; set; }
         public string CNPJDestinatario { get; set; }
@@ -74,7 +76,8 @@ namespace KhoraControl.Model.Import
                     Referência = det.Element(ns + "prod").Element(ns + "cProd").Value,
                     Descrição = det.Element(ns + "prod").Element(ns + "xProd").Value,
                     Quantidade = int.Parse(det.Element(ns + "prod").Element(ns + "qCom").Value.Split('.')[0]),
-                    Fornecedor = emitente.Element(ns + "xNome").Value
+                    ValorUnitario = det.Element(ns + "prod").Element(ns + "vUnCom").Value,
+                    ValorTotal = det.Element(ns + "prod").Element(ns + "vProd").Value
                 };
                 // Adicionar o produto à lista
                 products.Add(product);

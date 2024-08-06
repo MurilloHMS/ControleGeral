@@ -119,6 +119,7 @@
             salvarToolStripButton.Name = "salvarToolStripButton";
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
             // imprimirToolStripButton
             // 
