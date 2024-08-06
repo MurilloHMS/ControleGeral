@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBox1 = new GroupBox();
             panel4 = new Panel();
             chartVeiculosPorMarca = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -41,22 +44,37 @@
             label2 = new Label();
             panel3 = new Panel();
             chartVeiculosAtIn = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            panel5 = new Panel();
+            label4 = new Label();
+            LbTotalRevisoes = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            TxtQuantVeiculo = new Label();
+            LbQuantVeiculo = new Label();
             panel2 = new Panel();
             DgvVeiculos = new DataGridView();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            panel7 = new Panel();
+            dataGridView1 = new DataGridView();
+            label6 = new Label();
+            label5 = new Label();
+            panel6 = new Panel();
+            chartRevisoesPorPeriodo = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBox1.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartVeiculosPorMarca).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartVeiculosAtIn).BeginInit();
+            panel5.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgvVeiculos).BeginInit();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartRevisoesPorPeriodo).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -66,10 +84,11 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(panel3);
+            groupBox1.Controls.Add(panel5);
             groupBox1.Controls.Add(panel1);
             groupBox1.Location = new Point(13, 19);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(857, 244);
+            groupBox1.Size = new Size(836, 244);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dash Informações Veiculos";
@@ -86,18 +105,17 @@
             // 
             chartVeiculosPorMarca.BackColor = Color.Lavender;
             chartVeiculosPorMarca.BorderlineColor = Color.Lavender;
-            chartArea1.Name = "ChartArea1";
-            chartVeiculosPorMarca.ChartAreas.Add(chartArea1);
-            chartVeiculosPorMarca.Dock = DockStyle.Fill;
-            legend1.BackColor = Color.Lavender;
-            legend1.Name = "Legend1";
-            chartVeiculosPorMarca.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            chartVeiculosPorMarca.ChartAreas.Add(chartArea4);
+            legend4.BackColor = Color.Lavender;
+            legend4.Name = "Legend1";
+            chartVeiculosPorMarca.Legends.Add(legend4);
             chartVeiculosPorMarca.Location = new Point(0, 0);
             chartVeiculosPorMarca.Name = "chartVeiculosPorMarca";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartVeiculosPorMarca.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            chartVeiculosPorMarca.Series.Add(series4);
             chartVeiculosPorMarca.Size = new Size(431, 170);
             chartVeiculosPorMarca.TabIndex = 0;
             chartVeiculosPorMarca.Text = "chart1";
@@ -116,7 +134,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(619, 19);
+            label2.Location = new Point(598, 19);
             label2.Name = "label2";
             label2.Size = new Size(182, 36);
             label2.TabIndex = 5;
@@ -127,7 +145,7 @@
             // 
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.Controls.Add(chartVeiculosAtIn);
-            panel3.Location = new Point(601, 58);
+            panel3.Location = new Point(580, 58);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 170);
             panel3.TabIndex = 4;
@@ -137,35 +155,66 @@
             chartVeiculosAtIn.BackColor = Color.Lavender;
             chartVeiculosAtIn.BorderlineColor = Color.Lavender;
             chartVeiculosAtIn.BorderlineWidth = 0;
-            chartArea2.BackColor = Color.Lavender;
-            chartArea2.Name = "ChartArea1";
-            chartVeiculosAtIn.ChartAreas.Add(chartArea2);
+            chartArea5.BackColor = Color.Lavender;
+            chartArea5.Name = "ChartArea1";
+            chartVeiculosAtIn.ChartAreas.Add(chartArea5);
             chartVeiculosAtIn.Dock = DockStyle.Fill;
-            legend2.BackColor = Color.Lavender;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend1";
-            chartVeiculosAtIn.Legends.Add(legend2);
+            legend5.BackColor = Color.Lavender;
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend5.Name = "Legend1";
+            chartVeiculosAtIn.Legends.Add(legend5);
             chartVeiculosAtIn.Location = new Point(0, 0);
             chartVeiculosAtIn.Margin = new Padding(0);
             chartVeiculosAtIn.Name = "chartVeiculosAtIn";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.CustomProperties = "PieLabelStyle=Disabled, CollectedColor=Transparent";
-            series2.LabelForeColor = Color.Transparent;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            chartVeiculosAtIn.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.CustomProperties = "PieLabelStyle=Disabled, CollectedColor=Transparent";
+            series5.LabelForeColor = Color.Transparent;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            chartVeiculosAtIn.Series.Add(series5);
             chartVeiculosAtIn.Size = new Size(200, 170);
             chartVeiculosAtIn.TabIndex = 1;
             chartVeiculosAtIn.Text = "chart1";
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(label4);
+            panel5.Controls.Add(LbTotalRevisoes);
+            panel5.Location = new Point(18, 126);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(135, 81);
+            panel5.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(134, 20);
+            label4.TabIndex = 0;
+            label4.Text = "Total de Revisões ";
+            // 
+            // LbTotalRevisoes
+            // 
+            LbTotalRevisoes.Dock = DockStyle.Fill;
+            LbTotalRevisoes.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LbTotalRevisoes.Location = new Point(0, 0);
+            LbTotalRevisoes.Name = "LbTotalRevisoes";
+            LbTotalRevisoes.Size = new Size(135, 81);
+            LbTotalRevisoes.TabIndex = 0;
+            LbTotalRevisoes.Text = "0";
+            LbTotalRevisoes.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // panel1
             // 
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(TxtQuantVeiculo);
-            panel1.Location = new Point(16, 49);
+            panel1.Controls.Add(LbQuantVeiculo);
+            panel1.Location = new Point(18, 39);
             panel1.Name = "panel1";
-            panel1.Size = new Size(120, 129);
+            panel1.Size = new Size(135, 81);
             panel1.TabIndex = 1;
             // 
             // label1
@@ -179,16 +228,16 @@
             label1.TabIndex = 0;
             label1.Text = "Total de Veiculos ";
             // 
-            // TxtQuantVeiculo
+            // LbQuantVeiculo
             // 
-            TxtQuantVeiculo.Dock = DockStyle.Fill;
-            TxtQuantVeiculo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtQuantVeiculo.Location = new Point(0, 0);
-            TxtQuantVeiculo.Name = "TxtQuantVeiculo";
-            TxtQuantVeiculo.Size = new Size(120, 129);
-            TxtQuantVeiculo.TabIndex = 0;
-            TxtQuantVeiculo.Text = "0";
-            TxtQuantVeiculo.TextAlign = ContentAlignment.MiddleCenter;
+            LbQuantVeiculo.Dock = DockStyle.Fill;
+            LbQuantVeiculo.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LbQuantVeiculo.Location = new Point(0, 0);
+            LbQuantVeiculo.Name = "LbQuantVeiculo";
+            LbQuantVeiculo.Size = new Size(135, 81);
+            LbQuantVeiculo.TabIndex = 0;
+            LbQuantVeiculo.Text = "0";
+            LbQuantVeiculo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -196,7 +245,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 19);
             panel2.Name = "panel2";
-            panel2.Size = new Size(851, 375);
+            panel2.Size = new Size(830, 375);
             panel2.TabIndex = 2;
             // 
             // DgvVeiculos
@@ -209,7 +258,7 @@
             DgvVeiculos.Name = "DgvVeiculos";
             DgvVeiculos.ReadOnly = true;
             DgvVeiculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DgvVeiculos.Size = new Size(851, 375);
+            DgvVeiculos.Size = new Size(830, 375);
             DgvVeiculos.TabIndex = 0;
             // 
             // groupBox2
@@ -219,7 +268,7 @@
             groupBox2.Controls.Add(panel2);
             groupBox2.Location = new Point(16, 281);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(857, 397);
+            groupBox2.Size = new Size(836, 397);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Veiculos";
@@ -227,12 +276,83 @@
             // groupBox3
             // 
             groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox3.Controls.Add(panel7);
+            groupBox3.Controls.Add(label6);
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(panel6);
             groupBox3.Location = new Point(16, 715);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(854, 258);
+            groupBox3.Size = new Size(833, 258);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Resumo Custos Veiculos";
+            groupBox3.Text = "Resumo Revisões Veiculos";
+            // 
+            // panel7
+            // 
+            panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            panel7.Controls.Add(dataGridView1);
+            panel7.Location = new Point(479, 73);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(335, 149);
+            panel7.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(-31, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(366, 149);
+            dataGridView1.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(568, 53);
+            label6.Name = "label6";
+            label6.Size = new Size(140, 17);
+            label6.TabIndex = 1;
+            label6.Text = "Histórico de Revisões";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(104, 53);
+            label5.Name = "label5";
+            label5.Size = new Size(138, 17);
+            label5.TabIndex = 1;
+            label5.Text = "Revisões Por Periodo";
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(chartRevisoesPorPeriodo);
+            panel6.Location = new Point(59, 73);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(259, 149);
+            panel6.TabIndex = 0;
+            // 
+            // chartRevisoesPorPeriodo
+            // 
+            chartArea6.Name = "ChartArea1";
+            chartRevisoesPorPeriodo.ChartAreas.Add(chartArea6);
+            chartRevisoesPorPeriodo.Dock = DockStyle.Fill;
+            legend6.Name = "Legend1";
+            chartRevisoesPorPeriodo.Legends.Add(legend6);
+            chartRevisoesPorPeriodo.Location = new Point(0, 0);
+            chartRevisoesPorPeriodo.Name = "chartRevisoesPorPeriodo";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            chartRevisoesPorPeriodo.Series.Add(series6);
+            chartRevisoesPorPeriodo.Size = new Size(259, 149);
+            chartRevisoesPorPeriodo.TabIndex = 0;
+            chartRevisoesPorPeriodo.Text = "chart1";
             // 
             // Frm_Dashboard_Uc
             // 
@@ -244,18 +364,26 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Frm_Dashboard_Uc";
-            Size = new Size(887, 703);
+            Size = new Size(866, 703);
             Load += Frm_Dashboard_Uc_Load;
             groupBox1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chartVeiculosPorMarca).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chartVeiculosAtIn).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DgvVeiculos).EndInit();
             groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)chartRevisoesPorPeriodo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -265,7 +393,7 @@
         private GroupBox groupBox1;
         private Label label1;
         private Panel panel1;
-        private Label TxtQuantVeiculo;
+        private Label LbQuantVeiculo;
         private Panel panel2;
         private DataGridView DgvVeiculos;
         private Panel panel3;
@@ -276,5 +404,14 @@
         private Label label3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartVeiculosPorMarca;
         private GroupBox groupBox3;
+        private Panel panel5;
+        private Label label4;
+        private Label LbTotalRevisoes;
+        private Label label5;
+        private Panel panel6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevisoesPorPeriodo;
+        private Panel panel7;
+        private DataGridView dataGridView1;
+        private Label label6;
     }
 }

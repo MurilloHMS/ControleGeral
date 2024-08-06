@@ -24,7 +24,7 @@ namespace KhoraControl.View.UC
             Veiculo veiculo = new Veiculo();
             var dados = veiculo.GetAll();
             DgvVeiculos.DataSource = dados;
-            TxtQuantVeiculo.Text = dados.Count().ToString();
+            LbQuantVeiculo.Text = dados.Count().ToString();
 
             int veiculosAtivos = dados.Count(v => v.StatusVeiculo.Equals('T'));
             int veiculosInativos = dados.Count(v => v.StatusVeiculo.Equals('F'));
