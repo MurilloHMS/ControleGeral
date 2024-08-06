@@ -1,4 +1,6 @@
-﻿using KhoraControl.Model.Import;
+﻿using KhoraControl.Model.Enums;
+using KhoraControl.Model;
+using KhoraControl.Model.Import;
 using KhoraControl.View.Forms;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,7 @@ namespace KhoraControl.View.UC
         public Frm_LancamentoNFe_UC()
         {
             InitializeComponent();
+            PreencheComboBox();
         }
 
         private void BtnBuscaVeiculo_Click(object sender, EventArgs e)
@@ -29,6 +32,11 @@ namespace KhoraControl.View.UC
                 TxtID_Veiculo.Text = busca.idSelect.ToString();
                 TxtVeiculo.Text = busca.NomeSelect;
             }
+        }
+
+        private void PreencheComboBox()
+        {
+            CbNaturezaOpe.DataSource = Enum.GetValues(typeof(TipoNaturezaOperacao_e));
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
@@ -55,8 +63,8 @@ namespace KhoraControl.View.UC
                         TxtRzSocialDest.Text = data.Destinatario;
                         mTxtCnpjDes.Text = data.CNPJDestinatario;
                         TxtSerie.Text = data.Serie;
-                        TxtTotNFe.Text = data.ValorNFe.ToString();
-                        TxtTotProd.Text = data.ValorProd.ToString();
+                        TxtTotNFe.Text = data.ValorNFe;
+                        TxtTotProd.Text = data.ValorProd;
 
                         DgvDadosNFe.DataSource = dados;
                         AjustarColunasDataGridView();

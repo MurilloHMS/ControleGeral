@@ -15,8 +15,8 @@ namespace KhoraControl.Model.Import
         public string CNPJ { get; set; }
         public string NumeroNFe { get; set; }
         public string Serie { get; set; }
-        public double ValorNFe { get; set; }
-        public double ValorProd {  get; set; }
+        public string ValorNFe { get; set; }
+        public string ValorProd {  get; set; }
 
         public DateTime DataEmissao { get; set; }
 
@@ -46,8 +46,8 @@ namespace KhoraControl.Model.Import
             ChaveNFe = chave.Element(ns + "chNFe").Value;
 
             var dadosImposto = doc.Descendants(ns + "ICMSTot").FirstOrDefault();
-            ValorNFe = double.Parse(dadosImposto.Element(ns + "vProd").Value);
-            ValorProd = double.Parse(dadosImposto.Element(ns + "vNF").Value);
+            ValorNFe = dadosImposto.Element(ns + "vProd").Value;
+            ValorProd = dadosImposto.Element(ns + "vNF").Value;
 
 
             if (DateTime.TryParseExact(dataEmissaoStr, "yyyy-MM-ddTHH:mm:sszzz", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime dataEmissao))
