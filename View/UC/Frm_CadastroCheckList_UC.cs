@@ -56,7 +56,7 @@ namespace KhoraControl.View.UC
 
         private void TogglePanel()
         {
-            targetHeightCadastroCheckList = ShowPanelCadastroCheckList ? 248 : 150;
+            targetHeightCadastroCheckList = ShowPanelCadastroCheckList ? 240 : 150;
             animationTimer.Start();
         }
 

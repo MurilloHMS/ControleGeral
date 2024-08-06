@@ -88,9 +88,12 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackgroundImage = (Image)resources.GetObject("toolStrip1.BackgroundImage");
+            toolStrip1.BackgroundImageLayout = ImageLayout.None;
             toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, recortarToolStripButton, copiarToolStripButton, colarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
+            toolStrip1.RenderMode = ToolStripRenderMode.Professional;
             toolStrip1.Size = new Size(954, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroVeiculos_UC));
             groupBox1 = new GroupBox();
+            ckbAtivo = new CheckBox();
             cbEmpresa = new ComboBox();
             cbConcessionária = new ComboBox();
             TxtIDEmpresa = new TextBox();
@@ -81,7 +82,6 @@
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             statusStrip1 = new StatusStrip();
-            ckbAtivo = new CheckBox();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -140,6 +140,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Informações Veiculo";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // ckbAtivo
+            // 
+            ckbAtivo.AutoSize = true;
+            ckbAtivo.Location = new Point(593, 22);
+            ckbAtivo.Name = "ckbAtivo";
+            ckbAtivo.Size = new Size(54, 19);
+            ckbAtivo.TabIndex = 23;
+            ckbAtivo.Text = "Ativo";
+            ckbAtivo.UseVisualStyleBackColor = true;
             // 
             // cbEmpresa
             // 
@@ -511,6 +521,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackgroundImage = Properties.Resources._64px_HD_transparent_picture;
             toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, LimpartoolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -582,16 +593,6 @@
             statusStrip1.Size = new Size(714, 22);
             statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
-            // 
-            // ckbAtivo
-            // 
-            ckbAtivo.AutoSize = true;
-            ckbAtivo.Location = new Point(593, 22);
-            ckbAtivo.Name = "ckbAtivo";
-            ckbAtivo.Size = new Size(54, 19);
-            ckbAtivo.TabIndex = 23;
-            ckbAtivo.Text = "Ativo";
-            ckbAtivo.UseVisualStyleBackColor = true;
             // 
             // Frm_CadastroVeiculos_UC
             // 

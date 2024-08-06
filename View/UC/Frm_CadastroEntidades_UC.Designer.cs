@@ -337,6 +337,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackgroundImage = Properties.Resources._64px_HD_transparent_picture;
             toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
