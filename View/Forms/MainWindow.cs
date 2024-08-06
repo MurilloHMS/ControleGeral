@@ -234,5 +234,15 @@ namespace KhoraControl
         {
             ShowTabPage(new Frm_CadastroCheckList_UC(), "Frm_CadastroCheckList", "Cadastro de Check List");
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ShowTabPage(new Frm_LancamentoNFe_UC(), "Frm_LancamentoNFe_UC", "Lancamento NFe");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ShowTabPage(new Frm_Configuracoes_UC(), "Frm_Configuracoes_UC", "Lancamento NFe");
+        }
     }
 }

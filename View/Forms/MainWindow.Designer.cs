@@ -192,6 +192,7 @@
             // 
             // button4
             // 
+            button4.Cursor = Cursors.Hand;
             button4.Dock = DockStyle.Bottom;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -204,6 +205,7 @@
             button4.Size = new Size(199, 37);
             button4.TabIndex = 6;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // panelAnalises
             // 
@@ -321,6 +323,7 @@
             button7.Text = "                    Importar XML";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // btnPanelImportacoes
             // 
