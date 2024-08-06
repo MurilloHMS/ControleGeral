@@ -1,4 +1,6 @@
 ﻿using KhoraControl.Model;
+using KhoraControl.Model.Enums;
+using KhoraControl.View.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +25,19 @@ namespace KhoraControl.View.UC
             InitializeComponent();
             InitializeAnimationTimer();
             TogglePanel();
+            PreencheComboBox();
+        }
+
+        private void PreencheComboBox()
+        {
+            Concessionaria con = new Concessionaria();
+            var itens = con.ReturnAll();
+            CbConcessionaria.Items.Add(string.Empty);
+            foreach (var it in itens)
+            {
+                CbConcessionaria.Items.Add(it.Nome);
+            }
+
         }
 
         private void InitializeAnimationTimer()
@@ -136,5 +151,16 @@ namespace KhoraControl.View.UC
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_Busca busca = new Frm_Busca();
+            busca.ShowDialog();
+
+            if (busca.DialogResult == DialogResult.OK)
+            {
+                TxtID_Veiculo.Text = busca.idSelect.ToString();
+                TxtVeiculo.Text = busca.NomeSelect;
+            }
+        }
     }
 }

@@ -56,7 +56,7 @@
             label8 = new Label();
             button3 = new Button();
             button1 = new Button();
-            comboBox1 = new ComboBox();
+            CbConcessionaria = new ComboBox();
             label5 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label7 = new Label();
@@ -65,8 +65,8 @@
             label4 = new Label();
             label3 = new Label();
             TxtNumNotaFiscal = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            TxtVeiculo = new TextBox();
+            TxtID_Veiculo = new TextBox();
             label2 = new Label();
             TxtID = new TextBox();
             label1 = new Label();
@@ -206,7 +206,7 @@
             panelCadastroCheckList.Controls.Add(label8);
             panelCadastroCheckList.Controls.Add(button3);
             panelCadastroCheckList.Controls.Add(button1);
-            panelCadastroCheckList.Controls.Add(comboBox1);
+            panelCadastroCheckList.Controls.Add(CbConcessionaria);
             panelCadastroCheckList.Controls.Add(label5);
             panelCadastroCheckList.Controls.Add(dateTimePicker1);
             panelCadastroCheckList.Controls.Add(label7);
@@ -215,8 +215,8 @@
             panelCadastroCheckList.Controls.Add(label4);
             panelCadastroCheckList.Controls.Add(label3);
             panelCadastroCheckList.Controls.Add(TxtNumNotaFiscal);
-            panelCadastroCheckList.Controls.Add(textBox2);
-            panelCadastroCheckList.Controls.Add(textBox1);
+            panelCadastroCheckList.Controls.Add(TxtVeiculo);
+            panelCadastroCheckList.Controls.Add(TxtID_Veiculo);
             panelCadastroCheckList.Controls.Add(label2);
             panelCadastroCheckList.Controls.Add(TxtID);
             panelCadastroCheckList.Controls.Add(label1);
@@ -346,15 +346,16 @@
             button1.Size = new Size(25, 23);
             button1.TabIndex = 22;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // comboBox1
+            // CbConcessionaria
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(80, 102);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(337, 23);
-            comboBox1.TabIndex = 20;
+            CbConcessionaria.DropDownStyle = ComboBoxStyle.DropDownList;
+            CbConcessionaria.FormattingEnabled = true;
+            CbConcessionaria.Location = new Point(80, 102);
+            CbConcessionaria.Name = "CbConcessionaria";
+            CbConcessionaria.Size = new Size(337, 23);
+            CbConcessionaria.TabIndex = 20;
             // 
             // label5
             // 
@@ -423,19 +424,19 @@
             TxtNumNotaFiscal.Size = new Size(64, 23);
             TxtNumNotaFiscal.TabIndex = 14;
             // 
-            // textBox2
+            // TxtVeiculo
             // 
-            textBox2.Location = new Point(207, 42);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(285, 23);
-            textBox2.TabIndex = 14;
+            TxtVeiculo.Location = new Point(207, 42);
+            TxtVeiculo.Name = "TxtVeiculo";
+            TxtVeiculo.Size = new Size(285, 23);
+            TxtVeiculo.TabIndex = 14;
             // 
-            // textBox1
+            // TxtID_Veiculo
             // 
-            textBox1.Location = new Point(148, 42);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(53, 23);
-            textBox1.TabIndex = 13;
+            TxtID_Veiculo.Location = new Point(148, 42);
+            TxtID_Veiculo.Name = "TxtID_Veiculo";
+            TxtID_Veiculo.Size = new Size(53, 23);
+            TxtID_Veiculo.TabIndex = 13;
             // 
             // label2
             // 
@@ -475,6 +476,7 @@
             // 
             // checkedListBox1
             // 
+            checkedListBox1.CheckOnClick = true;
             checkedListBox1.Dock = DockStyle.Fill;
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Location = new Point(3, 19);
@@ -530,7 +532,7 @@
         private Label label8;
         private Button button3;
         private Button button1;
-        private ComboBox comboBox1;
+        private ComboBox CbConcessionaria;
         private Label label5;
         private DateTimePicker dateTimePicker1;
         private Label label7;
@@ -539,8 +541,8 @@
         private Label label4;
         private Label label3;
         private TextBox TxtNumNotaFiscal;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox TxtVeiculo;
+        private TextBox TxtID_Veiculo;
         private Label label2;
         private TextBox TxtID;
         private Label label1;
