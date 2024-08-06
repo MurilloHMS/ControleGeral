@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="View\Forms\MainWindow.cs">
+    <Compile Update="View\Forms\Frm_Busca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Forms\Frm_MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\UC\Frm_CadastroCheckList_UC.cs">

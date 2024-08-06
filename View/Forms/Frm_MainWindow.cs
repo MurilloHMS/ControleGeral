@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace KhoraControl
 {
-    public partial class MainWindow : Form
+    public partial class Frm_MainWindow : Form
     {
         private Boolean showPanelMenu = false;
         private Boolean showPanelVeiculos = false;
@@ -19,7 +19,7 @@ namespace KhoraControl
         private int targetHeightAnalises;
         private int step = 13; // Ajuste a velocidade da animação
 
-        public MainWindow()
+        public Frm_MainWindow()
         {
             InitializeComponent();
             InitializeAnimationTimer();

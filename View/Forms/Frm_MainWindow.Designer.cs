@@ -1,6 +1,6 @@
 ﻿namespace KhoraControl
 {
-    partial class MainWindow
+    partial class Frm_MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainWindow));
             btnVeiculos = new Button();
             panelVeiculos = new Panel();
             button3 = new Button();
