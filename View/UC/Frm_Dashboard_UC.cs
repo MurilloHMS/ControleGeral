@@ -27,14 +27,45 @@ namespace KhoraControl.View.UC
             TxtQuantVeiculo.Text = dados.Count().ToString();
 
             int veiculosAtivos = dados.Count(v => v.StatusVeiculo.Equals('T'));
-            int veiculosInativos = dados.Count(v => v.StatusVeiculo.Equals('F')); 
+            int veiculosInativos = dados.Count(v => v.StatusVeiculo.Equals('F'));
+
+            ConfigureChartVeiculosPorMarca(dados);
             ConfigureChartVeiculosAtivosEInativos(veiculosAtivos, veiculosInativos);
         }
+        public void ConfigureChartVeiculosPorMarca(IEnumerable<Veiculo> dados)
+        {
+                var dadosPorMarca = dados
+                .GroupBy(v => v.Marca)
+                .Select(g => new { Marca = g.Key, Quantidade = g.Count() })
+                .ToList();
 
+            
+            Chart pieChart = chartVeiculosPorMarca;
+            pieChart.BackColor = Color.Lavender;
+            pieChart.ChartAreas.Clear();
+            pieChart.Series.Clear();
+            pieChart.Titles.Clear();
+
+            ChartArea chartArea = new ChartArea();
+            chartArea.BackColor = Color.Lavender;
+            pieChart.ChartAreas.Add(chartArea);
+
+            Series series = new Series("Marcas");
+            series.LabelBackColor = Color.Transparent;
+            series.LabelForeColor = Color.Transparent;
+            series.ChartType = SeriesChartType.Pie;
+
+            foreach (var item in dadosPorMarca)
+            {
+                series.Points.AddXY(item.Marca, item.Quantidade);
+            }
+
+            pieChart.Series.Add(series);
+        }
         public void ConfigureChartVeiculosAtivosEInativos(int vAtivos, int vInativos)
         {
             
-            Chart pieChart = chart1;
+            Chart pieChart = chartVeiculosAtIn;
 
             pieChart.ChartAreas.Clear();
             pieChart.Series.Clear();
