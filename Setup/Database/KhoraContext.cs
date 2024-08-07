@@ -48,6 +48,9 @@ namespace KhoraControl.Setup.Database
                 .HasValue<Empresa>("Empresa")
                 .HasValue<Concessionaria>("Concessionaria");
 
+            modelBuilder.Entity<CheckList>().HasKey(c => c.Id);
+            modelBuilder.Entity<CheckList>().Property(c => c.Id).ValueGeneratedOnAdd();
+
             base.OnModelCreating(modelBuilder);
         }
     }

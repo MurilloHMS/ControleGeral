@@ -291,6 +291,7 @@
             TxtDescritivoCheckList.Name = "TxtDescritivoCheckList";
             TxtDescritivoCheckList.Size = new Size(550, 23);
             TxtDescritivoCheckList.TabIndex = 23;
+            TxtDescritivoCheckList.KeyDown += TxtDescritivoCheckList_KeyDown;
             // 
             // label9
             // 
