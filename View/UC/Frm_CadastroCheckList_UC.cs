@@ -153,13 +153,30 @@ namespace KhoraControl.View.UC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm_Busca busca = new Frm_Busca();
+            Frm_BuscaVeiculo busca = new Frm_BuscaVeiculo();
             busca.ShowDialog();
 
             if (busca.DialogResult == DialogResult.OK)
             {
                 TxtID_Veiculo.Text = busca.idSelect.ToString();
                 TxtVeiculo.Text = busca.NomeSelect;
+            }
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscaNotaFiscal_Click(object sender, EventArgs e)
+        {
+            Frm_BuscaNotaFiscal busca = new Frm_BuscaNotaFiscal();
+            busca.ShowDialog();
+
+            if (busca.DialogResult == DialogResult.OK)
+            {
+                TxtNumNotaFiscal.Text = busca.NumeroSelect;
+                
             }
         }
     }

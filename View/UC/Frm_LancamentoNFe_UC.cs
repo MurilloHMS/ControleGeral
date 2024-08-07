@@ -26,7 +26,7 @@ namespace KhoraControl.View.UC
 
         private void BtnBuscaVeiculo_Click(object sender, EventArgs e)
         {
-            Frm_Busca busca = new Frm_Busca();
+            Frm_BuscaVeiculo busca = new Frm_BuscaVeiculo();
             busca.ShowDialog();
 
             if (busca.DialogResult == DialogResult.OK)

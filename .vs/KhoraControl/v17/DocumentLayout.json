@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastroveiculos_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastroveiculos_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\forms\\frm_buscanotafiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\forms\\frm_buscanotafiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_lancamentonfe_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_lancamentonfe_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastroveiculos_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastroveiculos_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\class\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\class\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\class\\dadosnfe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\class\\dadosnfe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\forms\\frm_buscanotafiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\forms\\frm_buscanotafiscal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,8 +25,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 554,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 414,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,66 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_LancamentoNFe_UC.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_LancamentoNFe_UC.cs",
-              "RelativeDocumentMoniker": "View\\UC\\Frm_LancamentoNFe_UC.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_LancamentoNFe_UC.cs",
-              "RelativeToolTip": "View\\UC\\Frm_LancamentoNFe_UC.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAcwJMAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:03:07.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DadosNFe.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\DadosNFe.cs",
-              "RelativeDocumentMoniker": "Model\\Class\\DadosNFe.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\DadosNFe.cs",
-              "RelativeToolTip": "Model\\Class\\DadosNFe.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wBkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T19:02:52.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Veiculo.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\Veiculo.cs",
-              "RelativeDocumentMoniker": "Model\\Class\\Veiculo.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\Veiculo.cs",
-              "RelativeToolTip": "Model\\Class\\Veiculo.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA5wCYAAAAwAAAA",
+              "Title": "Frm_BuscaNotaFiscal.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "RelativeDocumentMoniker": "View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "RelativeToolTip": "View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAYwDsAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T18:53:50.882Z",
+              "WhenOpened": "2024-08-07T20:08:08.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Frm_CadastroVeiculos_UC.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroVeiculos_UC.cs",
-              "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroVeiculos_UC.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroVeiculos_UC.cs*",
-              "RelativeToolTip": "View\\UC\\Frm_CadastroVeiculos_UC.cs*",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAYwIwAAAA/AAAA",
+              "Title": "Frm_BuscaNotaFiscal.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "RelativeDocumentMoniker": "View\\Forms\\Frm_BuscaNotaFiscal.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_BuscaNotaFiscal.cs [Projeto]",
+              "RelativeToolTip": "View\\Forms\\Frm_BuscaNotaFiscal.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T18:09:03.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T20:08:05.396Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Frm_CadastroVeiculos_UC.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroVeiculos_UC.cs",
-              "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroVeiculos_UC.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroVeiculos_UC.cs [Projeto]*",
-              "RelativeToolTip": "View\\UC\\Frm_CadastroVeiculos_UC.cs [Projeto]*",
+              "Title": "Frm_CadastroCheckList_UC.cs",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "RelativeToolTip": "View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAowLEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T18:08:48.433Z",
+              "WhenOpened": "2024-08-07T19:53:32.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_CadastroCheckList_UC.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroCheckList_UC.cs",
+              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs [Projeto]",
+              "RelativeToolTip": "View\\UC\\Frm_CadastroCheckList_UC.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T19:53:30.418Z",
               "EditorCaption": " [Projeto]"
             }
           ]

@@ -1,4 +1,5 @@
 ﻿using KhoraControl.Model;
+using KhoraControl.Model.Import;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,18 +12,20 @@ using System.Windows.Forms;
 
 namespace KhoraControl.View.Forms
 {
-    public partial class Frm_Busca : Form
+    public partial class Frm_BuscaNotaFiscal : Form
     {
 
-        List<ItemBox> VeiculosBusca = new List<ItemBox>();
+        List<ItemBox> NFeBusca = new List<ItemBox>();
         public int idSelect { get; set; }
         public string NomeSelect { get; set; }
-        Veiculo veiculos = new Veiculo();
-        public Frm_Busca()
+        public string NumeroSelect { get; set; }
+
+        DadosNFe notasFiscais = new DadosNFe();
+        public Frm_BuscaNotaFiscal()
         {
             InitializeComponent();
             PreencherLista();
-            ListVeiculos.Sorted = true;
+            ListNotasFiscais.Sorted = true;
             textBox1.Focus();
         }
 
@@ -30,31 +33,33 @@ namespace KhoraControl.View.Forms
         {
             public int ID { get; set; }
             public string Nome { get; set; }
-            public string Placa { get; set; }
-            public string Marca { get; set; }
+            public string Numero { get; set; }
+            public string NaturezaOpe { get; set; }
+            public int ID_Veiculo { get; set; }
 
             public override string ToString()
             {
-                return Marca + " - " + Nome + " - " + Placa;
+                return Nome + " - ID Veiculo: "+ ID_Veiculo + " - " + Numero + " - " + NaturezaOpe;
             }
 
         }
 
         private void PreencherLista()
         {
-            ListVeiculos.Items.Clear();
-            VeiculosBusca.Clear();
+            ListNotasFiscais.Items.Clear();
+            NFeBusca.Clear();
 
-            var returnVeiculo = veiculos.GetAll();
+            var returnVeiculo = notasFiscais.ReturnAll();
             foreach (var item in returnVeiculo)
             {
                 ItemBox x = new ItemBox();
                 x.ID = item.ID;
-                x.Nome = item.Modelo;
-                x.Placa = item.Placa;
-                x.Marca = item.Marca;
-                VeiculosBusca.Add(x);
-                ListVeiculos.Items.Add(x);
+                x.Nome = item.RazaoSocialRemetente;
+                x.Numero = item.NumNFe;
+                x.NaturezaOpe = item.NaturezaOperacao;
+                x.ID_Veiculo = item.ID_Veiculo;
+                NFeBusca.Add(x);
+                ListNotasFiscais.Items.Add(x);
             }
         }
 
@@ -62,36 +67,37 @@ namespace KhoraControl.View.Forms
         {
             try
             {
-                ItemBox itemSelected = (ItemBox)ListVeiculos.Items[ListVeiculos.SelectedIndex];
+                ItemBox itemSelected = (ItemBox)ListNotasFiscais.Items[ListNotasFiscais.SelectedIndex];
                 DialogResult = DialogResult.OK;
                 NomeSelect = itemSelected.Nome;
                 idSelect = itemSelected.ID;
+                NumeroSelect = itemSelected.Numero;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Atenção selecione um Veiculo válido!", "Veiculo Selecionado inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Atenção selecione uma Nota Fiscal válida!", "NFe Selecionada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string filtro = textBox1.Text.ToLower();
-            List<ItemBox> itemFilter = VeiculosBusca.Where(x => x.Nome.ToLower().Contains(filtro)).ToList();
+            List<ItemBox> itemFilter = NFeBusca.Where(x => x.Numero.ToLower().Contains(filtro)).ToList();
 
-            ListVeiculos.Items.Clear();
+            ListNotasFiscais.Items.Clear();
             foreach (var item in itemFilter)
             {
-                ListVeiculos.Items.Add(item);
+                ListNotasFiscais.Items.Add(item);
             }
         }
 
-        private void ListVeiculos_DoubleClick(object sender, EventArgs e)
+        private void ListNotasFiscais_DoubleClick(object sender, EventArgs e)
         {
             SelecionarItem();
         }
 
-        private void ListVeiculos_KeyDown(object sender, KeyEventArgs e)
+        private void ListNotasFiscais_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {

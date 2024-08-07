@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\proau\OneDrive - Murillo HMS\Projetos\2 - Sistemas\5 - Projetos Murillo\KhoraControl\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Update="View\Forms\Frm_Busca.cs">
+    <Compile Update="View\Forms\Frm_BuscaVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Forms\Frm_BuscaNotaFiscal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\Forms\Frm_MainWindow.cs">

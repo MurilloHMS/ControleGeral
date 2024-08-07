@@ -54,7 +54,7 @@
             label9 = new Label();
             TxtID_CheckList = new TextBox();
             label8 = new Label();
-            button3 = new Button();
+            btnBuscaNotaFiscal = new Button();
             button1 = new Button();
             CbConcessionaria = new ComboBox();
             label5 = new Label();
@@ -124,6 +124,7 @@
             salvarToolStripButton.Name = "salvarToolStripButton";
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
+            salvarToolStripButton.Click += salvarToolStripButton_Click;
             // 
             // imprimirToolStripButton
             // 
@@ -204,7 +205,7 @@
             panelCadastroCheckList.Controls.Add(label9);
             panelCadastroCheckList.Controls.Add(TxtID_CheckList);
             panelCadastroCheckList.Controls.Add(label8);
-            panelCadastroCheckList.Controls.Add(button3);
+            panelCadastroCheckList.Controls.Add(btnBuscaNotaFiscal);
             panelCadastroCheckList.Controls.Add(button1);
             panelCadastroCheckList.Controls.Add(CbConcessionaria);
             panelCadastroCheckList.Controls.Add(label5);
@@ -318,20 +319,21 @@
             label8.TabIndex = 18;
             label8.Text = "ID CheckList";
             // 
-            // button3
+            // btnBuscaNotaFiscal
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(650, 39);
-            button3.Name = "button3";
-            button3.Size = new Size(26, 23);
-            button3.TabIndex = 22;
-            button3.UseVisualStyleBackColor = true;
+            btnBuscaNotaFiscal.BackgroundImage = (Image)resources.GetObject("btnBuscaNotaFiscal.BackgroundImage");
+            btnBuscaNotaFiscal.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBuscaNotaFiscal.Cursor = Cursors.Hand;
+            btnBuscaNotaFiscal.FlatAppearance.BorderSize = 0;
+            btnBuscaNotaFiscal.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBuscaNotaFiscal.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBuscaNotaFiscal.FlatStyle = FlatStyle.Flat;
+            btnBuscaNotaFiscal.Location = new Point(650, 39);
+            btnBuscaNotaFiscal.Name = "btnBuscaNotaFiscal";
+            btnBuscaNotaFiscal.Size = new Size(26, 23);
+            btnBuscaNotaFiscal.TabIndex = 22;
+            btnBuscaNotaFiscal.UseVisualStyleBackColor = true;
+            btnBuscaNotaFiscal.Click += btnBuscaNotaFiscal_Click;
             // 
             // button1
             // 
@@ -531,7 +533,7 @@
         private Label label9;
         private TextBox TxtID_CheckList;
         private Label label8;
-        private Button button3;
+        private Button btnBuscaNotaFiscal;
         private Button button1;
         private ComboBox CbConcessionaria;
         private Label label5;
