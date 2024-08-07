@@ -51,11 +51,11 @@ namespace KhoraControl.View.UC
             v.Placa = TxtPlaca.Text;
             v.Ano = TxtAno.Text;
             v.Modelo = TxtModelo.Text;
-            v.DataDaCompra = DtpDataDaCompra.Checked ? DtpDataDaCompra.Value : null;
+            v.DataDaCompra = DtpDataDaCompra.Checked ? DtpDataDaCompra.Value.ToUniversalTime() : null;
             v.KmQuandoComprado = ParseNullable(TxtKmQuandoComprado.Text);
-            v.DataUltimaRevisao = DtpDataUltimaRevisao.Checked ? DtpDataUltimaRevisao.Value : null;
+            v.DataUltimaRevisao = DtpDataUltimaRevisao.Checked ? DtpDataUltimaRevisao.Value.ToUniversalTime() : null;
             v.KmUltimaRevisao = ParseNullable(TxtKmUltimaRevisao.Text);
-            v.DataProximaRevisao = DtpDataProximaRevisao.Checked ? DtpDataProximaRevisao.Value : null;
+            v.DataProximaRevisao = DtpDataProximaRevisao.Checked ? DtpDataProximaRevisao.Value.ToUniversalTime() : null;
             v.KmRodados = ParseNullable(TxtKmRodados.Text);
             v.SugestaoConcessionaria = TxtSugestaoConcessionaria.Text;
             v.Observacoes = TxtObs.Text;
@@ -138,7 +138,11 @@ namespace KhoraControl.View.UC
                 }
                 if (TxtNotaFiscalDeCompra.Text.Length > 0)
                 {
-                    File.Copy(veiculo.NotaFiscalDeCompra, $@"{localSalvamento}\PDF\NotaFiscalDeCompra.pdf");
+                    if (!File.Exists(veiculo.NotaFiscalDeCompra))
+                    {
+                        File.Copy(veiculo.NotaFiscalDeCompra, $@"{localSalvamento}\PDF\NotaFiscalDeCompra.pdf");
+                    }
+                    
                 }
 
 
