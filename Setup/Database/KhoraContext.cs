@@ -1,11 +1,13 @@
 ﻿using KhoraControl.Model;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace KhoraControl.Setup.Database
 {
     public class KhoraContext : DbContext
     {
-        private string _connectionString;
+        private readonly string _connectionString;
+        private readonly string _databaseProvider;
 
         public DbSet<Veiculo> veiculos { get; set; }
         public DbSet<Entidade> entidade { get; set; }
@@ -16,20 +18,28 @@ namespace KhoraControl.Setup.Database
         public DbSet<DadosNFe> dadosNFe { get; set; }
         public DbSet<Produtos> produtos { get; set; }
 
-
         public KhoraContext()
         {
-            string dbDiretorio = Path.Combine(Directory.GetCurrentDirectory(), "db");
-            if (!Directory.Exists(dbDiretorio))
-            {
-                Directory.CreateDirectory(dbDiretorio);
-            }
-            string PathArquivo = Path.Combine(dbDiretorio, "System.db");
-
-            _connectionString = $"Data Source = {PathArquivo};Cache=Shared";
+            // Lê a configuração do App.config
+            _databaseProvider = ConfigurationManager.AppSettings["DatabaseProvider"];
+            _connectionString = ConfigurationManager.ConnectionStrings[_databaseProvider + "Connection"].ConnectionString;
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite(_connectionString).UseLazyLoadingProxies();
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (_databaseProvider == "SQLite")
+            {
+                optionsBuilder.UseSqlite(_connectionString).UseLazyLoadingProxies();
+            }
+            else if (_databaseProvider == "PostgreSQL")
+            {
+                optionsBuilder.UseNpgsql(_connectionString).UseLazyLoadingProxies();
+            }
+            else
+            {
+                throw new InvalidOperationException("Database provider not supported.");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

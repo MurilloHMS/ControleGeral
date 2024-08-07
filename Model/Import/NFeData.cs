@@ -35,7 +35,7 @@ namespace KhoraControl.Model.Import
             CNPJ = emitente.Element(ns + "CNPJ").Value;
             Fornecedor = emitente.Element(ns + "xNome").Value;
 
-            var destinatario = doc.Descendants(ns + "emit").FirstOrDefault();
+            var destinatario = doc.Descendants(ns + "dest").FirstOrDefault();
             Destinatario = destinatario.Element(ns + "xNome").Value;
             CNPJDestinatario = destinatario.Element(ns + "CNPJ").Value;
 
