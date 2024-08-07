@@ -211,6 +211,7 @@
             DtpDataProximaRevisao.Format = DateTimePickerFormat.Short;
             DtpDataProximaRevisao.Location = new Point(30, 232);
             DtpDataProximaRevisao.Name = "DtpDataProximaRevisao";
+            DtpDataProximaRevisao.ShowCheckBox = true;
             DtpDataProximaRevisao.Size = new Size(122, 23);
             DtpDataProximaRevisao.TabIndex = 12;
             // 
@@ -219,6 +220,7 @@
             DtpDataUltimaRevisao.Format = DateTimePickerFormat.Short;
             DtpDataUltimaRevisao.Location = new Point(322, 171);
             DtpDataUltimaRevisao.Name = "DtpDataUltimaRevisao";
+            DtpDataUltimaRevisao.ShowCheckBox = true;
             DtpDataUltimaRevisao.Size = new Size(108, 23);
             DtpDataUltimaRevisao.TabIndex = 10;
             // 

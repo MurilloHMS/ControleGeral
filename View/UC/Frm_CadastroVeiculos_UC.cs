@@ -53,9 +53,9 @@ namespace KhoraControl.View.UC
             v.Modelo = TxtModelo.Text;
             v.DataDaCompra = DtpDataDaCompra.Checked ? DtpDataDaCompra.Value : null;
             v.KmQuandoComprado = ParseNullable(TxtKmQuandoComprado.Text);
-            v.DataUltimaRevisao = DtpDataUltimaRevisao.Value;
+            v.DataUltimaRevisao = DtpDataUltimaRevisao.Checked ? DtpDataUltimaRevisao.Value : null;
             v.KmUltimaRevisao = ParseNullable(TxtKmUltimaRevisao.Text);
-            v.DataProximaRevisao = DtpDataProximaRevisao.Value;
+            v.DataProximaRevisao = DtpDataProximaRevisao.Checked ? DtpDataProximaRevisao.Value : null;
             v.KmRodados = ParseNullable(TxtKmRodados.Text);
             v.SugestaoConcessionaria = TxtSugestaoConcessionaria.Text;
             v.Observacoes = TxtObs.Text;
@@ -125,6 +125,23 @@ namespace KhoraControl.View.UC
                 Veiculo veiculo = new Veiculo();
                 veiculo = CollectData();
                 veiculo.ValidaClasse();
+
+                string localSalvamento = $@"{veiculo.LocalSalvamentoDeDados}\{veiculo.Placa}";
+                if (!Directory.Exists(localSalvamento))
+                {
+                    Directory.CreateDirectory(localSalvamento);
+                }
+
+                if (!Directory.Exists($@"{localSalvamento}\PDF"))
+                {
+                    Directory.CreateDirectory($@"{localSalvamento}\PDF");
+                }
+                if (TxtNotaFiscalDeCompra.Text.Length > 0)
+                {
+                    File.Copy(veiculo.NotaFiscalDeCompra, $@"{localSalvamento}\PDF\NotaFiscalDeCompra.pdf");
+                }
+
+
                 if (!string.IsNullOrEmpty(TxtID.Text))
                 {
                     veiculo.Update();
@@ -137,6 +154,8 @@ namespace KhoraControl.View.UC
                     MessageBox.Show("Veiculo Cadastrado com sucesso!", "Cadastro Veiculo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearData();
                 }
+
+                
             }
             catch (ValidationException ex)
             {

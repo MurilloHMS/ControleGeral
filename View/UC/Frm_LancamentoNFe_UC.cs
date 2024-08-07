@@ -17,6 +17,7 @@ namespace KhoraControl.View.UC
 {
     public partial class Frm_LancamentoNFe_UC : UserControl
     {
+        private string path;
         public Frm_LancamentoNFe_UC()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace KhoraControl.View.UC
 
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
-                        string path = ofd.FileName;
+                        path = ofd.FileName;
                         NFeData data = new NFeData();
                         var dados = data.ReturnDados(path);
 
@@ -107,8 +108,8 @@ namespace KhoraControl.View.UC
                 RazaoSocialRemetente = TxtRzSocialRem.Text,
                 CNPJDestinatario = mTxtCnpjDes.Text,
                 CNPJRemetente = mTxtCnpjRem.Text,
-                DataEmissao = DtpDataEmissao.Value,
-                DataRevisao = DtpDataRevisao.Value,
+                DataEmissao = DtpDataEmissao.Value.ToUniversalTime(),
+                DataRevisao = DtpDataRevisao.Value.ToUniversalTime(),
                 ValorTotalNotaFiscal = double.Parse(TxtTotNFe.Text),
                 ValorTotalProdutos = double.Parse(TxtTotProd.Text)
             };
@@ -137,6 +138,15 @@ namespace KhoraControl.View.UC
 
                 produtosParaIncluir.Add(produto);
             }
+
+            Veiculo veiculo = new Veiculo();
+            var retorno = veiculo.GetForID(int.Parse(TxtID_Veiculo.Text));
+            if (!Directory.Exists($@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML"))
+            {
+                Directory.CreateDirectory($@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML");
+            }
+            File.Copy(path, $@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML\{TxtChave.Text}.xml");
+            
             try
             {
                 foreach (Produtos i in produtosParaIncluir)

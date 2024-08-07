@@ -124,6 +124,7 @@
             TxtCPNJ.Name = "TxtCPNJ";
             TxtCPNJ.Size = new Size(140, 23);
             TxtCPNJ.TabIndex = 2;
+            TxtCPNJ.TextChanged += TxtCPNJ_TextChanged;
             // 
             // TxtID
             // 

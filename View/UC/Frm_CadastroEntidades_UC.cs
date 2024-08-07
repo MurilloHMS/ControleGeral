@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace KhoraControl.View.UC
 {
     public partial class Frm_CadastroEntidades_UC : UserControl
     {
+
+        private bool _isCpf = true;
         public Frm_CadastroEntidades_UC()
         {
             InitializeComponent();
@@ -80,7 +83,7 @@ namespace KhoraControl.View.UC
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
-            if (RbConcessionaria.Checked) 
+            if (RbConcessionaria.Checked)
             {
                 try
                 {
@@ -126,6 +129,57 @@ namespace KhoraControl.View.UC
                     MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void TxtCPNJ_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtCPNJ.TextLength > 11)
+            {
+                TxtCPNJ.Mask = "00,000,000/0000-00";
+                label3.Text = "CNPJ";
+            }
+            else
+            {
+                TxtCPNJ.Mask = "000,000,000-00";
+                label3.Text = "CPF";
+            }
+        }
+
+        private string ApplyCpfMask(string input)
+        {
+            // Remove todos os caracteres não numéricos
+            var digitsOnly = Regex.Replace(input, @"\D", "");
+
+            if (digitsOnly.Length <= 3)
+                return digitsOnly;
+
+            if (digitsOnly.Length <= 6)
+                return string.Format("{0}.{1}", digitsOnly.Substring(0, 3), digitsOnly.Substring(3));
+
+            if (digitsOnly.Length <= 9)
+                return string.Format("{0}.{1}.{2}", digitsOnly.Substring(0, 3), digitsOnly.Substring(3, 3), digitsOnly.Substring(6));
+
+            return string.Format("{0}.{1}.{2}-{3}", digitsOnly.Substring(0, 3), digitsOnly.Substring(3, 3), digitsOnly.Substring(6, 3), digitsOnly.Substring(9, 2));
+        }
+
+        private string ApplyCnpjMask(string input)
+        {
+            // Remove todos os caracteres não numéricos
+            var digitsOnly = Regex.Replace(input, @"\D", "");
+
+            if (digitsOnly.Length <= 2)
+                return digitsOnly;
+
+            if (digitsOnly.Length <= 5)
+                return string.Format("{0}.{1}", digitsOnly.Substring(0, 2), digitsOnly.Substring(2));
+
+            if (digitsOnly.Length <= 8)
+                return string.Format("{0}.{1}.{2}", digitsOnly.Substring(0, 2), digitsOnly.Substring(2, 3), digitsOnly.Substring(5));
+
+            if (digitsOnly.Length <= 12)
+                return string.Format("{0}.{1}.{2}/{3}", digitsOnly.Substring(0, 2), digitsOnly.Substring(2, 3), digitsOnly.Substring(5, 4), digitsOnly.Substring(9));
+
+            return string.Format("{0}.{1}.{2}/{3}-{4}", digitsOnly.Substring(0, 2), digitsOnly.Substring(2, 3), digitsOnly.Substring(5, 4), digitsOnly.Substring(9, 4), digitsOnly.Substring(13));
         }
     }
 }
