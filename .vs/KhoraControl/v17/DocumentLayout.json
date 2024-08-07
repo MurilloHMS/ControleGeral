@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163608_checklistidnulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240807163608_checklistidnulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\class\\dadoschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:model\\class\\dadoschecklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\setup\\database\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:setup\\database\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:view\\uc\\frm_cadastrochecklist_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:setup\\database\\khoracontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\setup\\database\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|solutionrelative:setup\\database\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C55BE6-1A28-4275-86E2-A33B69EEF330}|KhoraControl.csproj|c:\\users\\proau\\onedrive - murillo hms\\projetos\\2 - sistemas\\5 - projetos murillo\\khoracontrol\\model\\class\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 554,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,46 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240807163608_checklistidnulo.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163608_checklistidnulo.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240807163608_checklistidnulo.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163608_checklistidnulo.cs",
-              "RelativeToolTip": "Migrations\\20240807163608_checklistidnulo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:36:09.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs",
-              "RelativeToolTip": "Migrations\\20240807163041_InserindoChavePrimariaNoCheckListEAutoIncremento.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:30:42.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Veiculo.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\Veiculo.cs",
               "RelativeDocumentMoniker": "Model\\Class\\Veiculo.cs",
               "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\Veiculo.cs",
               "RelativeToolTip": "Model\\Class\\Veiculo.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAIA4wDEAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T16:20:32.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DAL.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Setup\\Database\\DAL.cs",
               "RelativeDocumentMoniker": "Setup\\Database\\DAL.cs",
@@ -142,20 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DadosCheckList.cs",
-              "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\DadosCheckList.cs",
-              "RelativeDocumentMoniker": "Model\\Class\\DadosCheckList.cs",
-              "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Class\\DadosCheckList.cs",
-              "RelativeToolTip": "Model\\Class\\DadosCheckList.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T16:19:17.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "KhoraContext.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Setup\\Database\\KhoraContext.cs",
               "RelativeDocumentMoniker": "Setup\\Database\\KhoraContext.cs",
@@ -168,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Frm_CadastroCheckList_UC.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroCheckList_UC.cs",
@@ -180,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -193,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Frm_LancamentoNFe_UC.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_LancamentoNFe_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_LancamentoNFe_UC.cs",
@@ -206,20 +155,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Frm_CadastroCheckList_UC.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroCheckList_UC.cs",
               "ToolTip": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.cs",
               "RelativeToolTip": "View\\UC\\Frm_CadastroCheckList_UC.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAwwHwAAAAPAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAwI4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T20:20:32.776Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Frm_CadastroCheckList_UC.Designer.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_CadastroCheckList_UC.Designer.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_CadastroCheckList_UC.Designer.cs",
@@ -232,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Frm_LancamentoNFe_UC.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_LancamentoNFe_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_LancamentoNFe_UC.cs",
@@ -244,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "Frm_Busca.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_Busca.cs",
               "RelativeDocumentMoniker": "View\\Forms\\Frm_Busca.cs",
@@ -257,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 12,
               "Title": "NFeData.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\Model\\Import\\NFeData.cs",
               "RelativeDocumentMoniker": "Model\\Import\\NFeData.cs",
@@ -269,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "Frm_Configuracoes_UC.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_Configuracoes_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_Configuracoes_UC.cs",
@@ -281,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "Frm_Configuracoes_UC.cs",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\UC\\Frm_Configuracoes_UC.cs",
               "RelativeDocumentMoniker": "View\\UC\\Frm_Configuracoes_UC.cs",
@@ -294,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "Frm_Busca.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\5 - Projetos Murillo\\KhoraControl\\View\\Forms\\Frm_Busca.cs",
               "RelativeDocumentMoniker": "View\\Forms\\Frm_Busca.cs",
@@ -307,7 +256,7 @@
           ]
         },
         {
-          "DockedWidth": 350,
+          "DockedWidth": 554,
           "SelectedChildIndex": -1,
           "Children": [
             {

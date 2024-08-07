@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -11,6 +12,7 @@ namespace KhoraControl.Model
     public class Entidade
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID {  get; set; }
         [Required]
         public string Nome { get; set; }

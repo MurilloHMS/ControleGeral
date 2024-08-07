@@ -13,7 +13,7 @@ namespace KhoraControl.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int? ID { get; set; }
+        public int ID { get; set; }
         [Required]
         public int ID_Veiculo { get; set; }
         [Required]

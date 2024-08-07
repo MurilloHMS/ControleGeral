@@ -1,3 +1,6 @@
+using KhoraControl.Setup.Database;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace KhoraControl
 {
     internal static class Program
@@ -8,6 +11,9 @@ namespace KhoraControl
         [STAThread]
         static void Main()
         {
+
+            KhoraContext context = new KhoraContext();
+            context.Database.EnsureCreated();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();

@@ -115,34 +115,32 @@ namespace KhoraControl.View.UC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Ocorreu um erro ao inserir os dados\n\n{ex.Message}\n\n{ex.Data}", "Erro ao Importar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            CheckList ck = new CheckList();
-            if (!string.IsNullOrEmpty(TxtID_CheckList.Text))
+            try
             {
-                ck.Id = int.Parse(TxtID_CheckList.Text);
-                ck.Descricao = TxtDescritivoCheckList.Text.Trim();
-                ck.ValidaClasse();
-                ck.Update();
-            }
-            else
-            {
-                ck.Descricao = TxtDescritivoCheckList.Text;
-                ck.ValidaClasse();
-                ck.Insert();
-            }
+                CheckList ck = new CheckList();
+                if (!string.IsNullOrEmpty(TxtID_CheckList.Text))
+                {
+                    ck.Id = int.Parse(TxtID_CheckList.Text);
+                    ck.Descricao = TxtDescritivoCheckList.Text.Trim();
+                    ck.ValidaClasse();
+                    ck.Update();
+                }
+                else
+                {
+                    ck.Descricao = TxtDescritivoCheckList.Text;
+                    ck.ValidaClasse();
+                    ck.Insert();
+                }
 
-            //MessageBox.Show("Dados inseridos com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            WriteCheckListData();
-            TxtDescritivoCheckList.Clear();
-            TxtID_CheckList.Clear();
+                //MessageBox.Show("Dados inseridos com sucesso!", "Inserção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                WriteCheckListData();
+                TxtDescritivoCheckList.Clear();
+                TxtID_CheckList.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro ao inserir os dados\n\n{ex.Message}\n\n{ex.Data}", "Erro ao Importar dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void TxtDescritivoCheckList_KeyDown(object sender, KeyEventArgs e)
