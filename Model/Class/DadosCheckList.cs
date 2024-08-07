@@ -25,7 +25,6 @@ namespace KhoraControl.Model
         [Required]
         public int ID_Concessionaria { get; set; }
         public string? Observacoes { get; set; }
-        public virtual  List<CheckList> CheckLists { get; set; }
 
         private readonly DAL<DadosCheckList> _dal;
 

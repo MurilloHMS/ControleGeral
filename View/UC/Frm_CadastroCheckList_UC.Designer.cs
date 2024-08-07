@@ -166,6 +166,7 @@
             colarToolStripButton.Name = "colarToolStripButton";
             colarToolStripButton.Size = new Size(23, 22);
             colarToolStripButton.Text = "&Colar";
+            colarToolStripButton.Click += colarToolStripButton_Click;
             // 
             // toolStripSeparator1
             // 

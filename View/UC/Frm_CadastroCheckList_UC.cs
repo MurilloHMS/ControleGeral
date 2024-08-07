@@ -40,6 +40,14 @@ namespace KhoraControl.View.UC
 
         }
 
+        private void CollectData()
+        {
+            foreach(var i in checkedListBox1.CheckedItems)
+            {
+
+            }
+        }
+
         private void InitializeAnimationTimer()
         {
             animationTimer = new System.Windows.Forms.Timer();
@@ -176,8 +184,13 @@ namespace KhoraControl.View.UC
             if (busca.DialogResult == DialogResult.OK)
             {
                 TxtNumNotaFiscal.Text = busca.NumeroSelect;
-                
+
             }
+        }
+
+        private void colarToolStripButton_Click(object sender, EventArgs e)
+        {
+            CollectData();
         }
     }
 }
