@@ -32,6 +32,10 @@ namespace KhoraControl.View.UC
             ConfigureChartVeiculosPorMarca(dados);
             ConfigureChartVeiculosAtivosEInativos(veiculosAtivos, veiculosInativos);
             configureDataGrideViewColumns();
+
+            DadosCheckList check = new DadosCheckList();
+            var dadosCheck = check.ReturnAll();
+            LbTotalRevisoes.Text = dadosCheck.Count().ToString();
         }
 
         public void configureDataGrideViewColumns()
