@@ -144,6 +144,8 @@
             // ckbAtivo
             // 
             ckbAtivo.AutoSize = true;
+            ckbAtivo.Checked = true;
+            ckbAtivo.CheckState = CheckState.Checked;
             ckbAtivo.Location = new Point(593, 22);
             ckbAtivo.Name = "ckbAtivo";
             ckbAtivo.Size = new Size(54, 19);
@@ -208,6 +210,7 @@
             // 
             // DtpDataProximaRevisao
             // 
+            DtpDataProximaRevisao.Checked = false;
             DtpDataProximaRevisao.Format = DateTimePickerFormat.Short;
             DtpDataProximaRevisao.Location = new Point(30, 232);
             DtpDataProximaRevisao.Name = "DtpDataProximaRevisao";
@@ -217,6 +220,7 @@
             // 
             // DtpDataUltimaRevisao
             // 
+            DtpDataUltimaRevisao.Checked = false;
             DtpDataUltimaRevisao.Format = DateTimePickerFormat.Short;
             DtpDataUltimaRevisao.Location = new Point(322, 171);
             DtpDataUltimaRevisao.Name = "DtpDataUltimaRevisao";
@@ -226,6 +230,7 @@
             // 
             // DtpDataDaCompra
             // 
+            DtpDataDaCompra.Checked = false;
             DtpDataDaCompra.Format = DateTimePickerFormat.Short;
             DtpDataDaCompra.Location = new Point(30, 174);
             DtpDataDaCompra.Name = "DtpDataDaCompra";
