@@ -94,7 +94,7 @@
             RbConcessionaria.Location = new Point(731, 44);
             RbConcessionaria.Name = "RbConcessionaria";
             RbConcessionaria.Size = new Size(105, 19);
-            RbConcessionaria.TabIndex = 3;
+            RbConcessionaria.TabIndex = 6;
             RbConcessionaria.TabStop = true;
             RbConcessionaria.Text = "Concessionária";
             RbConcessionaria.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             RbEmpresa.Location = new Point(731, 22);
             RbEmpresa.Name = "RbEmpresa";
             RbEmpresa.Size = new Size(70, 19);
-            RbEmpresa.TabIndex = 3;
+            RbEmpresa.TabIndex = 5;
             RbEmpresa.TabStop = true;
             RbEmpresa.Text = "Empresa";
             RbEmpresa.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             TxtIE.Location = new Point(559, 44);
             TxtIE.Name = "TxtIE";
             TxtIE.Size = new Size(140, 23);
-            TxtIE.TabIndex = 2;
+            TxtIE.TabIndex = 4;
             // 
             // TxtCPNJ
             // 
@@ -123,7 +123,7 @@
             TxtCPNJ.Mask = "00,000,000/0000-00";
             TxtCPNJ.Name = "TxtCPNJ";
             TxtCPNJ.Size = new Size(140, 23);
-            TxtCPNJ.TabIndex = 2;
+            TxtCPNJ.TabIndex = 3;
             TxtCPNJ.TextChanged += TxtCPNJ_TextChanged;
             // 
             // TxtID
@@ -139,7 +139,7 @@
             TxtNome.Location = new Point(121, 44);
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(286, 23);
-            TxtNome.TabIndex = 1;
+            TxtNome.TabIndex = 2;
             // 
             // label4
             // 
@@ -223,7 +223,7 @@
             TxtNumero.Location = new Point(512, 172);
             TxtNumero.Name = "TxtNumero";
             TxtNumero.Size = new Size(115, 23);
-            TxtNumero.TabIndex = 1;
+            TxtNumero.TabIndex = 13;
             // 
             // label10
             // 
@@ -240,7 +240,7 @@
             TxtUF.Location = new Point(465, 172);
             TxtUF.Name = "TxtUF";
             TxtUF.Size = new Size(41, 23);
-            TxtUF.TabIndex = 1;
+            TxtUF.TabIndex = 12;
             // 
             // label9
             // 
@@ -257,7 +257,7 @@
             TxtLocalidade.Location = new Point(356, 172);
             TxtLocalidade.Name = "TxtLocalidade";
             TxtLocalidade.Size = new Size(103, 23);
-            TxtLocalidade.TabIndex = 1;
+            TxtLocalidade.TabIndex = 11;
             // 
             // label8
             // 
@@ -274,7 +274,7 @@
             TxtBairro.Location = new Point(14, 172);
             TxtBairro.Name = "TxtBairro";
             TxtBairro.Size = new Size(336, 23);
-            TxtBairro.TabIndex = 1;
+            TxtBairro.TabIndex = 10;
             // 
             // label7
             // 
@@ -291,7 +291,7 @@
             TxtComplemento.Location = new Point(356, 114);
             TxtComplemento.Name = "TxtComplemento";
             TxtComplemento.Size = new Size(277, 23);
-            TxtComplemento.TabIndex = 1;
+            TxtComplemento.TabIndex = 9;
             // 
             // label6
             // 
@@ -308,7 +308,7 @@
             TxtLogradouro.Location = new Point(19, 114);
             TxtLogradouro.Name = "TxtLogradouro";
             TxtLogradouro.Size = new Size(331, 23);
-            TxtLogradouro.TabIndex = 1;
+            TxtLogradouro.TabIndex = 8;
             // 
             // label1
             // 
@@ -325,7 +325,7 @@
             TxtCep.Mask = "00000-000";
             TxtCep.Name = "TxtCep";
             TxtCep.Size = new Size(72, 23);
-            TxtCep.TabIndex = 2;
+            TxtCep.TabIndex = 7;
             // 
             // label5
             // 
