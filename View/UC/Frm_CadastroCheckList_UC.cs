@@ -53,7 +53,7 @@ namespace KhoraControl.View.UC
             dados.Data = DtpDataLancamento.Value.ToUniversalTime();
             dados.ID_Veiculo = int.Parse(TxtID_Veiculo.Text);
             dados.ID_Concessionaria = int.Parse(TxtID_Concessionaria.Text) ;
-            dados.KmRodados = int.Parse(TxtKmRodados.Text);
+            dados.KmRodados = int.TryParse(TxtKmRodados.Text, out var result ) ? (int)result : null ;
             dados.ValorRevisao = double.Parse(TxtValorRevisao.Text);
             dados.ChecklistItems = checkedListBox1.CheckedItems.Cast<string>().ToList();
 

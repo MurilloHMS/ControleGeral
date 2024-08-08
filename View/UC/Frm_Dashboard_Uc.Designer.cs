@@ -88,7 +88,7 @@
             groupBox1.Controls.Add(panel1);
             groupBox1.Location = new Point(13, 19);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(904, 244);
+            groupBox1.Size = new Size(853, 244);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dash Informações Veiculos";
@@ -134,7 +134,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(666, 19);
+            label2.Location = new Point(615, 19);
             label2.Name = "label2";
             label2.Size = new Size(182, 36);
             label2.TabIndex = 5;
@@ -145,7 +145,7 @@
             // 
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.Controls.Add(chartVeiculosAtIn);
-            panel3.Location = new Point(648, 58);
+            panel3.Location = new Point(597, 58);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 170);
             panel3.TabIndex = 4;
@@ -245,7 +245,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 19);
             panel2.Name = "panel2";
-            panel2.Size = new Size(898, 375);
+            panel2.Size = new Size(847, 375);
             panel2.TabIndex = 2;
             // 
             // DgvVeiculos
@@ -258,7 +258,7 @@
             DgvVeiculos.Name = "DgvVeiculos";
             DgvVeiculos.ReadOnly = true;
             DgvVeiculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DgvVeiculos.Size = new Size(898, 375);
+            DgvVeiculos.Size = new Size(847, 375);
             DgvVeiculos.TabIndex = 0;
             // 
             // groupBox2
@@ -268,7 +268,7 @@
             groupBox2.Controls.Add(panel2);
             groupBox2.Location = new Point(16, 281);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(904, 397);
+            groupBox2.Size = new Size(853, 397);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Veiculos";
@@ -282,7 +282,7 @@
             groupBox3.Controls.Add(panel6);
             groupBox3.Location = new Point(16, 715);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(901, 258);
+            groupBox3.Size = new Size(850, 258);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Resumo Revisões Veiculos";
@@ -291,7 +291,7 @@
             // 
             panel7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             panel7.Controls.Add(dataGridView1);
-            panel7.Location = new Point(547, 73);
+            panel7.Location = new Point(496, 73);
             panel7.Name = "panel7";
             panel7.Size = new Size(335, 149);
             panel7.TabIndex = 2;
@@ -313,7 +313,7 @@
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(636, 53);
+            label6.Location = new Point(585, 53);
             label6.Name = "label6";
             label6.Size = new Size(140, 17);
             label6.TabIndex = 1;
@@ -364,7 +364,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Frm_Dashboard_Uc";
-            Size = new Size(934, 703);
+            Size = new Size(883, 703);
             Load += Frm_Dashboard_Uc_Load;
             groupBox1.ResumeLayout(false);
             panel4.ResumeLayout(false);

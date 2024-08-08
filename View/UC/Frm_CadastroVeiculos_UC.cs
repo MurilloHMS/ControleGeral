@@ -243,7 +243,16 @@ namespace KhoraControl.View.UC
             if (TxtID.Text.Length > 0)
             {
                 Veiculo veiculo = new Veiculo();
-                WriteData(veiculo.GetForID(int.Parse(TxtID.Text)));
+                var retorno = veiculo.GetForID(int.Parse(TxtID.Text));
+                if (retorno != null) 
+                {
+                    WriteData(retorno);
+                }
+                else
+                {
+                    MessageBox.Show($"O código {TxtID.Text} não existe como Veiculo Cadastrado, por favor tente outro código",
+                        "Veiculo não localizado", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
             }
             else
             {
