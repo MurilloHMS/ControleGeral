@@ -45,12 +45,14 @@
             colarToolStripButton = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
+            lblTipoBase = new Label();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lblTipoBase);
             groupBox1.Controls.Add(cbProvider);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
@@ -67,7 +69,7 @@
             cbProvider.DropDownStyle = ComboBoxStyle.DropDownList;
             cbProvider.FormattingEnabled = true;
             cbProvider.Items.AddRange(new object[] { "SQLite", "PostgreSQL" });
-            cbProvider.Location = new Point(36, 62);
+            cbProvider.Location = new Point(35, 83);
             cbProvider.Name = "cbProvider";
             cbProvider.Size = new Size(121, 23);
             cbProvider.TabIndex = 2;
@@ -76,7 +78,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 44);
+            label2.Location = new Point(35, 65);
             label2.Name = "label2";
             label2.Size = new Size(55, 15);
             label2.TabIndex = 1;
@@ -85,7 +87,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(212, 44);
+            label1.Location = new Point(211, 65);
             label1.Name = "label1";
             label1.Size = new Size(105, 15);
             label1.TabIndex = 1;
@@ -93,7 +95,7 @@
             // 
             // TxtConnectionString
             // 
-            TxtConnectionString.Location = new Point(212, 62);
+            TxtConnectionString.Location = new Point(211, 83);
             TxtConnectionString.Name = "TxtConnectionString";
             TxtConnectionString.Size = new Size(706, 23);
             TxtConnectionString.TabIndex = 0;
@@ -190,6 +192,17 @@
             ajudaToolStripButton.Size = new Size(23, 22);
             ajudaToolStripButton.Text = "Aju&da";
             // 
+            // lblTipoBase
+            // 
+            lblTipoBase.AutoSize = true;
+            lblTipoBase.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoBase.ForeColor = Color.Black;
+            lblTipoBase.Location = new Point(35, 30);
+            lblTipoBase.Name = "lblTipoBase";
+            lblTipoBase.Size = new Size(65, 25);
+            lblTipoBase.TabIndex = 3;
+            lblTipoBase.Text = "label3";
+            // 
             // Frm_Configuracoes_UC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -224,5 +237,6 @@
         private ToolStripButton colarToolStripButton;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ajudaToolStripButton;
+        private Label lblTipoBase;
     }
 }

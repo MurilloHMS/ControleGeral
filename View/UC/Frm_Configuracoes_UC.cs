@@ -47,6 +47,8 @@ namespace KhoraControl.View.UC
             string selectedProvider = cbProvider.SelectedItem.ToString();
             string connectionString = ConfigurationManagerHelper.GetConnectionString(selectedProvider);
             TxtConnectionString.Text = connectionString;
+            lblTipoBase.Text = cbProvider.SelectedItem.ToString() == "SQLite" ? "BASE DE TESTE" : "BASE PRODUÇÃO";
+            lblTipoBase.ForeColor = cbProvider.SelectedItem.ToString() == "SQLite" ? Color.Red : Color.Green;
         }
     }
 }
