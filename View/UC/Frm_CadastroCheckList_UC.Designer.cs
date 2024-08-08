@@ -45,9 +45,9 @@
             groupBox1 = new GroupBox();
             panelCadastroCheckList = new Panel();
             BtnShowPanel = new Button();
-            textBox7 = new TextBox();
+            TxtValorRevisao = new TextBox();
             label11 = new Label();
-            textBox6 = new TextBox();
+            TxtKmRodados = new TextBox();
             label10 = new Label();
             button2 = new Button();
             TxtDescritivoCheckList = new TextBox();
@@ -58,14 +58,16 @@
             button1 = new Button();
             CbConcessionaria = new ComboBox();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            DtpDataLancamento = new DateTimePicker();
             label7 = new Label();
-            textBox4 = new TextBox();
+            TxtID_Concessionaria = new TextBox();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
             TxtNumNotaFiscal = new TextBox();
             TxtVeiculo = new TextBox();
+            TxtId_NotaFiscal = new TextBox();
+            label12 = new Label();
             TxtID_Veiculo = new TextBox();
             label2 = new Label();
             TxtID = new TextBox();
@@ -197,9 +199,9 @@
             // panelCadastroCheckList
             // 
             panelCadastroCheckList.Controls.Add(BtnShowPanel);
-            panelCadastroCheckList.Controls.Add(textBox7);
+            panelCadastroCheckList.Controls.Add(TxtValorRevisao);
             panelCadastroCheckList.Controls.Add(label11);
-            panelCadastroCheckList.Controls.Add(textBox6);
+            panelCadastroCheckList.Controls.Add(TxtKmRodados);
             panelCadastroCheckList.Controls.Add(label10);
             panelCadastroCheckList.Controls.Add(button2);
             panelCadastroCheckList.Controls.Add(TxtDescritivoCheckList);
@@ -210,14 +212,16 @@
             panelCadastroCheckList.Controls.Add(button1);
             panelCadastroCheckList.Controls.Add(CbConcessionaria);
             panelCadastroCheckList.Controls.Add(label5);
-            panelCadastroCheckList.Controls.Add(dateTimePicker1);
+            panelCadastroCheckList.Controls.Add(DtpDataLancamento);
             panelCadastroCheckList.Controls.Add(label7);
-            panelCadastroCheckList.Controls.Add(textBox4);
+            panelCadastroCheckList.Controls.Add(TxtID_Concessionaria);
             panelCadastroCheckList.Controls.Add(label6);
             panelCadastroCheckList.Controls.Add(label4);
             panelCadastroCheckList.Controls.Add(label3);
             panelCadastroCheckList.Controls.Add(TxtNumNotaFiscal);
             panelCadastroCheckList.Controls.Add(TxtVeiculo);
+            panelCadastroCheckList.Controls.Add(TxtId_NotaFiscal);
+            panelCadastroCheckList.Controls.Add(label12);
             panelCadastroCheckList.Controls.Add(TxtID_Veiculo);
             panelCadastroCheckList.Controls.Add(label2);
             panelCadastroCheckList.Controls.Add(TxtID);
@@ -243,12 +247,12 @@
             BtnShowPanel.UseVisualStyleBackColor = true;
             BtnShowPanel.Click += BtnShowPanel_Click;
             // 
-            // textBox7
+            // TxtValorRevisao
             // 
-            textBox7.Location = new Point(598, 102);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(127, 23);
-            textBox7.TabIndex = 26;
+            TxtValorRevisao.Location = new Point(598, 102);
+            TxtValorRevisao.Name = "TxtValorRevisao";
+            TxtValorRevisao.Size = new Size(127, 23);
+            TxtValorRevisao.TabIndex = 26;
             // 
             // label11
             // 
@@ -259,12 +263,12 @@
             label11.TabIndex = 25;
             label11.Text = "Valor Revisão";
             // 
-            // textBox6
+            // TxtKmRodados
             // 
-            textBox6.Location = new Point(442, 102);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(127, 23);
-            textBox6.TabIndex = 26;
+            TxtKmRodados.Location = new Point(442, 102);
+            TxtKmRodados.Name = "TxtKmRodados";
+            TxtKmRodados.Size = new Size(127, 23);
+            TxtKmRodados.TabIndex = 26;
             // 
             // label10
             // 
@@ -329,7 +333,7 @@
             btnBuscaNotaFiscal.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnBuscaNotaFiscal.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnBuscaNotaFiscal.FlatStyle = FlatStyle.Flat;
-            btnBuscaNotaFiscal.Location = new Point(650, 39);
+            btnBuscaNotaFiscal.Location = new Point(667, 39);
             btnBuscaNotaFiscal.Name = "btnBuscaNotaFiscal";
             btnBuscaNotaFiscal.Size = new Size(26, 23);
             btnBuscaNotaFiscal.TabIndex = 22;
@@ -370,13 +374,13 @@
             label5.TabIndex = 19;
             label5.Text = "Data Lançamento";
             // 
-            // dateTimePicker1
+            // DtpDataLancamento
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(725, 39);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(100, 23);
-            dateTimePicker1.TabIndex = 17;
+            DtpDataLancamento.Format = DateTimePickerFormat.Short;
+            DtpDataLancamento.Location = new Point(725, 39);
+            DtpDataLancamento.Name = "DtpDataLancamento";
+            DtpDataLancamento.Size = new Size(100, 23);
+            DtpDataLancamento.TabIndex = 17;
             // 
             // label7
             // 
@@ -387,12 +391,12 @@
             label7.TabIndex = 12;
             label7.Text = "Concessionária";
             // 
-            // textBox4
+            // TxtID_Concessionaria
             // 
-            textBox4.Location = new Point(21, 102);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(53, 23);
-            textBox4.TabIndex = 15;
+            TxtID_Concessionaria.Location = new Point(21, 102);
+            TxtID_Concessionaria.Name = "TxtID_Concessionaria";
+            TxtID_Concessionaria.Size = new Size(53, 23);
+            TxtID_Concessionaria.TabIndex = 15;
             // 
             // label6
             // 
@@ -406,7 +410,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(581, 22);
+            label4.Location = new Point(598, 22);
             label4.Name = "label4";
             label4.Size = new Size(68, 15);
             label4.TabIndex = 10;
@@ -423,7 +427,7 @@
             // 
             // TxtNumNotaFiscal
             // 
-            TxtNumNotaFiscal.Location = new Point(581, 39);
+            TxtNumNotaFiscal.Location = new Point(598, 39);
             TxtNumNotaFiscal.Name = "TxtNumNotaFiscal";
             TxtNumNotaFiscal.Size = new Size(64, 23);
             TxtNumNotaFiscal.TabIndex = 14;
@@ -434,6 +438,22 @@
             TxtVeiculo.Name = "TxtVeiculo";
             TxtVeiculo.Size = new Size(285, 23);
             TxtVeiculo.TabIndex = 14;
+            // 
+            // TxtId_NotaFiscal
+            // 
+            TxtId_NotaFiscal.Location = new Point(539, 39);
+            TxtId_NotaFiscal.Name = "TxtId_NotaFiscal";
+            TxtId_NotaFiscal.Size = new Size(53, 23);
+            TxtId_NotaFiscal.TabIndex = 13;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(539, 21);
+            label12.Name = "label12";
+            label12.Size = new Size(18, 15);
+            label12.TabIndex = 8;
+            label12.Text = "ID";
             // 
             // TxtID_Veiculo
             // 
@@ -457,6 +477,7 @@
             TxtID.Name = "TxtID";
             TxtID.Size = new Size(53, 23);
             TxtID.TabIndex = 16;
+            TxtID.TextChanged += TxtID_TextChanged;
             // 
             // label1
             // 
@@ -525,9 +546,9 @@
         private GroupBox groupBox1;
         private Panel panelCadastroCheckList;
         private Button BtnShowPanel;
-        private TextBox textBox7;
+        private TextBox TxtValorRevisao;
         private Label label11;
-        private TextBox textBox6;
+        private TextBox TxtKmRodados;
         private Label label10;
         private Button button2;
         private TextBox TxtDescritivoCheckList;
@@ -538,9 +559,9 @@
         private Button button1;
         private ComboBox CbConcessionaria;
         private Label label5;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DtpDataLancamento;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox TxtID_Concessionaria;
         private Label label6;
         private Label label4;
         private Label label3;
@@ -552,5 +573,7 @@
         private Label label1;
         private GroupBox groupBox2;
         private CheckedListBox checkedListBox1;
+        private TextBox TxtId_NotaFiscal;
+        private Label label12;
     }
 }

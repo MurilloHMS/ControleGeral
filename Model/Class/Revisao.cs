@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    internal class Revisao
+    public class Revisao
     {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int ID_CheckList {  get; set; }
     }
 }

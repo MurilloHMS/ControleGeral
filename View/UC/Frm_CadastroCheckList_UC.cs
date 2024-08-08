@@ -1,6 +1,7 @@
 ﻿using KhoraControl.Model;
 using KhoraControl.Model.Enums;
 using KhoraControl.View.Forms;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -40,12 +42,45 @@ namespace KhoraControl.View.UC
 
         }
 
-        private void CollectData()
+        private DadosCheckList CollectData()
         {
-            foreach(var i in checkedListBox1.CheckedItems)
+            DadosCheckList dados = new DadosCheckList();
+            if (!string.IsNullOrEmpty(TxtID.Text))
             {
-
+                dados.ID = int.Parse(TxtID.Text);
             }
+            dados.ID_NotaFiscal = int.Parse(TxtId_NotaFiscal.Text);
+            dados.Data = DtpDataLancamento.Value.ToUniversalTime();
+            dados.ID_Veiculo = int.Parse(TxtID_Veiculo.Text);
+            dados.ID_Concessionaria = int.Parse(TxtID_Concessionaria.Text);
+            dados.KmRodados = int.Parse(TxtKmRodados.Text);
+            dados.ValorRevisao = double.Parse(TxtValorRevisao.Text);
+            dados.ChecklistItems = checkedListBox1.CheckedItems.Cast<string>().ToList();
+
+            return dados;
+        }
+
+        private void WriteData(DadosCheckList ck)
+        {
+            TxtID.Text = ck.ID.ToString();
+            TxtId_NotaFiscal.Text = ck.ID_NotaFiscal.ToString();
+            TxtID_Veiculo.Text = ck.ID_Veiculo.ToString();
+            TxtID_Concessionaria.Text = ck.ID_Concessionaria.ToString();
+            DtpDataLancamento.Text = ck.Data.ToString();
+            TxtKmRodados.Text = ck.KmRodados.ToString();
+            TxtValorRevisao.Text = ck.ValorRevisao.ToString();
+
+            var item = JsonSerializer.Deserialize<List<String>>(ck.ChecklistJson) ?? new List<String>();
+
+            foreach (var i in item)
+            {
+                int index = checkedListBox1.Items.IndexOf(i);
+                if (index != -1)
+                {
+                    checkedListBox1.SetItemChecked(index, true);
+                }
+            }
+
         }
 
         private void InitializeAnimationTimer()
@@ -173,7 +208,28 @@ namespace KhoraControl.View.UC
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DadosCheckList dados = new DadosCheckList();
+                dados.ValidaClasse();
+                dados = CollectData();
+                if (string.IsNullOrEmpty(TxtID.Text))
+                {
+                    dados.Insert();
+                    MessageBox.Show("Dados inseridos com sucesso!");
+                }
+                else
+                {
+                    dados.Update();
+                    MessageBox.Show("Dados Atualizados com sucesso!");
+                }
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void btnBuscaNotaFiscal_Click(object sender, EventArgs e)
@@ -184,6 +240,7 @@ namespace KhoraControl.View.UC
             if (busca.DialogResult == DialogResult.OK)
             {
                 TxtNumNotaFiscal.Text = busca.NumeroSelect;
+                TxtId_NotaFiscal.Text = busca.idSelect.ToString();
 
             }
         }
@@ -191,6 +248,16 @@ namespace KhoraControl.View.UC
         private void colarToolStripButton_Click(object sender, EventArgs e)
         {
             CollectData();
+        }
+
+        private void TxtID_TextChanged(object sender, EventArgs e)
+        {
+            if(TxtID.Text.Length > 0)
+            {
+                var dados = new DadosCheckList();
+                var retorno = dados.ReturnForID(int.Parse(TxtID.Text));
+                WriteData(retorno);
+            }
         }
     }
 }
