@@ -36,14 +36,14 @@
             ajudaToolStripButton = new ToolStripButton();
             groupBox1 = new GroupBox();
             panelLancamentoPedido = new Panel();
-            button1 = new Button();
-            textBox4 = new TextBox();
+            btnRegistrar = new Button();
+            TxtValorUnitario = new TextBox();
             label19 = new Label();
-            textBox3 = new TextBox();
+            TxtQuantidade = new TextBox();
             label18 = new Label();
-            textBox2 = new TextBox();
+            TxtDescricao = new TextBox();
             label17 = new Label();
-            textBox1 = new TextBox();
+            TxtReferencia = new TextBox();
             label16 = new Label();
             TxtID = new TextBox();
             CbNaturezaOpe = new ComboBox();
@@ -93,7 +93,7 @@
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
-            toolStrip1.Size = new Size(928, 25);
+            toolStrip1.Size = new Size(894, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -138,21 +138,21 @@
             groupBox1.Dock = DockStyle.Top;
             groupBox1.Location = new Point(0, 25);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(928, 419);
+            groupBox1.Size = new Size(894, 419);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados NFe";
             // 
             // panelLancamentoPedido
             // 
-            panelLancamentoPedido.Controls.Add(button1);
-            panelLancamentoPedido.Controls.Add(textBox4);
+            panelLancamentoPedido.Controls.Add(btnRegistrar);
+            panelLancamentoPedido.Controls.Add(TxtValorUnitario);
             panelLancamentoPedido.Controls.Add(label19);
-            panelLancamentoPedido.Controls.Add(textBox3);
+            panelLancamentoPedido.Controls.Add(TxtQuantidade);
             panelLancamentoPedido.Controls.Add(label18);
-            panelLancamentoPedido.Controls.Add(textBox2);
+            panelLancamentoPedido.Controls.Add(TxtDescricao);
             panelLancamentoPedido.Controls.Add(label17);
-            panelLancamentoPedido.Controls.Add(textBox1);
+            panelLancamentoPedido.Controls.Add(TxtReferencia);
             panelLancamentoPedido.Controls.Add(label16);
             panelLancamentoPedido.Controls.Add(TxtID);
             panelLancamentoPedido.Controls.Add(CbNaturezaOpe);
@@ -191,21 +191,22 @@
             panelLancamentoPedido.Size = new Size(913, 378);
             panelLancamentoPedido.TabIndex = 11;
             // 
-            // button1
+            // btnRegistrar
             // 
-            button1.Location = new Point(743, 331);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 25);
-            button1.TabIndex = 13;
-            button1.Text = "Adicionar Registro";
-            button1.UseVisualStyleBackColor = true;
+            btnRegistrar.Location = new Point(743, 331);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(139, 25);
+            btnRegistrar.TabIndex = 20;
+            btnRegistrar.Text = "Adicionar Registro";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += button1_Click;
             // 
-            // textBox4
+            // TxtValorUnitario
             // 
-            textBox4.Location = new Point(556, 333);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 23);
-            textBox4.TabIndex = 12;
+            TxtValorUnitario.Location = new Point(556, 333);
+            TxtValorUnitario.Name = "TxtValorUnitario";
+            TxtValorUnitario.Size = new Size(176, 23);
+            TxtValorUnitario.TabIndex = 19;
             // 
             // label19
             // 
@@ -216,12 +217,12 @@
             label19.TabIndex = 11;
             label19.Text = "Valor Unitário";
             // 
-            // textBox3
+            // TxtQuantidade
             // 
-            textBox3.Location = new Point(556, 287);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(176, 23);
-            textBox3.TabIndex = 12;
+            TxtQuantidade.Location = new Point(556, 287);
+            TxtQuantidade.Name = "TxtQuantidade";
+            TxtQuantidade.Size = new Size(176, 23);
+            TxtQuantidade.TabIndex = 18;
             // 
             // label18
             // 
@@ -232,12 +233,13 @@
             label18.TabIndex = 11;
             label18.Text = "Quantidade";
             // 
-            // textBox2
+            // TxtDescricao
             // 
-            textBox2.Location = new Point(43, 333);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(471, 23);
-            textBox2.TabIndex = 12;
+            TxtDescricao.CharacterCasing = CharacterCasing.Upper;
+            TxtDescricao.Location = new Point(43, 333);
+            TxtDescricao.Name = "TxtDescricao";
+            TxtDescricao.Size = new Size(471, 23);
+            TxtDescricao.TabIndex = 17;
             // 
             // label17
             // 
@@ -248,12 +250,13 @@
             label17.TabIndex = 11;
             label17.Text = "Descricao";
             // 
-            // textBox1
+            // TxtReferencia
             // 
-            textBox1.Location = new Point(43, 287);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(471, 23);
-            textBox1.TabIndex = 12;
+            TxtReferencia.CharacterCasing = CharacterCasing.Upper;
+            TxtReferencia.Location = new Point(43, 287);
+            TxtReferencia.Name = "TxtReferencia";
+            TxtReferencia.Size = new Size(471, 23);
+            TxtReferencia.TabIndex = 16;
             // 
             // label16
             // 
@@ -269,7 +272,7 @@
             TxtID.Location = new Point(32, 24);
             TxtID.Name = "TxtID";
             TxtID.Size = new Size(43, 23);
-            TxtID.TabIndex = 5;
+            TxtID.TabIndex = 1;
             // 
             // CbNaturezaOpe
             // 
@@ -278,7 +281,7 @@
             CbNaturezaOpe.Location = new Point(129, 24);
             CbNaturezaOpe.Name = "CbNaturezaOpe";
             CbNaturezaOpe.Size = new Size(121, 23);
-            CbNaturezaOpe.TabIndex = 10;
+            CbNaturezaOpe.TabIndex = 2;
             CbNaturezaOpe.SelectedIndexChanged += CbNaturezaOpe_SelectedIndexChanged;
             // 
             // label1
@@ -314,14 +317,14 @@
             DtpDataRevisao.Location = new Point(612, 200);
             DtpDataRevisao.Name = "DtpDataRevisao";
             DtpDataRevisao.Size = new Size(99, 23);
-            DtpDataRevisao.TabIndex = 9;
+            DtpDataRevisao.TabIndex = 13;
             // 
             // TxtID_Veiculo
             // 
             TxtID_Veiculo.Location = new Point(32, 84);
             TxtID_Veiculo.Name = "TxtID_Veiculo";
             TxtID_Veiculo.Size = new Size(43, 23);
-            TxtID_Veiculo.TabIndex = 5;
+            TxtID_Veiculo.TabIndex = 3;
             // 
             // DtpDataEmissao
             // 
@@ -331,6 +334,7 @@
             DtpDataEmissao.Name = "DtpDataEmissao";
             DtpDataEmissao.Size = new Size(99, 23);
             DtpDataEmissao.TabIndex = 8;
+            DtpDataEmissao.TabStop = false;
             // 
             // label3
             // 
@@ -347,14 +351,15 @@
             mTxtCnpjDes.Mask = "00,000,000/0000-00";
             mTxtCnpjDes.Name = "mTxtCnpjDes";
             mTxtCnpjDes.Size = new Size(129, 23);
-            mTxtCnpjDes.TabIndex = 7;
+            mTxtCnpjDes.TabIndex = 12;
             // 
             // TxtVeiculo
             // 
+            TxtVeiculo.CharacterCasing = CharacterCasing.Upper;
             TxtVeiculo.Location = new Point(81, 84);
             TxtVeiculo.Name = "TxtVeiculo";
             TxtVeiculo.Size = new Size(198, 23);
-            TxtVeiculo.TabIndex = 5;
+            TxtVeiculo.TabIndex = 4;
             // 
             // mTxtCnpjRem
             // 
@@ -362,7 +367,7 @@
             mTxtCnpjRem.Mask = "00,000,000/0000-00";
             mTxtCnpjRem.Name = "mTxtCnpjRem";
             mTxtCnpjRem.Size = new Size(129, 23);
-            mTxtCnpjRem.TabIndex = 7;
+            mTxtCnpjRem.TabIndex = 10;
             // 
             // label7
             // 
@@ -386,7 +391,7 @@
             BtnBuscaVeiculo.Location = new Point(285, 84);
             BtnBuscaVeiculo.Name = "BtnBuscaVeiculo";
             BtnBuscaVeiculo.Size = new Size(30, 23);
-            BtnBuscaVeiculo.TabIndex = 6;
+            BtnBuscaVeiculo.TabIndex = 5;
             BtnBuscaVeiculo.UseVisualStyleBackColor = false;
             BtnBuscaVeiculo.Click += BtnBuscaVeiculo_Click;
             // 
@@ -401,10 +406,11 @@
             // 
             // TxtNumNFe
             // 
+            TxtNumNFe.CharacterCasing = CharacterCasing.Upper;
             TxtNumNFe.Location = new Point(422, 84);
             TxtNumNFe.Name = "TxtNumNFe";
             TxtNumNFe.Size = new Size(75, 23);
-            TxtNumNFe.TabIndex = 5;
+            TxtNumNFe.TabIndex = 6;
             // 
             // label14
             // 
@@ -435,17 +441,19 @@
             // 
             // TxtSerie
             // 
+            TxtSerie.CharacterCasing = CharacterCasing.Upper;
             TxtSerie.Location = new Point(503, 84);
             TxtSerie.Name = "TxtSerie";
             TxtSerie.Size = new Size(47, 23);
-            TxtSerie.TabIndex = 5;
+            TxtSerie.TabIndex = 7;
             // 
             // TxtRzSocialRem
             // 
+            TxtRzSocialRem.CharacterCasing = CharacterCasing.Upper;
             TxtRzSocialRem.Location = new Point(32, 148);
             TxtRzSocialRem.Name = "TxtRzSocialRem";
             TxtRzSocialRem.Size = new Size(368, 23);
-            TxtRzSocialRem.TabIndex = 5;
+            TxtRzSocialRem.TabIndex = 9;
             // 
             // label5
             // 
@@ -467,10 +475,11 @@
             // 
             // TxtChave
             // 
+            TxtChave.CharacterCasing = CharacterCasing.Upper;
             TxtChave.Location = new Point(556, 84);
             TxtChave.Name = "TxtChave";
             TxtChave.Size = new Size(293, 23);
-            TxtChave.TabIndex = 5;
+            TxtChave.TabIndex = 8;
             // 
             // label8
             // 
@@ -492,17 +501,18 @@
             // 
             // TxtRzSocialDest
             // 
+            TxtRzSocialDest.CharacterCasing = CharacterCasing.Upper;
             TxtRzSocialDest.Location = new Point(32, 199);
             TxtRzSocialDest.Name = "TxtRzSocialDest";
             TxtRzSocialDest.Size = new Size(368, 23);
-            TxtRzSocialDest.TabIndex = 5;
+            TxtRzSocialDest.TabIndex = 11;
             // 
             // TxtTotProd
             // 
             TxtTotProd.Location = new Point(732, 200);
             TxtTotProd.Name = "TxtTotProd";
             TxtTotProd.Size = new Size(117, 23);
-            TxtTotProd.TabIndex = 5;
+            TxtTotProd.TabIndex = 15;
             // 
             // label9
             // 
@@ -527,7 +537,7 @@
             TxtTotNFe.Location = new Point(732, 149);
             TxtTotNFe.Name = "TxtTotNFe";
             TxtTotNFe.Size = new Size(117, 23);
-            TxtTotNFe.TabIndex = 5;
+            TxtTotNFe.TabIndex = 14;
             // 
             // groupBox2
             // 
@@ -535,7 +545,7 @@
             groupBox2.Dock = DockStyle.Top;
             groupBox2.Location = new Point(0, 444);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(928, 357);
+            groupBox2.Size = new Size(894, 357);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Conteudo NFe";
@@ -546,7 +556,7 @@
             DgvDadosNFe.Dock = DockStyle.Fill;
             DgvDadosNFe.Location = new Point(3, 19);
             DgvDadosNFe.Name = "DgvDadosNFe";
-            DgvDadosNFe.Size = new Size(922, 335);
+            DgvDadosNFe.Size = new Size(888, 335);
             DgvDadosNFe.TabIndex = 0;
             // 
             // Frm_LancamentoNFe_UC
@@ -559,7 +569,7 @@
             Controls.Add(groupBox1);
             Controls.Add(toolStrip1);
             Name = "Frm_LancamentoNFe_UC";
-            Size = new Size(928, 685);
+            Size = new Size(894, 685);
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -614,13 +624,13 @@
         private DataGridView DgvDadosNFe;
         private Panel panelLancamentoPedido;
         private Label label16;
-        private TextBox textBox4;
+        private TextBox TxtValorUnitario;
         private Label label19;
-        private TextBox textBox3;
+        private TextBox TxtQuantidade;
         private Label label18;
-        private TextBox textBox2;
+        private TextBox TxtDescricao;
         private Label label17;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox TxtReferencia;
+        private Button btnRegistrar;
     }
 }

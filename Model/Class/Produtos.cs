@@ -1,4 +1,5 @@
-﻿using KhoraControl.Setup.Database;
+﻿using KhoraControl.Model.Validation;
+using KhoraControl.Setup.Database;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace KhoraControl.Model
 {
-    public class Produtos
+    public class Produtos : ValidaObjeto
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

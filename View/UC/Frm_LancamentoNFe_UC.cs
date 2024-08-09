@@ -25,13 +25,14 @@ namespace KhoraControl.View.UC
         private int step = 13;
 
         private string path;
+
         public Frm_LancamentoNFe_UC()
         {
             InitializeComponent();
             PreencheComboBox();
             InitializeAnimationTimer();
             TogglePanel();
-            
+
         }
 
         private void BtnBuscaVeiculo_Click(object sender, EventArgs e)
@@ -57,13 +58,13 @@ namespace KhoraControl.View.UC
 
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
-            if(panelLancamentoPedido.Height != targetLancamentoPedido)
+            if (panelLancamentoPedido.Height != targetLancamentoPedido)
             {
                 if (Math.Abs(panelLancamentoPedido.Height - targetLancamentoPedido) <= step)
                 {
                     panelLancamentoPedido.Height = targetLancamentoPedido;
                 }
-                else 
+                else
                 {
                     panelLancamentoPedido.Height += targetLancamentoPedido > panelLancamentoPedido.Height ? step : -step;
                 }
@@ -170,18 +171,16 @@ namespace KhoraControl.View.UC
 
             foreach (DataGridViewRow row in DgvDadosNFe.Rows)
             {
-                Produtos produto = new Produtos
-                {
-                    CodigoProduto = row.Cells["Referência"].Value.ToString(),
-                    DescricaoProduto = row.Cells["Descrição"].Value.ToString(),
-                    Quantidade = int.Parse(row.Cells["Quantidade"].Value.ToString()),
-                    ValorUnitario = double.Parse(row.Cells["ValorUnitario"].Value.ToString()),
-                    ValorTotal = double.Parse(row.Cells["ValorTotal"].Value.ToString()),
-                    ID_Veiculo = int.Parse(TxtID_Veiculo.Text),
-                    NumeroNFe = TxtNumNFe.Text,
-                    ID_NFe = int.Parse(TxtID.Text)
-
-                };
+                Produtos produto = new Produtos();
+                produto.CodigoProduto = row.Cells["Referência"].Value.ToString();
+                produto.DescricaoProduto = row.Cells["Descrição"].Value.ToString();
+                produto.Quantidade = int.Parse(row.Cells["Quantidade"].Value.ToString());
+                produto.ValorUnitario = double.Parse(row.Cells["ValorUnitario"].Value.ToString());
+                produto.ValorTotal = double.Parse(row.Cells["ValorTotal"].Value.ToString());
+                produto.ID_Veiculo = int.Parse(TxtID_Veiculo.Text);
+                produto.NumeroNFe = string.IsNullOrEmpty(TxtNumNFe.Text) ? "SNUMNFE" : TxtNumNFe.Text;
+                produto.ID_NFe = int.TryParse(TxtID.Text, out var result) ? (int)result : null;
+                produto.ValidaClasse();
 
                 produtosParaIncluir.Add(produto);
             }
@@ -233,6 +232,58 @@ namespace KhoraControl.View.UC
                 TogglePanel();
                 DtpDataEmissao.Enabled = false;
             }
+        }
+        private List<NFeData> products = new List<NFeData>();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            NFeData feData = new NFeData()
+            {
+                Referência = string.IsNullOrEmpty(TxtReferencia.Text) ? "SREF" : TxtReferencia.Text,
+                Quantidade = int.TryParse(TxtQuantidade.Text, out var result) ? (int)result : 0,
+                Descrição = TxtDescricao.Text,
+                ValorUnitario = TxtValorUnitario.Text,
+                ValorTotal = int.TryParse(TxtValorUnitario.Text, out int resultUnit) ? (resultUnit * result).ToString() : "0"
+
+            };
+            products.Add(feData);
+
+            AtualizarDataGridView();
+
+            clearDados();
+        }
+
+        private void AtualizarDataGridView()
+        {
+            DgvDadosNFe.Rows.Clear();
+            DgvDadosNFe.DataSource = products;
+            DgvDadosNFe.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvDadosNFe.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvDadosNFe.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvDadosNFe.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvDadosNFe.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            DgvDadosNFe.Columns[3].DefaultCellStyle.Format = "C";
+            DgvDadosNFe.Columns[4].DefaultCellStyle.Format = "C";
+
+            int[] colunasOcultar = new int[] { 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            foreach (int i in colunasOcultar)
+            {
+                DgvDadosNFe.Columns[i].Visible = false;
+            }
+
+            
+        }
+
+        private void clearDados()
+        {
+            TxtReferencia.Clear();
+            TxtDescricao.Clear();
+            TxtQuantidade.Clear();
+            TxtValorUnitario.Clear();
+            TxtReferencia.Focus();
         }
     }
 }
