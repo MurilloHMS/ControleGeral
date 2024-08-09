@@ -27,19 +27,6 @@ namespace KhoraControl.View.UC
             InitializeComponent();
             InitializeAnimationTimer();
             TogglePanel();
-            PreencheComboBox();
-        }
-
-        private void PreencheComboBox()
-        {
-            Concessionaria con = new Concessionaria();
-            var itens = con.ReturnAll();
-            CbConcessionaria.Items.Add(string.Empty);
-            foreach (var it in itens)
-            {
-                CbConcessionaria.Items.Add(it.Nome);
-            }
-
         }
 
         private DadosCheckList CollectData()
@@ -52,8 +39,8 @@ namespace KhoraControl.View.UC
             dados.ID_NotaFiscal = int.Parse(TxtId_NotaFiscal.Text);
             dados.Data = DtpDataLancamento.Value.ToUniversalTime();
             dados.ID_Veiculo = int.Parse(TxtID_Veiculo.Text);
-            dados.ID_Concessionaria = int.Parse(TxtID_Concessionaria.Text) ;
-            dados.KmRodados = int.TryParse(TxtKmRodados.Text, out var result ) ? (int)result : null ;
+            dados.ID_Concessionaria = int.Parse(TxtID_Concessionaria.Text);
+            dados.KmRodados = int.TryParse(TxtKmRodados.Text, out var result) ? (int)result : null;
             dados.ValorRevisao = double.Parse(TxtValorRevisao.Text);
             dados.ChecklistItems = checkedListBox1.CheckedItems.Cast<string>().ToList();
 
@@ -252,11 +239,23 @@ namespace KhoraControl.View.UC
 
         private void TxtID_TextChanged(object sender, EventArgs e)
         {
-            if(TxtID.Text.Length > 0)
+            if (TxtID.Text.Length > 0)
             {
                 var dados = new DadosCheckList();
                 var retorno = dados.ReturnForID(int.Parse(TxtID.Text));
                 WriteData(retorno);
+            }
+        }
+
+        private void btnBuscaConcessionaria_Click(object sender, EventArgs e)
+        {
+            Frm_BuscaConcessionaria busca = new Frm_BuscaConcessionaria();
+            busca.ShowDialog();
+
+            if (busca.DialogResult == DialogResult.OK)
+            {
+                TxtConcessionaria.Text = busca.NomeSelect;
+                TxtID_Concessionaria.Text = busca.idSelect.ToString();
             }
         }
     }

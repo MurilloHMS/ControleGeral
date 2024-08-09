@@ -32,15 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCheckList_UC));
             imageList1 = new ImageList(components);
             toolStrip1 = new ToolStrip();
-            novaToolStripButton = new ToolStripButton();
-            abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
-            imprimirToolStripButton = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
-            recortarToolStripButton = new ToolStripButton();
-            copiarToolStripButton = new ToolStripButton();
-            colarToolStripButton = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             groupBox1 = new GroupBox();
             panelCadastroCheckList = new Panel();
@@ -55,8 +47,8 @@
             TxtID_CheckList = new TextBox();
             label8 = new Label();
             btnBuscaNotaFiscal = new Button();
+            btnBuscaConcessionaria = new Button();
             button1 = new Button();
-            CbConcessionaria = new ComboBox();
             label5 = new Label();
             DtpDataLancamento = new DateTimePicker();
             label7 = new Label();
@@ -65,6 +57,7 @@
             label4 = new Label();
             label3 = new Label();
             TxtNumNotaFiscal = new TextBox();
+            TxtConcessionaria = new TextBox();
             TxtVeiculo = new TextBox();
             TxtId_NotaFiscal = new TextBox();
             label12 = new Label();
@@ -74,6 +67,7 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             checkedListBox1 = new CheckedListBox();
+            toolStripSeparator1 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             panelCadastroCheckList.SuspendLayout();
@@ -92,31 +86,13 @@
             // 
             toolStrip1.BackgroundImage = (Image)resources.GetObject("toolStrip1.BackgroundImage");
             toolStrip1.BackgroundImageLayout = ImageLayout.None;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, recortarToolStripButton, copiarToolStripButton, colarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
             toolStrip1.Size = new Size(954, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
-            // 
-            // novaToolStripButton
-            // 
-            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            novaToolStripButton.Image = (Image)resources.GetObject("novaToolStripButton.Image");
-            novaToolStripButton.ImageTransparentColor = Color.Magenta;
-            novaToolStripButton.Name = "novaToolStripButton";
-            novaToolStripButton.Size = new Size(23, 22);
-            novaToolStripButton.Text = "&Nova";
-            // 
-            // abrirToolStripButton
-            // 
-            abrirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            abrirToolStripButton.Image = (Image)resources.GetObject("abrirToolStripButton.Image");
-            abrirToolStripButton.ImageTransparentColor = Color.Magenta;
-            abrirToolStripButton.Name = "abrirToolStripButton";
-            abrirToolStripButton.Size = new Size(23, 22);
-            abrirToolStripButton.Text = "&Abrir";
             // 
             // salvarToolStripButton
             // 
@@ -127,53 +103,6 @@
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
             salvarToolStripButton.Click += salvarToolStripButton_Click;
-            // 
-            // imprimirToolStripButton
-            // 
-            imprimirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            imprimirToolStripButton.Image = (Image)resources.GetObject("imprimirToolStripButton.Image");
-            imprimirToolStripButton.ImageTransparentColor = Color.Magenta;
-            imprimirToolStripButton.Name = "imprimirToolStripButton";
-            imprimirToolStripButton.Size = new Size(23, 22);
-            imprimirToolStripButton.Text = "&Imprimir";
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 25);
-            // 
-            // recortarToolStripButton
-            // 
-            recortarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            recortarToolStripButton.Image = (Image)resources.GetObject("recortarToolStripButton.Image");
-            recortarToolStripButton.ImageTransparentColor = Color.Magenta;
-            recortarToolStripButton.Name = "recortarToolStripButton";
-            recortarToolStripButton.Size = new Size(23, 22);
-            recortarToolStripButton.Text = "R&ecortar";
-            // 
-            // copiarToolStripButton
-            // 
-            copiarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            copiarToolStripButton.Image = (Image)resources.GetObject("copiarToolStripButton.Image");
-            copiarToolStripButton.ImageTransparentColor = Color.Magenta;
-            copiarToolStripButton.Name = "copiarToolStripButton";
-            copiarToolStripButton.Size = new Size(23, 22);
-            copiarToolStripButton.Text = "&Copiar";
-            // 
-            // colarToolStripButton
-            // 
-            colarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            colarToolStripButton.Image = (Image)resources.GetObject("colarToolStripButton.Image");
-            colarToolStripButton.ImageTransparentColor = Color.Magenta;
-            colarToolStripButton.Name = "colarToolStripButton";
-            colarToolStripButton.Size = new Size(23, 22);
-            colarToolStripButton.Text = "&Colar";
-            colarToolStripButton.Click += colarToolStripButton_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
@@ -209,8 +138,8 @@
             panelCadastroCheckList.Controls.Add(TxtID_CheckList);
             panelCadastroCheckList.Controls.Add(label8);
             panelCadastroCheckList.Controls.Add(btnBuscaNotaFiscal);
+            panelCadastroCheckList.Controls.Add(btnBuscaConcessionaria);
             panelCadastroCheckList.Controls.Add(button1);
-            panelCadastroCheckList.Controls.Add(CbConcessionaria);
             panelCadastroCheckList.Controls.Add(label5);
             panelCadastroCheckList.Controls.Add(DtpDataLancamento);
             panelCadastroCheckList.Controls.Add(label7);
@@ -219,6 +148,7 @@
             panelCadastroCheckList.Controls.Add(label4);
             panelCadastroCheckList.Controls.Add(label3);
             panelCadastroCheckList.Controls.Add(TxtNumNotaFiscal);
+            panelCadastroCheckList.Controls.Add(TxtConcessionaria);
             panelCadastroCheckList.Controls.Add(TxtVeiculo);
             panelCadastroCheckList.Controls.Add(TxtId_NotaFiscal);
             panelCadastroCheckList.Controls.Add(label12);
@@ -252,7 +182,7 @@
             TxtValorRevisao.Location = new Point(598, 102);
             TxtValorRevisao.Name = "TxtValorRevisao";
             TxtValorRevisao.Size = new Size(127, 23);
-            TxtValorRevisao.TabIndex = 26;
+            TxtValorRevisao.TabIndex = 13;
             // 
             // label11
             // 
@@ -268,7 +198,7 @@
             TxtKmRodados.Location = new Point(442, 102);
             TxtKmRodados.Name = "TxtKmRodados";
             TxtKmRodados.Size = new Size(127, 23);
-            TxtKmRodados.TabIndex = 26;
+            TxtKmRodados.TabIndex = 12;
             // 
             // label10
             // 
@@ -285,7 +215,7 @@
             button2.Location = new Point(726, 189);
             button2.Name = "button2";
             button2.Size = new Size(136, 25);
-            button2.TabIndex = 24;
+            button2.TabIndex = 16;
             button2.Text = "Cadastrar CheckList";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -296,7 +226,7 @@
             TxtDescritivoCheckList.Location = new Point(148, 191);
             TxtDescritivoCheckList.Name = "TxtDescritivoCheckList";
             TxtDescritivoCheckList.Size = new Size(550, 23);
-            TxtDescritivoCheckList.TabIndex = 23;
+            TxtDescritivoCheckList.TabIndex = 15;
             TxtDescritivoCheckList.KeyDown += TxtDescritivoCheckList_KeyDown;
             // 
             // label9
@@ -313,7 +243,7 @@
             TxtID_CheckList.Location = new Point(21, 191);
             TxtID_CheckList.Name = "TxtID_CheckList";
             TxtID_CheckList.Size = new Size(72, 23);
-            TxtID_CheckList.TabIndex = 23;
+            TxtID_CheckList.TabIndex = 14;
             // 
             // label8
             // 
@@ -336,9 +266,25 @@
             btnBuscaNotaFiscal.Location = new Point(667, 39);
             btnBuscaNotaFiscal.Name = "btnBuscaNotaFiscal";
             btnBuscaNotaFiscal.Size = new Size(26, 23);
-            btnBuscaNotaFiscal.TabIndex = 22;
+            btnBuscaNotaFiscal.TabIndex = 7;
             btnBuscaNotaFiscal.UseVisualStyleBackColor = true;
             btnBuscaNotaFiscal.Click += btnBuscaNotaFiscal_Click;
+            // 
+            // btnBuscaConcessionaria
+            // 
+            btnBuscaConcessionaria.BackgroundImage = (Image)resources.GetObject("btnBuscaConcessionaria.BackgroundImage");
+            btnBuscaConcessionaria.BackgroundImageLayout = ImageLayout.Zoom;
+            btnBuscaConcessionaria.Cursor = Cursors.Hand;
+            btnBuscaConcessionaria.FlatAppearance.BorderSize = 0;
+            btnBuscaConcessionaria.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnBuscaConcessionaria.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnBuscaConcessionaria.FlatStyle = FlatStyle.Flat;
+            btnBuscaConcessionaria.Location = new Point(372, 101);
+            btnBuscaConcessionaria.Name = "btnBuscaConcessionaria";
+            btnBuscaConcessionaria.Size = new Size(25, 23);
+            btnBuscaConcessionaria.TabIndex = 11;
+            btnBuscaConcessionaria.UseVisualStyleBackColor = true;
+            btnBuscaConcessionaria.Click += btnBuscaConcessionaria_Click;
             // 
             // button1
             // 
@@ -352,18 +298,9 @@
             button1.Location = new Point(498, 42);
             button1.Name = "button1";
             button1.Size = new Size(25, 23);
-            button1.TabIndex = 22;
+            button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // CbConcessionaria
-            // 
-            CbConcessionaria.DropDownStyle = ComboBoxStyle.DropDownList;
-            CbConcessionaria.FormattingEnabled = true;
-            CbConcessionaria.Location = new Point(80, 102);
-            CbConcessionaria.Name = "CbConcessionaria";
-            CbConcessionaria.Size = new Size(337, 23);
-            CbConcessionaria.TabIndex = 20;
             // 
             // label5
             // 
@@ -380,7 +317,7 @@
             DtpDataLancamento.Location = new Point(725, 39);
             DtpDataLancamento.Name = "DtpDataLancamento";
             DtpDataLancamento.Size = new Size(100, 23);
-            DtpDataLancamento.TabIndex = 17;
+            DtpDataLancamento.TabIndex = 8;
             // 
             // label7
             // 
@@ -396,7 +333,7 @@
             TxtID_Concessionaria.Location = new Point(21, 102);
             TxtID_Concessionaria.Name = "TxtID_Concessionaria";
             TxtID_Concessionaria.Size = new Size(53, 23);
-            TxtID_Concessionaria.TabIndex = 15;
+            TxtID_Concessionaria.TabIndex = 9;
             // 
             // label6
             // 
@@ -430,21 +367,28 @@
             TxtNumNotaFiscal.Location = new Point(598, 39);
             TxtNumNotaFiscal.Name = "TxtNumNotaFiscal";
             TxtNumNotaFiscal.Size = new Size(64, 23);
-            TxtNumNotaFiscal.TabIndex = 14;
+            TxtNumNotaFiscal.TabIndex = 6;
+            // 
+            // TxtConcessionaria
+            // 
+            TxtConcessionaria.Location = new Point(80, 102);
+            TxtConcessionaria.Name = "TxtConcessionaria";
+            TxtConcessionaria.Size = new Size(285, 23);
+            TxtConcessionaria.TabIndex = 10;
             // 
             // TxtVeiculo
             // 
             TxtVeiculo.Location = new Point(207, 42);
             TxtVeiculo.Name = "TxtVeiculo";
             TxtVeiculo.Size = new Size(285, 23);
-            TxtVeiculo.TabIndex = 14;
+            TxtVeiculo.TabIndex = 3;
             // 
             // TxtId_NotaFiscal
             // 
             TxtId_NotaFiscal.Location = new Point(539, 39);
             TxtId_NotaFiscal.Name = "TxtId_NotaFiscal";
             TxtId_NotaFiscal.Size = new Size(53, 23);
-            TxtId_NotaFiscal.TabIndex = 13;
+            TxtId_NotaFiscal.TabIndex = 5;
             // 
             // label12
             // 
@@ -460,7 +404,7 @@
             TxtID_Veiculo.Location = new Point(148, 42);
             TxtID_Veiculo.Name = "TxtID_Veiculo";
             TxtID_Veiculo.Size = new Size(53, 23);
-            TxtID_Veiculo.TabIndex = 13;
+            TxtID_Veiculo.TabIndex = 2;
             // 
             // label2
             // 
@@ -476,7 +420,7 @@
             TxtID.Location = new Point(21, 39);
             TxtID.Name = "TxtID";
             TxtID.Size = new Size(53, 23);
-            TxtID.TabIndex = 16;
+            TxtID.TabIndex = 1;
             TxtID.TextChanged += TxtID_TextChanged;
             // 
             // label1
@@ -507,7 +451,12 @@
             checkedListBox1.Location = new Point(3, 19);
             checkedListBox1.Name = "checkedListBox1";
             checkedListBox1.Size = new Size(948, 262);
-            checkedListBox1.TabIndex = 0;
+            checkedListBox1.TabIndex = 17;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // Frm_CadastroCheckList_UC
             // 
@@ -533,15 +482,7 @@
         #endregion
         private ImageList imageList1;
         private ToolStrip toolStrip1;
-        private ToolStripButton novaToolStripButton;
-        private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;
-        private ToolStripButton imprimirToolStripButton;
-        private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton recortarToolStripButton;
-        private ToolStripButton copiarToolStripButton;
-        private ToolStripButton colarToolStripButton;
-        private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ajudaToolStripButton;
         private GroupBox groupBox1;
         private Panel panelCadastroCheckList;
@@ -557,7 +498,6 @@
         private Label label8;
         private Button btnBuscaNotaFiscal;
         private Button button1;
-        private ComboBox CbConcessionaria;
         private Label label5;
         private DateTimePicker DtpDataLancamento;
         private Label label7;
@@ -575,5 +515,8 @@
         private CheckedListBox checkedListBox1;
         private TextBox TxtId_NotaFiscal;
         private Label label12;
+        private Button btnBuscaConcessionaria;
+        private TextBox TxtConcessionaria;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

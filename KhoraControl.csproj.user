@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\Users\proau\OneDrive - Murillo HMS\Projetos\2 - Sistemas\5 - Projetos Murillo\KhoraControl\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="View\Forms\Frm_BuscaConcessionaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Forms\Frm_BuscaVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>

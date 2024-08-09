@@ -30,22 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Configuracoes_UC));
             groupBox1 = new GroupBox();
+            lblTipoBase = new Label();
             cbProvider = new ComboBox();
             label2 = new Label();
             label1 = new Label();
             TxtConnectionString = new TextBox();
             toolStrip1 = new ToolStrip();
-            novaToolStripButton = new ToolStripButton();
-            abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
-            imprimirToolStripButton = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
-            recortarToolStripButton = new ToolStripButton();
-            copiarToolStripButton = new ToolStripButton();
-            colarToolStripButton = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
-            lblTipoBase = new Label();
             groupBox1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -63,6 +56,17 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Configurações";
+            // 
+            // lblTipoBase
+            // 
+            lblTipoBase.AutoSize = true;
+            lblTipoBase.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoBase.ForeColor = Color.Black;
+            lblTipoBase.Location = new Point(35, 30);
+            lblTipoBase.Name = "lblTipoBase";
+            lblTipoBase.Size = new Size(65, 25);
+            lblTipoBase.TabIndex = 3;
+            lblTipoBase.Text = "label3";
             // 
             // cbProvider
             // 
@@ -102,30 +106,12 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, imprimirToolStripButton, toolStripSeparator, recortarToolStripButton, copiarToolStripButton, colarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { salvarToolStripButton, toolStripSeparator1, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(980, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
-            // 
-            // novaToolStripButton
-            // 
-            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            novaToolStripButton.Image = (Image)resources.GetObject("novaToolStripButton.Image");
-            novaToolStripButton.ImageTransparentColor = Color.Magenta;
-            novaToolStripButton.Name = "novaToolStripButton";
-            novaToolStripButton.Size = new Size(23, 22);
-            novaToolStripButton.Text = "&Nova";
-            // 
-            // abrirToolStripButton
-            // 
-            abrirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            abrirToolStripButton.Image = (Image)resources.GetObject("abrirToolStripButton.Image");
-            abrirToolStripButton.ImageTransparentColor = Color.Magenta;
-            abrirToolStripButton.Name = "abrirToolStripButton";
-            abrirToolStripButton.Size = new Size(23, 22);
-            abrirToolStripButton.Text = "&Abrir";
             // 
             // salvarToolStripButton
             // 
@@ -136,47 +122,6 @@
             salvarToolStripButton.Size = new Size(23, 22);
             salvarToolStripButton.Text = "&Salvar";
             salvarToolStripButton.Click += salvarToolStripButton_Click;
-            // 
-            // imprimirToolStripButton
-            // 
-            imprimirToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            imprimirToolStripButton.Image = (Image)resources.GetObject("imprimirToolStripButton.Image");
-            imprimirToolStripButton.ImageTransparentColor = Color.Magenta;
-            imprimirToolStripButton.Name = "imprimirToolStripButton";
-            imprimirToolStripButton.Size = new Size(23, 22);
-            imprimirToolStripButton.Text = "&Imprimir";
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 25);
-            // 
-            // recortarToolStripButton
-            // 
-            recortarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            recortarToolStripButton.Image = (Image)resources.GetObject("recortarToolStripButton.Image");
-            recortarToolStripButton.ImageTransparentColor = Color.Magenta;
-            recortarToolStripButton.Name = "recortarToolStripButton";
-            recortarToolStripButton.Size = new Size(23, 22);
-            recortarToolStripButton.Text = "R&ecortar";
-            // 
-            // copiarToolStripButton
-            // 
-            copiarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            copiarToolStripButton.Image = (Image)resources.GetObject("copiarToolStripButton.Image");
-            copiarToolStripButton.ImageTransparentColor = Color.Magenta;
-            copiarToolStripButton.Name = "copiarToolStripButton";
-            copiarToolStripButton.Size = new Size(23, 22);
-            copiarToolStripButton.Text = "&Copiar";
-            // 
-            // colarToolStripButton
-            // 
-            colarToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            colarToolStripButton.Image = (Image)resources.GetObject("colarToolStripButton.Image");
-            colarToolStripButton.ImageTransparentColor = Color.Magenta;
-            colarToolStripButton.Name = "colarToolStripButton";
-            colarToolStripButton.Size = new Size(23, 22);
-            colarToolStripButton.Text = "&Colar";
             // 
             // toolStripSeparator1
             // 
@@ -191,17 +136,6 @@
             ajudaToolStripButton.Name = "ajudaToolStripButton";
             ajudaToolStripButton.Size = new Size(23, 22);
             ajudaToolStripButton.Text = "Aju&da";
-            // 
-            // lblTipoBase
-            // 
-            lblTipoBase.AutoSize = true;
-            lblTipoBase.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTipoBase.ForeColor = Color.Black;
-            lblTipoBase.Location = new Point(35, 30);
-            lblTipoBase.Name = "lblTipoBase";
-            lblTipoBase.Size = new Size(65, 25);
-            lblTipoBase.TabIndex = 3;
-            lblTipoBase.Text = "label3";
             // 
             // Frm_Configuracoes_UC
             // 
@@ -227,14 +161,7 @@
         private ComboBox cbProvider;
         private Label label2;
         private ToolStrip toolStrip1;
-        private ToolStripButton novaToolStripButton;
-        private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;
-        private ToolStripButton imprimirToolStripButton;
-        private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton recortarToolStripButton;
-        private ToolStripButton copiarToolStripButton;
-        private ToolStripButton colarToolStripButton;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ajudaToolStripButton;
         private Label lblTipoBase;

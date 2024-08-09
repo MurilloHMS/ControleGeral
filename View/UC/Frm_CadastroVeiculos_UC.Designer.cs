@@ -75,7 +75,6 @@
             TxtID = new TextBox();
             label1 = new Label();
             toolStrip1 = new ToolStrip();
-            novaToolStripButton = new ToolStripButton();
             abrirToolStripButton = new ToolStripButton();
             salvarToolStripButton = new ToolStripButton();
             LimpartoolStripButton = new ToolStripButton();
@@ -529,22 +528,12 @@
             // toolStrip1
             // 
             toolStrip1.BackgroundImage = Properties.Resources._64px_HD_transparent_picture;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novaToolStripButton, abrirToolStripButton, salvarToolStripButton, LimpartoolStripButton, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { abrirToolStripButton, salvarToolStripButton, LimpartoolStripButton, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(714, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
-            // 
-            // novaToolStripButton
-            // 
-            novaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            novaToolStripButton.Image = (Image)resources.GetObject("novaToolStripButton.Image");
-            novaToolStripButton.ImageTransparentColor = Color.Magenta;
-            novaToolStripButton.Name = "novaToolStripButton";
-            novaToolStripButton.Size = new Size(23, 22);
-            novaToolStripButton.Text = "&Novo";
-            novaToolStripButton.ToolTipText = "Cadastrar Novo Veiculo";
             // 
             // abrirToolStripButton
             // 
@@ -623,7 +612,6 @@
 
         private GroupBox groupBox1;
         private ToolStrip toolStrip1;
-        private ToolStripButton novaToolStripButton;
         private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;
         private ToolStripSeparator toolStripSeparator;
