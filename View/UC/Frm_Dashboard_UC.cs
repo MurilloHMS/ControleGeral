@@ -1,13 +1,5 @@
 ﻿using KhoraControl.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace KhoraControl.View.UC
@@ -36,6 +28,14 @@ namespace KhoraControl.View.UC
             DadosCheckList check = new DadosCheckList();
             var dadosCheck = check.ReturnAll();
             LbTotalRevisoes.Text = dadosCheck.Count().ToString();
+
+            DadosNFe dadosN = new DadosNFe();
+            var dadosNfe = dadosN.ReturnAll();
+            lbTotalNotas.Text = dadosNfe.Count().ToString();
+
+            Produtos produtos = new Produtos();
+            var produtosCount = produtos.ReturnAll();
+            lbTotalItens.Text = produtosCount.Count().ToString();
         }
 
         public void configureDataGrideViewColumns()

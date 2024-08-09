@@ -37,6 +37,10 @@
             panelImagem = new Panel();
             btnMenu = new Button();
             panelMenu = new Panel();
+            panelConsultas = new Panel();
+            button8 = new Button();
+            button9 = new Button();
+            btnConsultas = new Button();
             button4 = new Button();
             panelAnalises = new Panel();
             button5 = new Button();
@@ -50,6 +54,7 @@
             panelVeiculos.SuspendLayout();
             panelImagem.SuspendLayout();
             panelMenu.SuspendLayout();
+            panelConsultas.SuspendLayout();
             panelAnalises.SuspendLayout();
             panelImportacoes.SuspendLayout();
             SuspendLayout();
@@ -176,6 +181,8 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(32, 36, 62);
+            panelMenu.Controls.Add(panelConsultas);
+            panelMenu.Controls.Add(btnConsultas);
             panelMenu.Controls.Add(button4);
             panelMenu.Controls.Add(panelAnalises);
             panelMenu.Controls.Add(BtnPanelAnalises);
@@ -189,6 +196,75 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(199, 761);
             panelMenu.TabIndex = 0;
+            // 
+            // panelConsultas
+            // 
+            panelConsultas.BackColor = Color.FromArgb(53, 56, 83);
+            panelConsultas.Controls.Add(button8);
+            panelConsultas.Controls.Add(button9);
+            panelConsultas.Dock = DockStyle.Top;
+            panelConsultas.Location = new Point(0, 604);
+            panelConsultas.Name = "panelConsultas";
+            panelConsultas.Size = new Size(199, 116);
+            panelConsultas.TabIndex = 8;
+            // 
+            // button8
+            // 
+            button8.Cursor = Cursors.Hand;
+            button8.Dock = DockStyle.Top;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.ForeColor = Color.FromArgb(144, 148, 155);
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.ImageAlign = ContentAlignment.MiddleLeft;
+            button8.Location = new Point(0, 38);
+            button8.Margin = new Padding(0);
+            button8.Name = "button8";
+            button8.Size = new Size(199, 38);
+            button8.TabIndex = 1;
+            button8.Text = "                    Consulta Veiculos";
+            button8.TextAlign = ContentAlignment.MiddleLeft;
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            button9.Cursor = Cursors.Hand;
+            button9.Dock = DockStyle.Top;
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.ForeColor = Color.FromArgb(144, 148, 155);
+            button9.Image = (Image)resources.GetObject("button9.Image");
+            button9.ImageAlign = ContentAlignment.MiddleLeft;
+            button9.Location = new Point(0, 0);
+            button9.Margin = new Padding(0);
+            button9.Name = "button9";
+            button9.Size = new Size(199, 38);
+            button9.TabIndex = 0;
+            button9.Text = "                    Consulta NFe";
+            button9.TextAlign = ContentAlignment.MiddleLeft;
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // btnConsultas
+            // 
+            btnConsultas.AutoSize = true;
+            btnConsultas.BackgroundImageLayout = ImageLayout.None;
+            btnConsultas.Cursor = Cursors.Hand;
+            btnConsultas.Dock = DockStyle.Top;
+            btnConsultas.FlatAppearance.BorderSize = 0;
+            btnConsultas.FlatStyle = FlatStyle.Flat;
+            btnConsultas.Font = new Font("MesloLGLDZ Nerd Font", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnConsultas.ForeColor = Color.FromArgb(144, 148, 155);
+            btnConsultas.Image = (Image)resources.GetObject("btnConsultas.Image");
+            btnConsultas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnConsultas.Location = new Point(0, 566);
+            btnConsultas.Margin = new Padding(0);
+            btnConsultas.Name = "btnConsultas";
+            btnConsultas.Size = new Size(199, 38);
+            btnConsultas.TabIndex = 7;
+            btnConsultas.Text = "      Consultas";
+            btnConsultas.TextAlign = ContentAlignment.MiddleLeft;
+            btnConsultas.UseVisualStyleBackColor = true;
+            btnConsultas.Click += btnConsultas_Click;
             // 
             // button4
             // 
@@ -372,6 +448,7 @@
             panelImagem.ResumeLayout(false);
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
+            panelConsultas.ResumeLayout(false);
             panelAnalises.ResumeLayout(false);
             panelImportacoes.ResumeLayout(false);
             ResumeLayout(false);
@@ -397,5 +474,9 @@
         private Button BtnDashBoard;
         private Button BtnPanelAnalises;
         private Button button4;
+        private Panel panelConsultas;
+        private Button button8;
+        private Button button9;
+        private Button btnConsultas;
     }
 }

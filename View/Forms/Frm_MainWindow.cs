@@ -11,13 +11,16 @@ namespace KhoraControl
         private Boolean showPanelVeiculos = false;
         private Boolean showPanelImportacoes = false;
         private Boolean showPanelAnalises = false;
+        private Boolean showPanelConsultas = false;
 
         private System.Windows.Forms.Timer animationTimer;
+        private int step = 10; // Ajuste a velocidade da animação
+
         private int targetHeightVeiculos;
         private int targetWidthMenu;
         private int targetHeightImportacoes;
         private int targetHeightAnalises;
-        private int step = 13; // Ajuste a velocidade da animação
+        private int targetHeightConsultas;
 
         public Frm_MainWindow()
         {
@@ -87,11 +90,24 @@ namespace KhoraControl
                 }
             }
 
+            // Animar painel Consultas
+            if (panelConsultas.Height != targetHeightConsultas)
+            {
+                if (Math.Abs(panelConsultas.Height - targetHeightConsultas) <= step)
+                {
+                    panelConsultas.Height = targetHeightConsultas;
+                }
+                else
+                {
+                    panelConsultas.Height += targetHeightConsultas > panelAnalises.Height ? step : -step;
+                }
+            }
             // Parar o Timer se todas as animações estiverem concluídas
             if (panelVeiculos.Height == targetHeightVeiculos &&
                 panelMenu.Width == targetWidthMenu &&
                 panelImportacoes.Height == targetHeightImportacoes &&
-                panelAnalises.Height == targetHeightAnalises)
+                panelAnalises.Height == targetHeightAnalises &&
+                panelConsultas.Height == targetHeightConsultas)
             {
                 animationTimer.Stop();
             }
@@ -103,6 +119,7 @@ namespace KhoraControl
             targetWidthMenu = showPanelMenu ? 192 : 40;
             targetHeightImportacoes = showPanelImportacoes ? 115 : 0;
             targetHeightAnalises = showPanelAnalises ? 115 : 0;
+            targetHeightConsultas = showPanelConsultas ? 115 : 0;
 
             // Inicia a animação
             animationTimer.Start();
@@ -132,6 +149,11 @@ namespace KhoraControl
             TogglePanel();
         }
 
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            showPanelConsultas = !showPanelConsultas;
+            TogglePanel();
+        }
         private void tbcHome_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
@@ -244,5 +266,6 @@ namespace KhoraControl
         {
             ShowTabPage(new Frm_Configuracoes_UC(), "Frm_Configuracoes_UC", "Lancamento NFe");
         }
+
     }
 }

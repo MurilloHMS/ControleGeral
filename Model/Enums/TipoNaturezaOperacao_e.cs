@@ -11,6 +11,8 @@ namespace KhoraControl.Model.Enums
         NotaFiscalServiço,
         NotaFiscalCompraVeiculo,
         NotaFiscalAluguelVeiculo,
-        NotaFiscalRevisao
+        NotaFiscalRevisao,
+        PedidoServiço,
+        PedidoRevisao
     }
 }

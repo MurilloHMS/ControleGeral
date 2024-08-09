@@ -17,11 +17,21 @@ namespace KhoraControl.View.UC
 {
     public partial class Frm_LancamentoNFe_UC : UserControl
     {
+
+        private Boolean showPanelLancamentoPedido = false;
+
+        private System.Windows.Forms.Timer animationTimer;
+        private int targetLancamentoPedido;
+        private int step = 13;
+
         private string path;
         public Frm_LancamentoNFe_UC()
         {
             InitializeComponent();
             PreencheComboBox();
+            InitializeAnimationTimer();
+            TogglePanel();
+            
         }
 
         private void BtnBuscaVeiculo_Click(object sender, EventArgs e)
@@ -35,6 +45,43 @@ namespace KhoraControl.View.UC
                 TxtVeiculo.Text = busca.NomeSelect;
             }
         }
+
+        #region Animação
+
+        private void InitializeAnimationTimer()
+        {
+            animationTimer = new System.Windows.Forms.Timer();
+            animationTimer.Interval = 10;
+            animationTimer.Tick += AnimationTimer_Tick;
+        }
+
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            if(panelLancamentoPedido.Height != targetLancamentoPedido)
+            {
+                if (Math.Abs(panelLancamentoPedido.Height - targetLancamentoPedido) <= step)
+                {
+                    panelLancamentoPedido.Height = targetLancamentoPedido;
+                }
+                else 
+                {
+                    panelLancamentoPedido.Height += targetLancamentoPedido > panelLancamentoPedido.Height ? step : -step;
+                }
+
+            }
+
+            if (panelLancamentoPedido.Height == targetLancamentoPedido)
+            {
+                animationTimer.Stop();
+            }
+        }
+
+        private void TogglePanel()
+        {
+            targetLancamentoPedido = showPanelLancamentoPedido ? 375 : 250;
+            animationTimer.Start();
+        }
+        #endregion
 
         private void PreencheComboBox()
         {
@@ -88,7 +135,7 @@ namespace KhoraControl.View.UC
             DgvDadosNFe.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // Ocultar colunas , 4, 5, 6, 7, 8, 9, 10, 11
-            int[] colunasOcultar = new int[] { 0,6,7,8,9,10,11,12,13,14,15};
+            int[] colunasOcultar = new int[] { 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             foreach (int i in colunasOcultar)
             {
                 DgvDadosNFe.Columns[i].Visible = false;
@@ -101,13 +148,13 @@ namespace KhoraControl.View.UC
             {
                 NaturezaOperacao = CbNaturezaOpe.Text,
                 ID_Veiculo = int.Parse(TxtID_Veiculo.Text),
-                NumNFe = TxtNumNFe.Text,
-                Serie = TxtSerie.Text,
-                ChaveDeAcesso = TxtChave.Text,
+                NumNFe = TxtNumNFe.Text ?? null,
+                Serie = TxtSerie.Text ?? null,
+                ChaveDeAcesso = TxtChave.Text ?? null,
                 RazaoSocialDestinatario = TxtRzSocialDest.Text,
                 RazaoSocialRemetente = TxtRzSocialRem.Text,
-                CNPJDestinatario = mTxtCnpjDes.Text,
-                CNPJRemetente = mTxtCnpjRem.Text,
+                CNPJDestinatario = mTxtCnpjDes.Text ?? null,
+                CNPJRemetente = mTxtCnpjRem.Text ?? null,
                 DataEmissao = DtpDataEmissao.Value.ToUniversalTime(),
                 DataRevisao = DtpDataRevisao.Value.ToUniversalTime(),
                 ValorTotalNotaFiscal = double.Parse(TxtTotNFe.Text),
@@ -145,8 +192,11 @@ namespace KhoraControl.View.UC
             {
                 Directory.CreateDirectory($@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML");
             }
-            File.Copy(path, $@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML\{TxtChave.Text}.xml");
-            
+            if (!string.IsNullOrEmpty(TxtChave.Text))
+            {
+                File.Copy(path, $@"{retorno.LocalSalvamentoDeDados}\{retorno.Placa}\XML\{TxtChave.Text}.xml");
+            }
+
             try
             {
                 foreach (Produtos i in produtosParaIncluir)
@@ -166,6 +216,23 @@ namespace KhoraControl.View.UC
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
             SaveData();
+        }
+
+        private void CbNaturezaOpe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((TipoNaturezaOperacao_e)CbNaturezaOpe.SelectedItem == TipoNaturezaOperacao_e.PedidoServiço ||
+                (TipoNaturezaOperacao_e)CbNaturezaOpe.SelectedItem == TipoNaturezaOperacao_e.PedidoRevisao)
+            {
+                DtpDataEmissao.Enabled = true;
+                showPanelLancamentoPedido = true;
+                TogglePanel();
+            }
+            else
+            {
+                showPanelLancamentoPedido = false;
+                TogglePanel();
+                DtpDataEmissao.Enabled = false;
+            }
         }
     }
 }
