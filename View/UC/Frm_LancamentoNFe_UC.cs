@@ -257,7 +257,6 @@ namespace KhoraControl.View.UC
 
         private void AtualizarDataGridView()
         {
-            DgvDadosNFe.Rows.Clear();
             DgvDadosNFe.DataSource = products;
             DgvDadosNFe.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvDadosNFe.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -265,8 +264,8 @@ namespace KhoraControl.View.UC
             DgvDadosNFe.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvDadosNFe.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            DgvDadosNFe.Columns[3].DefaultCellStyle.Format = "C";
             DgvDadosNFe.Columns[4].DefaultCellStyle.Format = "C";
+            DgvDadosNFe.Columns[5].DefaultCellStyle.Format = "C";
 
             int[] colunasOcultar = new int[] { 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             foreach (int i in colunasOcultar)
