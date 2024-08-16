@@ -67,5 +67,10 @@ namespace KhoraControl.Model
         {
             return _dal.ObterRegistroPor(r => r.ID.Equals(id));
         }
+
+        public IEnumerable<DadosCheckList> ReturnForIDVeiculo(int id)
+        {
+            return _dal.ObterListaPor(r => r.ID_Veiculo.Equals(id));
+        }
     }
 }

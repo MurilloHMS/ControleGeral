@@ -16,6 +16,9 @@
     <Compile Update="View\Forms\Frm_MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Forms\Frm_ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\UC\Frm_CadastroCheckList_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UC\Frm_Configuracoes_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="View\UC\Frm_ConsultaVeiculos_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="View\UC\Frm_Dashboard_UC.cs">
