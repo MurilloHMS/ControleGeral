@@ -519,6 +519,7 @@
             ClientSize = new Size(1184, 761);
             Controls.Add(tbcHome);
             Controls.Add(panelMenu);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Frm_MainWindow";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Khora Control";

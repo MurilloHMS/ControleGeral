@@ -12,13 +12,24 @@ namespace KhoraControl
         [STAThread]
         static void Main()
         {
+            try
+            {
+                KhoraContext context = new KhoraContext();
+                context.Database.EnsureCreated();
 
-            KhoraContext context = new KhoraContext();
-            context.Database.EnsureCreated();
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Frm_MainWindow());
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                // To customize application configuration such as set high DPI settings or default font,
+                // see https://aka.ms/applicationconfiguration.
+                ApplicationConfiguration.Initialize();
+                Application.Run(new Frm_MainWindow());
+
+            }
         }
     }
 }
