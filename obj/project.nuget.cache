@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9uxDDhcJVtU=",
+  "dgSpecHash": "cCRCaCE7n3g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\proau\\OneDrive - Murillo HMS\\Projetos\\2 - Sistemas\\KhoraControl\\KhoraControl.csproj",
+  "projectFilePath": "D:\\KhoraControl\\KhoraControl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\proau\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\proau\\.nuget\\packages\\costura.fody\\5.7.0\\costura.fody.5.7.0.nupkg.sha512",
